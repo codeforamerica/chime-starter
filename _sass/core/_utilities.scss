@@ -1,0 +1,64 @@
+// Mobile-first media query helper
+@mixin media($bp) {
+	@media screen and (min-width: #{$bp}) {
+		@content;
+	}
+}
+
+// Clearfix helper
+%clearfix {
+	&:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+// Content size helpers
+@mixin allow-layout-classes {
+
+	&.width-one-half {
+		@include media($tablet-up) {
+			width: 50%;
+		}
+	}
+
+	&.width-one-third {
+		@include media($tablet-up) {
+			width: 33%;
+		}
+	}
+
+	&.width-two-thirds {
+		@include media($tablet-up) {
+			width: 67%;
+		}
+	}
+
+	&.width-one-fourth {
+		@include media($tablet-up) {
+			width: 25%;
+		}
+	}
+
+	&.width-three-fourths {
+		@include media($tablet-up) {
+			width: 75%;
+		}
+	}	
+
+	&.align-left {
+		float: left;
+		margin-top: .5em;
+		margin-right: 2em;
+	}
+
+	&.align-right {
+		float: right;
+		margin-top: .5em;
+		margin-left: 2em;
+	}
+
+}
+

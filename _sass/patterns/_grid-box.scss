@@ -1,0 +1,34 @@
+.grid-box {
+	@include outer-container();
+	margin: {
+		top: 2em;
+		bottom: 2em;
+	}
+
+
+	@include media($tablet-up) {
+		.width-one-whole {
+			@include span-columns(12);
+		}
+		.width-one-half {
+			@include span-columns(6);
+		}
+		.width-one-third {
+			@include span-columns(4);
+		}
+		.width-two-thirds {
+			@include span-columns(8);
+		}
+		.width-one-fourth {
+			@include span-columns(3);
+		}
+		.width-three-fourths {
+			@include span-columns(9);
+		}
+
+		.end-row {
+			@include omega();
+		}
+	}
+
+}

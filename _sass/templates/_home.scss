@@ -1,0 +1,37 @@
+.home {
+
+	.site-section-hero {
+		text-align: center;
+		background-color: $color-grey-200;
+		h1 {
+			font-size: $title-font-size;
+			margin-top: 0;
+			margin-bottom: .25em;
+		}
+		.subtitle {
+			margin-top: 0;
+			font-size: $h3-font-size;
+		}
+		.input-search-large {
+			padding: .5em .7em;
+			width: 80%;
+		}
+	}
+
+	.site-section-city-services {
+		.grid-item {
+			padding: 1.5em 0;
+			border-bottom: 1px solid $color-grey-200;
+		}
+		.grid-item:nth-of-type(3n) {
+			@include omega();
+		}
+		h2 {
+			margin: 0;
+		}
+	}
+
+	.site-section-generic {
+		background-color: $color-grey-400;
+	}
+}

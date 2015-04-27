@@ -1,0 +1,19 @@
+.breadcrumbs {
+    margin: 1em 0;
+}
+
+.breadcrumbs__item {
+    margin-right: .5em;
+
+    &:not(:last-child) {
+        &:after {
+            margin-left: .5em;
+            content: '→';
+        }
+    }
+
+    a {
+        color: $color-grey-700;
+    }
+    
+}

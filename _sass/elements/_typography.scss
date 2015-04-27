@@ -1,0 +1,44 @@
+html {
+	font-family: $font-sans;
+	font-size: $em-base*.9;	//Scale down font-sizes for mobile
+
+	@include media($mobile-up) {
+		font-size: $em-base;
+	}
+}
+
+body {
+	font-size: $base-font-size;
+	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	margin: {
+		top: 1em;
+		bottom: 1em;
+	}
+}
+
+h1, h2, h3 {
+	clear: both;
+	margin: {
+		top: 1em;
+		bottom: .5em;
+	}
+	line-height: $heading-line-height;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: $h1-font-size;
+}
+
+h2 {
+	font-size: $h2-font-size;
+}
+
+h3 {
+	font-size: $h3-font-size;
+}

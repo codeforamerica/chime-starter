@@ -1,0 +1,17 @@
+aside {
+	@include allow-layout-classes();
+	background-color: $color-grey-200;
+	padding: 1.5em 2em;
+	margin: {
+		top: 2em;
+		bottom: 2em;
+	}
+
+	& *:first-child {
+		margin-top: 0;
+	}
+
+	& *:last-child {
+		margin-bottom: 0;
+	}
+}

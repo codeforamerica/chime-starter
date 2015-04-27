@@ -1,0 +1,18 @@
+.article {
+	margin: 0 auto 6em auto;
+	max-width: $site-max-width;
+	padding: 0 $site-margins;
+
+	.grid-item {
+		background-color: $color-grey-200;
+		padding: 1em;
+		margin-bottom: 1em;
+	}
+}
+
+.article-header {
+	border-bottom: 1px solid $color-grey-200;
+	h1 {
+		font-size: $title-font-size;
+	}
+}

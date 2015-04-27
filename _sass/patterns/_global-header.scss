@@ -1,0 +1,13 @@
+.global-header {
+	background-color: $color-grey-800;
+	color: #fff;
+	padding: 1em $site-margins;
+	h1 {
+		margin: 0;
+		font-size: $h3-font-size;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}

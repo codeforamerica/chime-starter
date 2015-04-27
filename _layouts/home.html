@@ -1,0 +1,94 @@
+---
+layout: base
+---
+
+<div class="home">
+    
+    <section class="site-section site-section-hero">
+        <div class="grid-box">
+            <div class="grid-item width-one-whole">
+                <h1>Welcome to the City of Oakland.</h1>
+                <p class="subtitle">How can we help you?</p>
+                <input type="text" class="input-search-large" placeholder="e.g., pay a parking ticket">
+            </div>
+        </div>
+    </section>
+
+    <section class="site-section site-section-city-services">
+        <h1>City Services</h1>
+        <div class="grid-box">
+            <div class="grid-item width-one-third">
+                <h2>Government</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+            <div class="grid-item width-one-third">
+                <h2>Jobs</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+            <div class="grid-item width-one-third">
+                <h2>Public Safety</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+            <div class="grid-item width-one-third">
+                <h2>Licensing &amp; Permits</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+            <div class="grid-item width-one-third">
+                <h2>Utilities &amp; Streets</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+            <div class="grid-item width-one-third">
+                <h2>Transport</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+            <div class="grid-item width-one-third">
+                <h2>Government</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+            <div class="grid-item width-one-third">
+                <h2>Parks &amp; Recreation</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+            <div class="grid-item width-one-third">
+                <h2>Events</h2>
+                <p>City Departments and council members &amp; meetings and history</p>
+                <p><a href="#">Browse Government</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="site-section">
+        <div class="grid-box">
+            <div class="grid-item width-one-whole">
+                <ul class="post-list">
+                    {% for post in site.posts %}
+                    <li>
+                        <h3>
+                            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        </h3>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="site-section site-section-generic">
+        <h2>Generic Site Section</h2>
+        <div class="grid-box">
+            <div class="grid-item width-one-half">
+                <aside>Half width grid item</aside>
+            </div>
+            <div class="grid-item width-one-half">
+                <aside>Half width grid item</aside>
+            </div>
+        </div>
+    </section>
+
+</div>
