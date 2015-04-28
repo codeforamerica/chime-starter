@@ -5,6 +5,7 @@ description: >
   A starter kit for government sites built with the Chime CMS
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
+permalink: /:categories/:title/
 
 # Build settings
 markdown: kramdown

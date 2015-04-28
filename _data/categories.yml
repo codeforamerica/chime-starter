@@ -1,0 +1,40 @@
+# IA settings
+# top level nav
+toplevel:
+- url: government
+  name: "Government"
+  description: "City Departments and council members & meetings and history"
+- url: jobs
+  name: "Jobs"
+  description: "Finding jobs with the City of Oakland and general employment services"
+- url: public-safety
+  name: "Public Safety"
+  description: "Includes emergency prepardness and safety advice and crime"
+- url: licensing-permits
+  name: "Licensing &amp; Permits"
+  description: "Includes applications for building permits and zoning code"
+- url: utilities-streets
+  name: "Utilities &amp; Streets"
+  description: "Including bill payments, reporting issues and disputes"
+- url: transport
+  name: "Transport"
+  description: "Including public <a href=''>transport</a>, parking and citations"
+  secondary:
+  - url: "parking"
+  - name: "Parking"
+- url: parks-recreation
+  name: "Parks &amp; Recreation"
+  description: "Includes city provided outdoor activities, attractions and entertainment"
+
+# second level nav
+public-safety:
+- title: "Crime Statistics and Maps"
+  tag: crime-statistics-and-maps
+- title: "Emergency Services"
+  tag: emergency-services
+- title: "Prisons and Inmate Support"
+  tag: prisons-and-inmate-support
+- title: "Report an Issue or Crime"
+  tag: report-an-issue-or-crime
+- title: "Vehicle Accidents and Violations"
+  tag: vehicle-accidents-and-violations

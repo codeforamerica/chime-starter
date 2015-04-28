@@ -2,7 +2,8 @@
 layout: article
 title:  "Pattern Samples"
 date:   2015-04-23 16:34:55
-categories: article
+categories: public-safety
+tag: emergency-services
 ---
 
 # Heading Level 1

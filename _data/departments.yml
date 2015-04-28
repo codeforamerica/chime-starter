@@ -1,0 +1,38 @@
+# top level departments nav
+toplevel:
+- url: office-mayor
+  name: "Office of the Mayor"
+- url: city-administrator
+  name: "City Administrator’s Office"
+- url: city-clerk 
+  name: "City Clerk"
+- url: community-economic-development
+  name: "Community and Economic Development"
+- url: finance
+  name: "Finance"
+- url: fire-department
+  name: "Fire Department"
+- url: housing-community-development
+  name: "Housing &amp; Community Development"
+- url: human-resources-management
+  name: "Human Resources Management"
+- url: human-services
+  name: "Human Services"
+- url: information-technology
+  name: "Information Technology"
+- url: parks-recreation
+  name: "Parks &amp; Recreation"
+- url: planning-building
+  name: "Planning &amp; Building"
+- url: police-department
+  name: "Police Department"
+- url: public-library
+  name: "Public Library"
+- url: public-works
+  name: "Public Works"
+- url: city-council
+  name: "City Council"
+- url: city-attorney
+  name: "City Attorney"
+- url: city-auditor
+  name: "City Auditor"

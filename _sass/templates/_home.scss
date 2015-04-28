@@ -18,16 +18,34 @@
 		}
 	}
 
-	.site-section-city-services {
+	.site-section-city-services, .site-section-city-departments {
 		.grid-item {
 			padding: 1.5em 0;
-			border-bottom: 1px solid $color-grey-200;
-		}
-		.grid-item:nth-of-type(3n) {
-			@include omega();
+			&:nth-of-type(3n) {
+				@include omega();
+			}
 		}
 		h2 {
 			margin: 0;
+			font-size: $h3-font-size;
+			a {
+				color: inherit;
+			}
+		}
+	}
+
+	.site-section-city-services {
+		.grid-item {
+			border-bottom: 1px solid $color-grey-200;
+			height: rem(200px);
+		}
+
+	}
+
+	.site-section-city-departments {
+		background-color: $color-grey-200;
+		.grid-item {
+			height: rem(75px);
 		}
 	}
 
