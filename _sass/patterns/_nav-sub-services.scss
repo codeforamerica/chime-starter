@@ -1,0 +1,23 @@
+.nav-sub-services {
+	padding: 1em 0;
+
+	h1 {
+		font-size: $h3-font-size;
+		margin-top: 0;
+	}
+	ul {
+		margin: 2em 0;
+		li {
+			&.is-selected {
+				background-color: $color-grey-200;
+			}
+			.nav-sub-service-link {
+				font-weight: bold;
+				color: inherit;
+			}
+			p {
+				margin-top: .5em;
+			}
+		}
+	}
+}

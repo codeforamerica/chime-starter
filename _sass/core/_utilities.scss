@@ -49,15 +49,19 @@
 	}	
 
 	&.align-left {
-		float: left;
-		margin-top: .5em;
-		margin-right: 2em;
+		@include media($tablet-up) {
+			float: left;
+			margin-top: .5em;
+			margin-right: 2em;
+		}
 	}
 
 	&.align-right {
-		float: right;
-		margin-top: .5em;
-		margin-left: 2em;
+		@include media($tablet-up) {
+			float: right;
+			margin-top: .5em;
+			margin-left: 2em;
+		}
 	}
 
 }

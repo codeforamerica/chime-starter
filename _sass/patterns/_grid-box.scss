@@ -1,10 +1,5 @@
 .grid-box {
 	@include outer-container();
-	margin: {
-		top: 2em;
-		bottom: 2em;
-	}
-
 
 	@include media($tablet-up) {
 		.width-one-whole {
@@ -25,10 +20,25 @@
 		.width-three-fourths {
 			@include span-columns(9);
 		}
+		.width-one-sixth {
+			@include span-columns(2);
+		}
+		.width-five-sixths {
+			@include span-columns(10);
+		}
 
 		.end-row {
 			@include omega();
 		}
 	}
 
+}
+
+article {
+	.grid-box {
+		margin: {
+			top: 2em;
+			bottom: 2em;
+		}
+	}
 }

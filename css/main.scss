@@ -42,7 +42,9 @@
 
 @import 'patterns/global-header';
 @import 'patterns/global-footer';
-@import 'patterns/breadcrumbs';
+@import 'patterns/nav-breadcrumbs';
+@import 'patterns/nav-services';
+@import 'patterns/nav-sub-services';
 @import 'patterns/section-slab';
 @import 'patterns/form-search-site';
 
@@ -52,6 +54,7 @@
 
 @import 'templates/home';
 @import 'templates/service';
+@import 'templates/sub-service';
 @import 'templates/article';
 // @import 'templates/event';
 // @import 'templates/job';

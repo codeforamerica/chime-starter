@@ -1,16 +1,36 @@
 ---
 layout: base
 ---
-<div class="service">
+<div class="template-service">
 
     <header class="service-header">
-    	<nav class="breadcrumbs">
-    	    <span class="breadcrumbs-item"><a href="#">City</a></span>
-    	    <span class="breadcrumbs-item"><a href="#">Department</a></span>
+    	<nav class="nav-breadcrumbs">
+    	    <span class="nav-breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
+    	    <span class="nav-breadcrumbs-item">{{ page.title }}</span>
     	</nav>
-		<h1>{{ page.title }}</h1>
     </header>
-    <section class="sub-services">
-        {{ content }}
-    </section>
+    <div class="grid-box">
+        <div class="grid-item width-one-third">
+            <nav class="nav-services">
+                <ul>
+                    {% for category in site.data.categories.toplevel %}
+                    <li {% if page.category == category.url %} class="is-selected" {% endif %}><a href="{{ category.url | prepend: '/services/' }}">{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+        <div class="grid-item width-two-thirds">
+            <nav class="nav-sub-services">
+                <h1>{{ page.title }}</h1>
+                <ul>
+                    {% for subcategory in site.data.categories[page.category] %}
+                    <li>
+                        <a href="{{ subcategory.url }}" class="nav-sub-service-link">{{ subcategory.name }}</a></b>
+                        <p>{{ subcategory.description }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
 </div>

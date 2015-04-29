@@ -1,0 +1,7 @@
+<nav class="nav-services">
+    <ul>
+        {% for category in site.data.categories.toplevel %}
+        <li {% if page.category == category.url %} class="is-selected" {% endif %}><a href="{{ category.url | prepend: '/services/' }}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>

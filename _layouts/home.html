@@ -3,9 +3,9 @@ layout: base
 role: homepage
 ---
 
-<div class="home">
+<div class="template-home">
     
-    <section class="site-section site-section-hero">
+    <section class="section-slab section-slab-hero">
         <div class="grid-box">
             <div class="grid-item width-one-whole">
                 <h1>Welcome to the City of Oakland.</h1>
@@ -19,7 +19,7 @@ role: homepage
         </div>
     </section>
 
-    <section class="site-section site-section-city-services">
+    <section class="section-slab section-slab-city-services">
         <h1>City Services</h1>
         <div class="grid-box">
             {% for service in site.data.categories.toplevel %}
@@ -30,7 +30,7 @@ role: homepage
             {% endfor %}
         </div>
     </section>
-<!--     <section class="site-section site-section-city-departments">
+<!--     <section class="section-slab section-slab-city-departments">
         <h1>City Departments</h1>
         <div class="grid-box">
             {% for department in site.data.departments.toplevel %}
@@ -40,7 +40,7 @@ role: homepage
             {% endfor %}
         </div>
     </section> -->
-    <section class="site-section">
+    <section class="section-slab">
         <div class="grid-box">
             <div class="grid-item width-one-whole">
                 <ul class="post-list">

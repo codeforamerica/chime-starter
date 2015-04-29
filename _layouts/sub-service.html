@@ -1,0 +1,46 @@
+---
+layout: base
+---
+{% comment %}
+	Retrieve category name and url for breadcrumb
+{% endcomment %}
+
+{% for category in site.data.categories.toplevel %}
+	{% if category.url == page.category %}
+		{% assign currCategory = category %}
+	{% endif %}
+{% endfor %}
+
+<div class="template-sub-service">
+	<header class="sub-service-header">
+		<nav class="nav-breadcrumbs">
+		    <span class="nav-breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
+		    <span class="nav-breadcrumbs-item"><a href="{{ currCategory.url | prepend: '/services/' }}">{{ currCategory.name }}</a></span>
+		    <span class="nav-breadcrumbs-item">{{ page.title }}</span>
+		</nav>
+	</header>
+	<div class="grid-box">
+		<div class="grid-item width-one-sixth">
+			{% include nav-services.html %}
+		</div>
+		<div class="grid-item width-one-third">
+			{% include nav-sub-services.html %}
+		</div>
+		<div class="grid-item width-one-half">
+			<nav class="nav-article-list">
+				<h1>{{ page.title }}</h1>
+				<ul>
+				{% for article in site.pages %}
+					{% if article.categories == page.category %}
+					{% if article.subcategories == page.subcategory %}
+					<li><a href="{{ article.url }}" class="article-link">{{ article.title }}</a></li>
+					{% endif %}
+					{% endif %}
+				{% endfor %}
+				</ul>
+				
+			</nav>
+		</div>
+	</div>
+
+</div>

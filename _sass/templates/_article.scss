@@ -1,7 +1,6 @@
-.article {
+.template-article {
 	margin: 0 auto 6em auto;
 	max-width: $site-max-width;
-	padding: 0 $site-margins;
 
 	.grid-item {
 		background-color: $color-grey-200;
@@ -12,7 +11,12 @@
 
 .article-header {
 	border-bottom: 1px solid $color-grey-200;
+	margin-bottom: 4em;
 	h1 {
 		font-size: $title-font-size;
 	}
+}
+
+.article-content {
+	max-width: $article-max-width;
 }

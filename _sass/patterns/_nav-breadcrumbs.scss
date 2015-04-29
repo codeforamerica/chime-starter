@@ -1,8 +1,8 @@
-.breadcrumbs {
+.nav-breadcrumbs {
     margin: 1em 0;
 }
 
-.breadcrumbs-item {
+.nav-breadcrumbs-item {
     margin-right: .5em;
 
     &:not(:last-child) {
@@ -10,10 +10,6 @@
             margin-left: .5em;
             content: '→';
         }
-    }
-
-    a {
-        color: $color-grey-700;
     }
     
 }

@@ -28,13 +28,18 @@ toplevel:
 
 # second level nav
 public-safety:
-- title: "Crime Statistics and Maps"
-  tag: crime-statistics-and-maps
-- title: "Emergency Services"
-  tag: emergency-services
-- title: "Prisons and Inmate Support"
-  tag: prisons-and-inmate-support
-- title: "Report an Issue or Crime"
-  tag: report-an-issue-or-crime
-- title: "Vehicle Accidents and Violations"
-  tag: vehicle-accidents-and-violations
+- name: "Crime Statistics and Maps"
+  url: crime-statistics-and-maps
+  description: "Philadelphia Crime statistics and reports by district and map"
+- name: "Emergency Services"
+  url: emergency-services
+  description: "How to prepare, mitigate and recover from emergencies"
+- name: "Prisons and Inmate Support"
+  url: prisons-and-inmate-support
+  description: "Includes prison locations, visiting hours, and inmate support services"
+- name: "Report an Issue or Crime"
+  url: report-an-issue-or-crime
+  description: "Report a public safety issue or tip - If you are reporting a crime in progress, or require emergency service, please dial 9-1-1 Submit information regarding suspicious, nuisance and criminal activity to the Philadelphia Police Department"
+- name: "Vehicle Accidents and Violations"
+  url: vehicle-accidents-and-violations
+  description: "Information on parking tickets, red light and parking violations"

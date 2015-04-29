@@ -1,9 +1,17 @@
 <header class="global-header">
-	<h1><a href="/">City of Oakland</a></h1>
-	{% unless page.role == 'homepage' %}
-	<form class="site-search">
-	    <input type="search" placeholder="e.g., pay a parking ticket">
-	    <input type="submit" value="Search">
-	</form>
-	{% endunless %}
+	<div class="grid-box">
+		<div class="grid-item width-one-half">
+			<h1><a href="/">City of Oakland</a></h1>
+		</div>
+		<div class="grid-item width-one-half">
+			{% unless page.role == 'homepage' %}
+			<form class="site-search">
+			    <input type="search" placeholder="e.g., pay a parking ticket">
+			    <input type="submit" value="Search">
+			</form>
+			{% endunless %}
+		</div>
+	</div>
+	
+
 </header>

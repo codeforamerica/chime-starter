@@ -1,0 +1,26 @@
+.nav-services {
+	display: none;
+	padding: 1em 0;
+	border-right: 4px solid $color-grey-200;
+	margin-right: 2em;
+	overflow: hidden;
+
+	@include media($tablet-up) {
+		display: block;
+	}
+	li {
+		margin-right: 0;
+		padding: .5em;
+		min-width: 10em;
+		&.is-selected {
+			font-weight: bold;
+			background-color: $color-grey-200;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
