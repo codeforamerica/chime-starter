@@ -7,10 +7,12 @@ title: "Public Safety"
 
 <h2>{{ subcategory.title }}</h2>
 
-{% for post in site.tags[subcategory.tag] %}
+{% for page in site.pages %}
+{% if page.tag == subcategory.tag %}
 <ul>
-	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	<li><a href="{{ page.url }}">{{ page.title }}</a></li>
 </ul>
+{% endif %}
 
 {% endfor %}
 

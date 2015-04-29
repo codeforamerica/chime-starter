@@ -1,13 +1,47 @@
 .global-header {
+	@extend %clearfix;
 	background-color: $color-grey-800;
 	color: #fff;
 	padding: 1em $site-margins;
 	h1 {
 		margin: 0;
 		font-size: $h3-font-size;
+
+		@include media($tablet-up) {
+			float: left;
+		}
 		a {
 			color: inherit;
 			text-decoration: none;
+		}
+	}
+
+	.site-search {
+
+		@include media($tablet-up) {
+			width: 300px;
+			float: right;
+		}
+
+		input[type="search"], input[type="submit"] {
+			color: #000;
+			height: 2em;
+			width: calc(100% - 2em);
+			margin: {
+				top: .5em;
+				bottom: .5em;
+			}
+			border: 0;
+			@include media($tablet-up) {
+				font-size: $small-font-size;
+				margin: {
+					top: 0;
+					bottom: 0;
+				}
+			}
+		}
+		input[type="submit"] {
+			width: 2em;
 		}
 	}
 }

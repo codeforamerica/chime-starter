@@ -1,7 +1,7 @@
 .home {
 
 	.site-section-hero {
-		text-align: center;
+		text-align: left;
 		background-color: $color-grey-200;
 		h1 {
 			font-size: $title-font-size;
@@ -12,9 +12,10 @@
 			margin-top: 0;
 			font-size: $h3-font-size;
 		}
-		.input-search-large {
-			padding: .5em .7em;
-			width: 80%;
+		.site-search {
+			@include media($tablet-up) {
+				width: 50%;
+			}
 		}
 	}
 
@@ -36,8 +37,7 @@
 
 	.site-section-city-services {
 		.grid-item {
-			border-bottom: 1px solid $color-grey-200;
-			height: rem(200px);
+			height: rem(150px);
 		}
 
 	}

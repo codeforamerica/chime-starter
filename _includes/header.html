@@ -1,3 +1,9 @@
 <header class="global-header">
 	<h1><a href="/">City of Oakland</a></h1>
+	{% unless page.role == 'homepage' %}
+	<form class="site-search">
+	    <input type="search" placeholder="e.g., pay a parking ticket">
+	    <input type="submit" value="Search">
+	</form>
+	{% endunless %}
 </header>

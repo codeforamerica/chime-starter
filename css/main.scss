@@ -27,6 +27,7 @@
 @import 'elements/aside';
 @import 'elements/blockquote';
 @import 'elements/figure';
+@import 'elements/form';
 
 
 // Patterns ---------- //
@@ -42,7 +43,8 @@
 @import 'patterns/global-header';
 @import 'patterns/global-footer';
 @import 'patterns/breadcrumbs';
-@import 'patterns/site-section';
+@import 'patterns/section-slab';
+@import 'patterns/form-search-site';
 
 
 // Templates --------- //

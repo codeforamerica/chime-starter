@@ -1,0 +1,22 @@
+.site-search {
+	@extend %clearfix;
+	input[type="search"], input[type="submit"] {
+		box-sizing: border-box;
+		margin: 0;
+		float: left;
+		height: 3em;
+	}
+	input[type="search"] {
+		width: calc(100% - 3em);
+		border-right: 0px;
+	}
+	input[type="submit"] {
+		width: 3em;
+		height: 3em;
+		text-indent: -9999px;
+		background-image: url('ui/icon_search.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 60% auto;
+	}
+}
