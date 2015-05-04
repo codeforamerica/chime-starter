@@ -1,6 +1,9 @@
 figure {
 	@include allow-layout-classes();
-	margin: 2em auto;
+	margin: {
+		top: 2em;
+		bottom: 2em;
+	}
 	width: 100%;
 
 	img {

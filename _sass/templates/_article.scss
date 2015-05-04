@@ -20,3 +20,11 @@
 .article-content {
 	max-width: $article-max-width;
 }
+
+article {
+	aside[class^="width"] + p {
+		@include media($tablet-up) {
+			margin-top: 0;
+		}
+	}
+}

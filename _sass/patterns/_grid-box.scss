@@ -31,14 +31,4 @@
 			@include omega();
 		}
 	}
-
-}
-
-article {
-	.grid-box {
-		margin: {
-			top: 2em;
-			bottom: 2em;
-		}
-	}
 }

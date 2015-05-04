@@ -7,13 +7,13 @@ input[type="tel"],
 input[type="number"],
 input[type="search"],
 input[type="file"],
-input[type="color"],
 input[type="date"],
 input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"],
 textarea  {
+	box-sizing: border-box;
 	-webkit-appearance: none;
 	border: 1px solid $color-grey-300;
 	display: block;
@@ -22,10 +22,6 @@ textarea  {
 	font-size: $base-font-size;
 	padding: .5em .7em;
 	margin: .5em 0;
-}
-
-input[type="color"] {
-	height: 3em;
 }
 
 // Inline form elements

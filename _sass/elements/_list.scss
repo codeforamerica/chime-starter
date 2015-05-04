@@ -13,10 +13,11 @@ article {
 			bottom: 2em;
 		}
 		li {
-		margin: {
-			top: .5em;
-			bottom: .5em;
-		}
+			line-height: $base-line-height;
+			margin: {
+				top: 1em;
+				bottom: 1em;
+			}
 		}
 	}
 	ul {
