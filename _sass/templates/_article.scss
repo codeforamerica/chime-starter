@@ -1,19 +1,12 @@
 .template-article {
 	margin: 0 auto 6em auto;
 	max-width: $site-max-width;
-
-	.grid-item {
-		background-color: $color-grey-200;
-		padding: 1em;
-		margin-bottom: 1em;
-	}
-}
-
-.article-header {
-	border-bottom: 1px solid $color-grey-200;
-	margin-bottom: 4em;
-	h1 {
-		font-size: $title-font-size;
+	.secondary-header {
+		border-bottom: 1px solid $color-grey-200;
+		margin-bottom: 4em;
+		h1 {
+			font-size: $title-font-size;
+		}
 	}
 }
 
@@ -22,9 +15,12 @@
 }
 
 article {
-	aside[class^="width"] + p {
-		@include media($tablet-up) {
-			margin-top: 0;
+
+	aside[class^="width"], figure[class^="width"] {
+		& + p {
+			@include media($tablet-up) {
+				margin-top: 0;
+			}
 		}
 	}
 }

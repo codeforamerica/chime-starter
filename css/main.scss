@@ -13,9 +13,11 @@
 // Core -------------- //
 
 @import 'core/defaults';
+@import 'core/variables';
 @import 'core/utilities';
 @import 'core/normalize';
 @import 'core/base';
+@import 'core/grid';
 
 // Elements ---------- //
 // Styles basic html elements.
@@ -32,16 +34,12 @@
 
 // Content Patterns ---------- //
 
-@import 'patterns/grid-box';
-// @import 'patterns/buttons';
-// @import 'patterns/links';
-// @import 'patterns/icons';
-
 
 // Site Patterns //
 
 @import 'patterns/global-header';
 @import 'patterns/global-footer';
+@import 'patterns/secondary-header';
 @import 'patterns/nav-breadcrumbs';
 @import 'patterns/nav-services';
 @import 'patterns/nav-sub-services';
@@ -61,6 +59,8 @@
 
 
 // Themes ------------ //
+
+// @import 'themes/cfa';
 
 
 // Hacks --------- //

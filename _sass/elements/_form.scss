@@ -16,6 +16,7 @@ textarea  {
 	box-sizing: border-box;
 	-webkit-appearance: none;
 	border: 1px solid $color-grey-300;
+	border-radius: $border-radius;
 	display: block;
 	width: 100%;
 	outline: none;
@@ -46,6 +47,7 @@ button[type="reset"] {
 	-webkit-appearance: none;
 	background-color: $color-grey-300;
 	border: 0;
+	border-radius: $border-radius;
 	font-size: $base-font-size;
 	text-align: center;
 	width: 8em;

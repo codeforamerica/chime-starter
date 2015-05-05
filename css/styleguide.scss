@@ -34,7 +34,7 @@ $width-nav-sidebar: 250px;
 		h1 {
 			font-weight: bold;
 			font-size: $h3-font-size;
-			padding-bottom: .6em;
+			padding-bottom: 1.1em;
 			border-bottom: 1px solid #000;
 		}
 		.link-h1 {
@@ -85,8 +85,13 @@ $width-nav-sidebar: 250px;
 				margin-top: 2em;
 			}
 		}
+		> h2, > h3 {
+			margin-top: 2em;
+		}
 	}
-	.code-sample {
+
+	//Pattern Preview Boxes
+	.preview {
 		@extend %clearfix;
 		background-color: #fff;
 		margin: {
@@ -94,12 +99,52 @@ $width-nav-sidebar: 250px;
 			bottom: 2em;
 		}
 		padding: 1em $site-margins;
-		border-radius: $border-radius;
-		box-shadow: $box-shadow;
+		border: 1px solid $color-grey-200;
 		.is-peripheral {
 			opacity: .2;
 		}
 	}
+
+	//Code Sample Boxes
+	.code-sample {
+		@extend %clearfix;
+		border: 1px solid $color-grey-200;
+		background-color: $color-grey-50;
+
+		&.is-open {
+			.button-toggle::before {
+				content: 'Hide code';
+			}
+			pre {
+				display: block;
+			}
+		}
+		.button-toggle {
+			font-size: $small-font-size;
+			display: block;
+			padding: .5em $site-margins;
+			text-decoration: underline;
+			&::before {
+				content: 'Show code';
+			}
+		}
+		pre {
+			display: none;
+			background-color: transparent;
+			overflow-y: hidden;
+			code {
+				background-color: transparent;
+			}			
+		}
+	}
+
+	.preview + .code-sample {
+		margin-top: -2em;
+		border-top: 0px;
+	}
+
+	// Custom Styles to illustrate invisible patterns for style guide
+	
 	.grid-box-example {
 		.grid-item {
 			padding: 1em;

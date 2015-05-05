@@ -3,6 +3,10 @@
 	.section-slab-hero {
 		text-align: left;
 		background-color: $color-grey-200;
+		padding: {
+			top: 4em;
+			bottom: 4em;
+		}
 		h1 {
 			font-size: $title-font-size;
 			margin-top: 0;
