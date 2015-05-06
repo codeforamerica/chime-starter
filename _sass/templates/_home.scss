@@ -26,7 +26,7 @@
 	.section-slab-city-services, .section-slab-city-departments {
 		.grid-item {
 			padding: 1.5em 0;
-			&:nth-of-type(3n) {
+			&:nth-child(3n) {
 				@include omega();
 			}
 		}

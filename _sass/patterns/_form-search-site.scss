@@ -1,22 +1,26 @@
 .site-search {
-	@extend %clearfix;
 	input[type="search"], input[type="submit"] {
-		box-sizing: border-box;
 		margin: 0;
 		float: left;
-		height: 3em;
+		height: 2em;
 	}
 	input[type="search"] {
-		width: calc(100% - 3em);
-		border-right: 0px;
+		width: calc(100% - 45px);
+		@include lt-ie9 {
+			width: 85%;
+		}
 	}
 	input[type="submit"] {
-		width: 3em;
-		height: 3em;
+		width: 40px;
 		text-indent: -9999px;
 		background-image: url('ui/icon_search.svg');
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: 60% auto;
+		background-size: auto 70%;
+		@include lt-ie9 {
+			width: 15%;
+			text-indent: 0;
+			background-image: none;
+		}
 	}
 }

@@ -4,12 +4,21 @@
 
 .nav-breadcrumbs-item {
     margin-right: .5em;
-
-    &:not(:last-child) {
-        &:after {
-            margin-left: .5em;
-            content: '→';
+    &:not(:last-of-type) {
+    	&:after {
+        	margin-left: .5em;
+        	content: '→';
         }
+    }
+
+    @include lt-ie9 {
+    	a {
+    		text-decoration: none;
+    		&:after {
+    			margin-left: .5em;
+    			content: '→';
+    		}
+    	}
     }
     
 }

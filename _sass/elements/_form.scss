@@ -13,6 +13,7 @@ input[type="month"],
 input[type="time"],
 input[type="week"],
 textarea  {
+	color: #000; // standardize on firefox
 	box-sizing: border-box;
 	-webkit-appearance: none;
 	border: 1px solid $color-grey-300;
@@ -21,8 +22,9 @@ textarea  {
 	width: 100%;
 	outline: none;
 	font-size: $base-font-size;
-	padding: .5em .7em;
+	padding: 0 .7em;
 	margin: .5em 0;
+	height: 2em;
 }
 
 // Inline form elements

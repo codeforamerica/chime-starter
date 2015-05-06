@@ -89,7 +89,7 @@ aside {
 
 .global-header {
 	background-color: #fff;
-	border-bottom: 1px solid $color-grey-200;
+	border-bottom: 1px solid $color-grey-300;
 	h1 {
 		color: $color-red;
 	}
@@ -109,6 +109,7 @@ aside {
 
 .template-home {
 	.section-slab-hero {
+		background-color: $color-grey-700; // IE8 fallback for no background-image
 		background-color: rgba(#000, .3);
 		position: relative;
 		color: #fff;

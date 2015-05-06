@@ -1,3 +1,10 @@
+// Mixin that allows us to write IE CSS inline.
+@mixin lt-ie9() {
+	@if $lt-ie9 {
+		@content;
+	}
+}
+
 // Mobile-first media query helper
 @mixin media($bp) {
 	@media screen and (min-width: #{$bp}) {
@@ -8,9 +15,11 @@
 // Clearfix helper
 %clearfix {
 	&:after {
-        content: "";
-        display: table;
-        clear: both;
+		content: ".";  
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
     }
 }
 
