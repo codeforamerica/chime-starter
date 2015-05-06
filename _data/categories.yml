@@ -30,7 +30,7 @@ toplevel:
 public-safety:
 - name: "Crime Statistics and Maps"
   url: crime-statistics-and-maps
-  description: "Philadelphia Crime statistics and reports by district and map"
+  description: "Crime statistics and reports by district and map"
 - name: "Emergency Services"
   url: emergency-services
   description: "How to prepare, mitigate and recover from emergencies"
