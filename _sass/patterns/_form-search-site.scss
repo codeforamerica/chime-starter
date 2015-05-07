@@ -6,7 +6,7 @@
 	}
 	input[type="search"] {
 		width: calc(100% - 45px);
-		@include lt-ie9 {
+		.lt-ie9 & {
 			width: 85%;
 		}
 	}
@@ -17,7 +17,7 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: auto 70%;
-		@include lt-ie9 {
+		.lt-ie9 & {
 			width: 15%;
 			text-indent: 0;
 			background-image: none;

@@ -27,6 +27,9 @@ $width-nav-sidebar: 250px;
 		padding: 1em 2em;
 		overflow: auto;
 		display: none;
+		.lt-ie9 & {
+			width: 25%;
+		}
 
 		@include media($tablet-up + $width-nav-sidebar) {
 			display: block;
@@ -67,8 +70,15 @@ $width-nav-sidebar: 250px;
 		overflow: auto;
 		width: 100%;
 
+		.lt-ie9 & {
+			width: 75%;
+		}
+
 		@include media($tablet-up + $width-nav-sidebar) {
 			width: calc(100% - #{$width-nav-sidebar});
+			.lt-ie9 & {
+				width: 75%;
+			}
 		}
 	}
 
@@ -112,7 +122,7 @@ $width-nav-sidebar: 250px;
 		background-color: $color-grey-50;
 
 		&.is-open {
-			.button-toggle::before {
+			.button-toggle:before {
 				content: 'Hide code';
 			}
 			pre {
@@ -124,7 +134,7 @@ $width-nav-sidebar: 250px;
 			display: block;
 			padding: .5em $site-margins;
 			text-decoration: underline;
-			&::before {
+			&:before {
 				content: 'Show code';
 			}
 		}

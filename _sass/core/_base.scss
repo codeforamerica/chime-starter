@@ -10,7 +10,7 @@ body {
 	padding: 0 $site-margins;
 }
 
-@include lt-ie9 {
+.lt-ie9 {
 	// Hack for clearfixes
 	* {
 		filter: none !important;

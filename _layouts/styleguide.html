@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html>                     <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +11,16 @@
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/styleguide.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/css/prism.css" | prepend: site.baseurl }}">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="{{ "/css/prism.css" | prepend: site.baseurl }}">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <![endif]-->
   </head>
 
 
@@ -33,6 +39,10 @@
     <script src="{{ '/js/jquery-1.11.2.min.js' | prepend: site.baseurl }}"></script>
     <script src="{{ '/js/prism.js' | prepend: site.baseurl }}"></script>
     <script src="{{ '/js/styleguide.js' | prepend: site.baseurl }}"></script>
+    <!--[if lt IE 9]>
+      <script src="{{ '/js/rem.min.js' | prepend: site.baseurl }}"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
   </body>
 
 </html>

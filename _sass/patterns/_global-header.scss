@@ -33,13 +33,13 @@
 					bottom: 0;
 				}
 			}
-			@include lt-ie9 {
+			.lt-ie9 & {
 				width: 85%;
 			}
 		}
 		input[type="submit"] {
 			width: 2em;
-			@include lt-ie9 {
+			.lt-ie9 & {
 				width: 15%;
 			}
 		}

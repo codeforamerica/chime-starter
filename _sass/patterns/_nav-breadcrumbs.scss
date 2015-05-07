@@ -11,7 +11,7 @@
         }
     }
 
-    @include lt-ie9 {
+    .lt-ie9 & {
     	a {
     		text-decoration: none;
     		&:after {
