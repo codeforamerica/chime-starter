@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html>                     <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="stylesheet" href="{{ "/css/styleguide.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic|Source+Code+Pro' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="{{ "/css/prism.css" | prepend: site.baseurl }}">
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+      <script src="{{'/js/selectivizr-min-1.0.2.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+    <![endif]-->
+  </head>
+
+
+  <body>
+    <div class="template-styleguide">
+      <div class="nav-sidebar">
+        <h1>Chime Starter<br>Style Guide</h1>
+       
+      </div>
+      <div class="main-content">
+        <article class="style-guide-content">
+          {{ content }}
+        </article>
+      </div>
+    </div>
+    <script src="{{ '/js/jquery-1.11.2.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/prism.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/js/styleguide.js' | prepend: site.baseurl }}"></script>
+    <!--[if lt IE 9]>
+      <script src="{{ '/js/rem.min.js' | prepend: site.baseurl }}"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+  </body>
+
+</html>

@@ -7,25 +7,24 @@ input[type="tel"],
 input[type="number"],
 input[type="search"],
 input[type="file"],
-input[type="color"],
 input[type="date"],
 input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"],
 textarea  {
+	color: #000; // standardize on firefox
+	box-sizing: border-box;
 	-webkit-appearance: none;
 	border: 1px solid $color-grey-300;
+	border-radius: $border-radius;
 	display: block;
 	width: 100%;
 	outline: none;
 	font-size: $base-font-size;
-	padding: .5em .7em;
+	padding: 0 .7em;
 	margin: .5em 0;
-}
-
-input[type="color"] {
-	height: 3em;
+	height: 2em;
 }
 
 // Inline form elements
@@ -50,6 +49,7 @@ button[type="reset"] {
 	-webkit-appearance: none;
 	background-color: $color-grey-300;
 	border: 0;
+	border-radius: $border-radius;
 	font-size: $base-font-size;
 	text-align: center;
 	width: 8em;

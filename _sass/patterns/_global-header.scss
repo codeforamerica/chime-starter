@@ -2,9 +2,6 @@
 	background-color: $color-grey-800;
 	color: #fff;
 	padding: 1em $site-margins;
-	.grid-box {
-		max-width: $site-max-width;
-	}
 	h1 {
 		margin: 0;
 		font-size: $h3-font-size;
@@ -33,9 +30,15 @@
 					bottom: 0;
 				}
 			}
+			.lt-ie9 & {
+				width: 85%;
+			}
 		}
 		input[type="submit"] {
 			width: 2em;
+			.lt-ie9 & {
+				width: 15%;
+			}
 		}
 	}
 }

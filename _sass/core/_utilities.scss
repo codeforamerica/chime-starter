@@ -8,15 +8,22 @@
 // Clearfix helper
 %clearfix {
 	&:after {
-        content: "";
-        display: table;
-        clear: both;
+		content: ".";  
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
     }
 }
 
 
 // Content size helpers
 @mixin allow-layout-classes {
+
+	margin: {
+		left: auto;
+		right: auto;
+	}
 
 	&.width-one-half {
 		@include media($tablet-up) {

@@ -8,7 +8,7 @@ role: homepage
     <section class="section-slab section-slab-hero">
         <div class="grid-box">
             <div class="grid-item width-one-whole">
-                <h1>Welcome to the City of Oakland.</h1>
+                <h1>Welcome to the City of Springfield.</h1>
                 <p class="subtitle">How can we help you?</p>
                 <form class="site-search">
                     <input type="search" placeholder="e.g., pay a parking ticket">
@@ -25,7 +25,7 @@ role: homepage
             {% for service in site.data.categories.toplevel %}
             <div class="grid-item width-one-third">
                 <h2><a href="{{ service.url | prepend: 'services/' }}">{{ service.name }}</a></h2>
-                <p>City Departments and council members &amp; meetings and history</p>
+                <p>{{ service.description }}</p>
             </div>
             {% endfor %}
         </div>

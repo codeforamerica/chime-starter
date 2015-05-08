@@ -1,10 +1,7 @@
 html {
 	font-family: $font-sans;
-	font-size: $em-base*.9;	//Scale down font-sizes for mobile
+	font-size: $em-base;
 
-	@include media($mobile-up) {
-		font-size: $em-base;
-	}
 }
 
 body {
@@ -22,47 +19,47 @@ p {
 }
 
 a {
-	color: $base-link-color;
+	color: $color-base-link;
 	&:hover, &:active, &:visited {
-		color: $base-link-color;
+		color: $color-base-link;
 	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	margin: {
-		top: 1em;
+		top: 2em;
 		bottom: .5em;
 	}
 	line-height: $heading-line-height;
 }
 
-h1 {
+h1, .h1 {
 	font-size: $h1-font-size;
-	font-weight: 400;
+	font-weight: 700;
 }
 
-h2 {
+h2, .h2 {
 	font-size: $h2-font-size;
-	font-weight: 400;
+	font-weight: 700;
 }
 
-h3 {
+h3, .h3 {
 	font-size: $h3-font-size;
-	font-weight: 400;
+	font-weight: 700;
 }
 
-h4 {
+h4, .h4 {
 	font-size: $h4-font-size;
 	font-weight: 700;
 }
 
-h5 {
+h5, .h5 {
 	font-size: $h5-font-size;
 	font-weight: 700;
 }
 
-h6 {
+h6, .h6 {
 	font-size: $h6-font-size;
 	font-weight: 700;
 }

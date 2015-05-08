@@ -17,6 +17,8 @@ $base-line-height:		1.5em !default;
 $heading-line-height:	1.3em !default;
 
 $font-sans: 			'Source Sans Pro', 'Helvetica', 'Arial', sans-serif !default;
+$font-serif:			'Merriweather', 'Georgia', 'Times New Roman', serif;
+$font-mono:				'Source Code Pro', 'Courier New', 'Courier', monospace !default;
 
 
 // Color
@@ -31,7 +33,7 @@ $color-grey-700:		#616161 !default;
 $color-grey-800:		#424242 !default;
 $color-grey-900:		#212121 !default;
 
-$base-link-color:		#000000 !default;
+$color-base-link:		#000000 !default;
 
 
 // Mobile First Breakpoints
@@ -44,3 +46,5 @@ $widescreen-up:			1201px !default;
 $site-max-width:		960px !default;
 $site-margins:			40px !default;
 $article-max-width:		600px !default;
+$border-radius:			0px !default;
+$box-shadow:			0 0 2px rgba(#000, .3) !default;

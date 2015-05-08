@@ -1,0 +1,176 @@
+$color-red: 		#990000;
+$color-beige: 		#BDBBAC;
+$color-egg:			#FFFAEE;
+$color-blue: 		#5B93B4;
+$color-royal-blue: 	#002266;
+
+
+body {
+	font-family: $font-serif;
+	color: $color-grey-800;
+
+}
+.global-header {
+	background-color: $color-red;
+	h1 {
+		color: #fff;
+	}
+}
+.global-footer {
+	background-color: $color-red;
+	color: #fff;
+}
+
+h2, h3, h4, h5, h6 {
+	color: #000;
+}
+
+h4, h5, h6 {
+	font-family: $font-sans;
+}
+
+h1 {
+	color: $color-red;
+}
+
+h3 {
+	font-weight: normal;
+}
+
+a {
+	color: $color-red;
+	text-decoration: none;
+	&:hover, &:visited, &:active {
+		color: $color-red;
+	}
+}
+
+blockquote {
+	border-left-color: $color-beige;
+}
+
+aside {
+	background-color: $color-beige;
+	font-family: $font-sans;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"],
+button[type="button"],
+button[type="submit"],
+button[type="reset"] {
+	color: #fff;
+	background-color: $color-red;
+}
+
+table {
+	th {
+		border: 0;
+		border-bottom: 2px solid #000;
+	}
+	tr {
+		border-bottom: 1px solid #000;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+	td {
+		border: 0;
+	}
+}
+
+.site-search {
+	input[type="submit"] {
+		background-color: $color-red;
+	}
+}
+
+.nav-services, .nav-sub-services {
+	ul {
+		li {
+			a {
+				color: #000;
+				font-weight: bold;
+			}
+			&.is-selected {
+				background-color: $color-beige;
+			}
+
+		}
+	}
+	
+	border-right-color: $color-beige;
+}
+
+.template-sub-service {
+	.nav-sub-services {
+		border-right-color: $color-beige;
+	}
+}
+
+.template-home {
+	.section-slab-hero {
+		background-color: rgba(#000, .3);
+		position: relative;
+		text-align: center;
+		color: #fff;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: url('../media/images/background.jpg');
+			background-position: 100% 55%;
+			z-index: -1;
+		}
+		h1 {
+			font-weight: normal;
+			color: #fff;
+		}
+		.subtitle {
+			font-family: $font-serif;
+			font-style: italic;
+		}
+		.site-search {
+			margin: {
+				left: auto;
+				right: auto;
+			}
+		}
+	}
+	.section-slab-city-services {
+		h2 {
+			a {
+				color: #000;
+			}
+		}
+	}
+}
+
+.template-article {
+	.secondary-header {
+		border-bottom: 2px solid #000;
+	}
+}
+
+.template-styleguide {
+	.nav-sidebar {
+		h1, a {
+			color: #000;
+		}
+	}
+	.style-guide-content {
+		background-color: #fff;
+		.preview {
+			background-color: $color-egg;
+		}
+		.preview, .code-sample {
+			border-color: $color-grey-200;
+		}
+	}
+}

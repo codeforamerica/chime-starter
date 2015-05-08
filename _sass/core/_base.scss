@@ -9,3 +9,10 @@ body {
 .page-content {
 	padding: 0 $site-margins;
 }
+
+.lt-ie9 {
+	// Hack for clearfixes
+	* {
+		filter: none !important;
+	}
+}

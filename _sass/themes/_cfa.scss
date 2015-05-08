@@ -1,0 +1,143 @@
+// Colors
+$color-red:			#cf1b41;
+$color-blue:		#399fd3;
+$color-gray:		#6D6E71;
+$color-light-blue:	#7ab5d6;
+$color-medium-blue:	#4298bb;
+$color-dark-blue:	#004b6a;
+$color-light-gray:	#e5e5e5;
+$color-medium-gray:	#999595;
+$color-dark-gray:	#444444;
+$color-medium-red:	#aa1c3a;
+$color-orange:		#e87d2b;
+$color-purple:		#69579C;
+$color-teal:		#00a175;
+$color-yellow:		#fedd44;
+
+// Magic Numbers
+
+$border-radius: 4px;
+
+
+// Elements
+h1 {
+	text-transform: uppercase;
+}
+
+h2, h3, h4 {
+	font-family: $font-serif;
+	font-weight: normal;
+}
+
+a {
+	color: $color-red;
+	text-decoration: none;
+	&:hover, &:visited, &:active {
+		color: $color-red;
+	}
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"],
+button[type="button"],
+button[type="submit"],
+button[type="reset"] {
+	color: #fff;
+	background-color: $color-blue;
+	border-radius: $border-radius;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="file"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+textarea {
+	border-radius: $border-radius;
+}
+
+aside {
+	color: #fff;
+	background-color: $color-red;
+}
+
+// Site Patterns
+
+.site-search {
+	input[type="search"] {
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+	input[type="submit"] {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+}
+
+.global-header {
+	background-color: #fff;
+	border-bottom: 1px solid $color-grey-300;
+	h1 {
+		color: $color-red;
+	}
+	.site-search {
+		input[type="search"] {
+			border: 1px solid $color-grey-200;
+		}
+	}
+}
+
+.global-footer {
+	color: #fff;
+	background-color: #000; 
+}
+
+// Templates
+
+.template-home {
+	.section-slab-hero {
+		background-color: $color-grey-700; // IE8 fallback for no background-image
+		background-color: rgba(#000, .3);
+		position: relative;
+		color: #fff;
+		text-align: center;
+		padding: {
+			top: 5em;
+			bottom: 5em;
+		}
+
+		.site-search {
+			margin: {
+				left: auto;
+				right: auto;
+			}
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: url('../media/images/cfa-masthead.jpg');
+			background-position: cover;
+			z-index: -1;
+		}
+		.subtitle {
+			font-family: $font-serif;
+			font-style: italic;
+		}
+	}
+}
