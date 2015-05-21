@@ -387,8 +387,8 @@ A default combinaton of a seach type input and a custom submit button used to gl
 
 ## Home
 
-## Service
+## Category
 
-## Subservice
+## Subcategory
 
 ## Article

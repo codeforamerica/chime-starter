@@ -43,11 +43,11 @@ table {
 
 }
 
-.nav-services {
+.nav-categories {
 	border-right: 4px solid #000;
 }
 
-.nav-services, .nav-sub-services {
+.nav-categories, .nav-subcategories {
 	ul {
 		li {
 			&.is-selected {
@@ -62,8 +62,8 @@ table {
 	}
 }
 
-.template-sub-service {
-	.nav-sub-services {
+.template-subcategory {
+	.nav-subcategories {
 		border-right: 4px solid #000;
 	}
 }

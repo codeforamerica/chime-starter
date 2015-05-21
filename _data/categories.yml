@@ -19,9 +19,6 @@ toplevel:
 - url: transport
   name: "Transport"
   description: "Including public <a href=''>transport</a>, parking and citations"
-  secondary:
-  - url: "parking"
-  - name: "Parking"
 - url: parks-recreation
   name: "Parks &amp; Recreation"
   description: "Includes city provided outdoor activities, attractions and entertainment"

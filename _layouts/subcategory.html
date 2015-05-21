@@ -11,20 +11,20 @@ layout: base
 	{% endif %}
 {% endfor %}
 
-<div class="template-sub-service">
+<div class="template-subcategory">
 	<header class="secondary-header">
 		<nav class="nav-breadcrumbs">
 		    <span class="nav-breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
-		    <span class="nav-breadcrumbs-item"><a href="{{ currCategory.url | prepend: '/services/' }}">{{ currCategory.name }}</a></span>
+		    <span class="nav-breadcrumbs-item"><a href="{{ currCategory.url | prepend: '/categories/' }}">{{ currCategory.name }}</a></span>
 		    <span class="nav-breadcrumbs-item">{{ page.title }}</span>
 		</nav>
 	</header>
 	<div class="grid-box">
 		<div class="grid-item width-one-sixth">
-			{% include nav-services.html %}
+			{% include nav-categories.html %}
 		</div>
 		<div class="grid-item width-one-third">
-			{% include nav-sub-services.html %}
+			{% include nav-subcategories.html %}
 		</div>
 		<div class="grid-item width-one-half end-row">
 			<nav class="nav-article-list">

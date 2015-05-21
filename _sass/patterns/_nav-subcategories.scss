@@ -1,4 +1,4 @@
-.nav-sub-services {
+.nav-subcategories {
 	padding: 1em 0;
 
 	h1 {
@@ -11,7 +11,7 @@
 			&.is-selected {
 				background-color: $color-grey-200;
 			}
-			.nav-sub-service-link {
+			.nav-subcategory-link {
 				font-weight: bold;
 				color: inherit;
 			}
