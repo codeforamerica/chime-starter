@@ -24,7 +24,7 @@ role: homepage
         <div class="grid-box">
             {% for service in site.data.categories.toplevel %}
             <div class="grid-item width-one-third">
-                <h2><a href="{{ service.url | prepend: 'services/' }}">{{ service.name }}</a></h2>
+                <h2><a href="{{ service.url | prepend: 'categories/' }}">{{ service.name }}</a></h2>
                 <p>{{ service.description }}</p>
             </div>
             {% endfor %}

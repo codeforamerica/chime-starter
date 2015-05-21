@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-<div class="template-service">
+<div class="template-category">
 
     <header class="secondary-header">
     	<nav class="nav-breadcrumbs">
@@ -11,21 +11,15 @@ layout: base
     </header>
     <div class="grid-box">
         <div class="grid-item width-one-third">
-            <nav class="nav-services">
-                <ul>
-                    {% for category in site.data.categories.toplevel %}
-                    <li {% if page.category == category.url %} class="is-selected" {% endif %}><a href="{{ category.url | prepend: '/services/' }}">{{ category.name }}</a></li>
-                    {% endfor %}
-                </ul>
-            </nav>
+            {% include nav-categories.html %}
         </div>
         <div class="grid-item width-two-thirds end-row">
-            <nav class="nav-sub-services">
+            <nav class="nav-subcategories">
                 <h1>{{ page.title }}</h1>
                 <ul>
                     {% for subcategory in site.data.categories[page.category] %}
                     <li>
-                        <a href="{{ subcategory.url }}" class="nav-sub-service-link">{{ subcategory.name }}</a></b>
+                        <a href="{{ subcategory.url }}" class="nav-subcategory-link">{{ subcategory.name }}</a></b>
                         <p>{{ subcategory.description }}</p>
                     </li>
                     {% endfor %}

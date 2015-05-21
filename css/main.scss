@@ -39,8 +39,8 @@
 @import 'patterns/global-footer';
 @import 'patterns/secondary-header';
 @import 'patterns/nav-breadcrumbs';
-@import 'patterns/nav-services';
-@import 'patterns/nav-sub-services';
+@import 'patterns/nav-categories';
+@import 'patterns/nav-subcategories';
 @import 'patterns/section-slab';
 @import 'patterns/form-search-site';
 
@@ -49,8 +49,8 @@
 // Styles specific page templates
 
 @import 'templates/home';
-@import 'templates/service';
-@import 'templates/sub-service';
+@import 'templates/category';
+@import 'templates/subcategory';
 @import 'templates/article';
 // @import 'templates/event';
 // @import 'templates/job';
@@ -58,8 +58,8 @@
 
 // Themes ------------ //
 
-// @import 'themes/cfa';
-@import 'themes/usa';
+@import 'themes/cfa';
+// @import 'themes/usa';
 // @import 'themes/wireframe';
 
 // Hacks --------- //

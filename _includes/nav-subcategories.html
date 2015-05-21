@@ -1,9 +1,9 @@
-<nav class="nav-sub-services">
+<nav class="nav-subcategories">
 	<h1>{{ currCategory.name }}</h1>
     <ul>
         {% for subcategory in site.data.categories[page.category] %}
         <li {% if subcategory.url == page.subcategory %} class="is-selected" {% endif %}>
-            <a href="{{ subcategory.url | prepend: '/' | prepend: page.category | prepend: '/services/' | prepend: site.url }}" class="nav-sub-service-link">{{ subcategory.name }}</a></b>
+            <a href="{{ subcategory.url | prepend: '/' | prepend: page.category | prepend: '/categories/' | prepend: site.url }}" class="nav-subcategory-link">{{ subcategory.name }}</a></b>
             <p>{{ subcategory.description }}</p>
         </li>
         {% endfor %}

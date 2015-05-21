@@ -87,7 +87,7 @@ table {
 	}
 }
 
-.nav-services, .nav-sub-services {
+.nav-categories, .nav-subcategories {
 	ul {
 		li {
 			a {
@@ -104,8 +104,8 @@ table {
 	border-right-color: $color-beige;
 }
 
-.template-sub-service {
-	.nav-sub-services {
+.template-subcategory {
+	.nav-subcategories {
 		border-right-color: $color-beige;
 	}
 }
