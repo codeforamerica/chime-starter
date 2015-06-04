@@ -10,8 +10,8 @@ module Structure
                     path_list = make_path_split(check_page.path)
                     cat_path = path_list.join("/")
 
-                    page_info['layout'] = check_page.data['layout']
-                    page_info['title'] = check_page.data['title']
+                    # copy data from the page's front matter and embellish it
+                    page_info = check_page.data.clone
                     page_info['path_list'] = path_list
                     page_info['depth'] = path_list.length
                     page_info['path'] = cat_path
@@ -67,7 +67,8 @@ module Structure
                         end
                     end
 
-                    column_info['pages'] = column_pages
+                    # sort by order and assign
+                    column_info['pages'] = column_pages.sort_by { |hsh| hsh['order'] }
                     display_columns << column_info
                     end_range += 1
                 end
