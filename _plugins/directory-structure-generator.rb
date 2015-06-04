@@ -48,25 +48,27 @@ module Structure
                 display_columns = []
                 end_range = 0
                 end_depth = [target_page_depth - lowest_depth + 1, all_columns.length - 1].min
+                next_column_title = ""
                 for check_depth in (0..end_depth)
                     check_column = all_columns[check_depth]
                     show_pattern = target_path_list[0..end_range].join("/")
                     select_pattern = target_path_list[0..end_range + 1].join("/")
-                    fill_column = []
+                    column_info = {"title" => next_column_title}
+                    column_pages = []
                     for check_page in check_column
                         clone_page = check_page.clone
                         if select_pattern == clone_page['path']
                             clone_page['selected'] = true
+                            next_column_title = clone_page['title']
                         end
 
                         if /^#{show_pattern}/.match(clone_page['path'])
-                            fill_column << clone_page
+                            column_pages << clone_page
                         end
                     end
 
-                    if fill_column.length > 0
-                        display_columns << fill_column
-                    end
+                    column_info['pages'] = column_pages
+                    display_columns << column_info
                     end_range += 1
                 end
 
