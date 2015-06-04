@@ -1,6 +1,6 @@
 ---
 layout: subcategory
 title: Prisons and Inmate Support
-category: public-safety
-subcategory: prisons-and-inmate-support
+order: 2
+summary: "Includes prison locations, visiting hours, and inmate support services"
 ---

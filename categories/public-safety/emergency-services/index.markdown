@@ -1,6 +1,6 @@
 ---
 layout: subcategory
 title: Emergency Services
-category: public-safety
-subcategory: emergency-services
+order: 1
+summary: "How to prepare, mitigate and recover from emergencies"
 ---

@@ -1,6 +1,6 @@
 ---
 layout: subcategory
 title: Vehicle Accidents and Violations
-category: public-safety
-subcategory: vehicle-accidents-and-violations
+order: 4
+summary: "Information on parking tickets, red light and parking violations"
 ---
