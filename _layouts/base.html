@@ -20,7 +20,7 @@
     <td>
       <p><strong>{{ column['title'] }}</strong></p>
       {% for show_page in column['pages'] %}
-      <p><a href="{{ show_page['link_path'] }}">{% if show_page['selected'] %}<strong>{% endif %}{{ show_page['title'] }}{% if show_page['selected'] %}</strong>{% endif %}</a><br /><em>{{ show_page['summary'] }}</em></p>
+      <p><a href="{{ show_page['link_path'] }}">{% if show_page['selected'] %}<strong>{% endif %}{{ show_page['title'] }}{% if show_page['selected'] %}</strong>{% endif %}</a><br /><em>{{ show_page['description'] }}</em></p>
       {% endfor %}
     </td>
   {% endfor %}
