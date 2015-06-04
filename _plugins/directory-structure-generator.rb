@@ -2,27 +2,89 @@ module Structure
     class Generator < Jekyll::Generator
         def generate(site)
 
-            structure = []
+            pages = []
 
             for check_page in site.pages
-                page_path_list = check_page.path.split("/")
-                if page_path_list[-1] == 'index.markdown'
-                    page_path_list.pop()
-                end
-                page_cat_path = page_path_list.join("/")
-
                 page_info = Hash.new
-                if check_page.data['layout'] == 'category' or check_page.data['layout'] == 'subcategory' or check_page.data['layout'] == 'article'
+                if is_chime_page(check_page.data['layout'])
+                    path_list = make_path_split(check_page.path)
+                    cat_path = path_list.join("/")
+
                     page_info['layout'] = check_page.data['layout']
                     page_info['title'] = check_page.data['title']
-                    page_info['path'] = page_cat_path
-                    structure << page_info
+                    page_info['path_list'] = path_list
+                    page_info['depth'] = path_list.length
+                    page_info['path'] = cat_path
+                    page_info['link_path'] = "/#{cat_path}/"
+                    page_info['selected'] = false
+
+                    pages << page_info
                 end
+            end
+
+            # sort by depth
+            pages = pages.sort_by { |hsh| hsh['depth'] }
+            lowest_depth = pages[0]['depth']
+
+            # build columns
+            all_columns = []
+            for check_page in pages
+                if all_columns.length < check_page['depth'] - lowest_depth + 1
+                    all_columns << []
+                end
+                all_columns[check_page['depth'] - lowest_depth] << check_page
             end
 
             for target_page in site.pages
-                target_page.data['structure'] = structure
+                if !is_chime_page(target_page.data['layout'])
+                    target_page.data['columns'] = []
+                    next
+                end
+
+                target_path_list = make_path_split(target_page.path)
+                target_page_cat_path = target_path_list.join("/")
+                target_page_depth = target_path_list.length
+
+                display_columns = []
+                end_range = 0
+                end_depth = [target_page_depth - lowest_depth + 1, all_columns.length - 1].min
+                for check_depth in (0..end_depth)
+                    check_column = all_columns[check_depth]
+                    show_pattern = target_path_list[0..end_range].join("/")
+                    select_pattern = target_path_list[0..end_range + 1].join("/")
+                    fill_column = []
+                    for check_page in check_column
+                        clone_page = check_page.clone
+                        if select_pattern == clone_page['path']
+                            clone_page['selected'] = true
+                        end
+
+                        if /^#{show_pattern}/.match(clone_page['path'])
+                            fill_column << clone_page
+                        end
+                    end
+
+                    if fill_column.length > 0
+                        display_columns << fill_column
+                    end
+                    end_range += 1
+                end
+
+                target_page.data['columns'] = display_columns
             end
         end
+
+        def is_chime_page(layout)
+            return (layout == "category" or layout == "subcategory" or layout == "article")
+        end
+
+        def make_path_split(path_string)
+            path_list = path_string.split("/")
+            if path_list.length > 1 and path_list[-1] == "index.markdown"
+                path_list.pop()
+            end
+            return path_list
+        end
+
     end
 end

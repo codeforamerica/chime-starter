@@ -14,19 +14,18 @@
       </div>
     </div>
 
-<p>The value of structure is {{ page.structure }}</p>
-
-{% assign my_path_list = page.path | split: "/" | pop %}
-{% assign my_cat_path = my_path_list | join: "/" %}
-<p>My <strong>path</strong>={{ my_cat_path }}</p>
-{% assign pages = site.pages | sort:"path" %}
-{% for check_page in pages %}
-    {% assign page_path_list = check_page.path | split: "/" | pop %}
-    {% assign page_cat_path = page_path_list | join: "/" %}
-    {% if check_page.layout == 'category' or check_page.layout == 'subcategory' or check_page.layout == 'article' %}
-    <p><strong>====</strong> <strong>title</strong>={{ check_page.title }} <strong>path</strong>={{ page_cat_path }} <strong>layout</strong>={{ check_page.layout }}</p>
-    {% endif %}
-{% endfor %}
+<table>
+  <tr>
+  {% for column in page.columns %}
+    <td>
+      <p><strong>column {{ column[0]['depth'] - 1 }}</strong></p>
+      {% for show_page in column %}
+      <p><a href="{{ show_page['link_path'] }}">{% if show_page['selected'] %}<strong>{% else %}<em>{% endif %}{{ show_page['title'] }}{% if show_page['selected'] %}</strong>{% else %}</em>{% endif %}</a></p>
+      {% endfor %}
+    </td>
+  {% endfor %}
+  </tr>
+</table>
 
     {% include footer.html %}
     <!--[if lt IE 9]>
