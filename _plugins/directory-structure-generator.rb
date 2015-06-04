@@ -34,10 +34,13 @@ module Structure
                 end
                 all_columns[check_page['depth'] - lowest_depth] << check_page
             end
+            # sort the root pages within their column
+            all_columns[0] = all_columns[0].sort_by { |hsh| hsh['order'] }
 
             for target_page in site.pages
                 if !is_chime_page(target_page.data['layout'])
-                    target_page.data['columns'] = []
+                    # send non-category pages just the root pages
+                    target_page.data['columns'] = [{"title" => "", "pages" => all_columns[0]}]
                     next
                 end
 
