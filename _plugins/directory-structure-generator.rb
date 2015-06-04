@@ -41,6 +41,7 @@ module Structure
                 if !is_chime_page(target_page.data['layout'])
                     # send non-category pages just the root pages
                     target_page.data['columns'] = [{"title" => "", "pages" => all_columns[0]}]
+                    target_page.data['breadcrumbs'] = []
                     next
                 end
 
@@ -49,6 +50,7 @@ module Structure
                 target_page_depth = target_path_list.length
 
                 display_columns = []
+                breadcrumbs = []
                 end_range = 0
                 end_depth = [target_page_depth - lowest_depth + 1, all_columns.length - 1].min
                 next_column_title = ""
@@ -63,6 +65,7 @@ module Structure
                         if select_pattern == clone_page['path']
                             clone_page['selected'] = true
                             next_column_title = clone_page['title']
+                            breadcrumbs << clone_page
                         end
 
                         if /^#{show_pattern}/.match(clone_page['path'])
@@ -77,6 +80,7 @@ module Structure
                 end
 
                 target_page.data['columns'] = display_columns
+                target_page.data['breadcrumbs'] = breadcrumbs
             end
         end
 

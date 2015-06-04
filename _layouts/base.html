@@ -14,6 +14,11 @@
       </div>
     </div>
 
+Springfield >>
+{% for crumb in page.breadcrumbs %}
+ <a href="{{ crumb['link_path'] }}">{{ crumb['title'] }}</a> >>
+{% endfor %}
+
 <table>
   <tr>
   {% for column in page.columns %}
