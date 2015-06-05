@@ -1,6 +1,8 @@
 ---
-layout: base
-role: homepage
+"layout": |-
+  base
+"role": |-
+  homepage
 ---
 
 <div class="template-home">
@@ -22,14 +24,15 @@ role: homepage
     <section class="section-slab section-slab-city-services">
         <h1>City Services</h1>
         <div class="grid-box">
-            {% for service in site.data.categories.toplevel %}
+            {% for show_page in page.columns[0]['pages'] %}
             <div class="grid-item width-one-third">
-                <h2><a href="{{ service.url | prepend: 'categories/' }}">{{ service.name }}</a></h2>
-                <p>{{ service.description }}</p>
+                <h2><a href="{{ show_page['link_path'] }}">{{ show_page['title'] }}</a></h2>
+                <p>{{ show_page['description'] }}</p>
             </div>
             {% endfor %}
         </div>
     </section>
+
 <!--     <section class="section-slab section-slab-city-departments">
         <h1>City Departments</h1>
         <div class="grid-box">

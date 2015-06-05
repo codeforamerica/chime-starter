@@ -1,6 +1,10 @@
 ---
-layout: subcategory
-title: Crime Statistics and Maps
-category: public-safety
-subcategory: crime-statistics-and-maps
+"layout": |-
+  category
+"title": |-
+  Crime Statistics and Maps
+"order": |-
+  0
+"description": |-
+  Crime statistics and reports by district and map
 ---

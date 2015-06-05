@@ -1,30 +1,48 @@
 ---
-layout: base
+"layout": |-
+  base
 ---
-<div class="template-category">
+
+{% comment %} columns classes, assigned depending on which and how many columns {% endcomment %}
+{% if page.columns.size > 2 %}
+    {% assign column_count = 3 %}
+    {% assign column_classes = "grid-item width-one-sixth,grid-item width-one-third,grid-item width-one-half end-row" | split: "," %}
+{% else %}
+    {% assign column_count = 2 %}
+    {% assign column_classes = "grid-item width-one-third,grid-item width-two-thirds end-row" | split: "," %}
+{% endif %}
+
+{% comment %} nav and link classes, assigned depending on which column {% endcomment %}
+{% assign nav_classes = "nav-categories,nav-subcategories,nav-article-list" | split: "," %}
+{% assign link_classes = ",nav-subcategory-link,article-link" | split: "," %}
+
+<div class="{% if column_count == 2 %}template-category{% else %}template-subcategory{% endif %}">
 
     <header class="secondary-header">
         <nav class="nav-breadcrumbs">
             <span class="nav-breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
-            <span class="nav-breadcrumbs-item">{{ page.title }}</span>
+            {% for crumb in page.breadcrumbs %}
+             <span class="nav-breadcrumbs-item">{% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{% endif %}{{ crumb['title'] }}{% if forloop.rindex0 > 0 %}</a>{% endif %}</span>
+            {% endfor %}
         </nav>
     </header>
+
     <div class="grid-box">
-        <div class="grid-item width-one-third">
-            {% include nav-categories.html %}
-        </div>
-        <div class="grid-item width-two-thirds end-row">
-            <nav class="nav-subcategories">
-                <h1>{{ page.title }}</h1>
+    {% for column in page.columns %}
+        {% assign column_idx = forloop.index0 %}
+        <div class="{{ column_classes[column_idx] }}">
+            <nav class="{{ nav_classes[column_idx] }}">
+                {% if column_idx > 0 %}<h1>{{ column['title'] }}</h1>{% endif %}
                 <ul>
-                    {% for subcategory in site.data.categories[page.category] %}
-                    <li>
-                        <a href="{{ subcategory.url }}" class="nav-subcategory-link">{{ subcategory.name }}</a></b>
-                        <p>{{ subcategory.description }}</p>
+                    {% for show_page in column['pages'] %}
+                    <li {% if show_page['selected'] %}class="is-selected"{% endif %}>
+                        <a href="{{ show_page['link_path'] }}" class="{{ link_classes[column_idx] }}">{{ show_page['title'] }}</a>
+                        {% if column_idx == 1 %}<p>{{ show_page['description'] }}</p>{% endif %}
                     </li>
                     {% endfor %}
                 </ul>
             </nav>
         </div>
+    {% endfor %}
     </div>
 </div>

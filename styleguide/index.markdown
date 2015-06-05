@@ -1,6 +1,8 @@
 ---
-layout: styleguide
-title: "Chime Starter Style Guide"
+"layout": |-
+  styleguide
+"title": |-
+  Chime Starter Style Guide
 ---
 
 # About this Guide
