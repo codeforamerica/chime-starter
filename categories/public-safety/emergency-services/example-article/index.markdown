@@ -1,6 +1,8 @@
 ---
-layout: article
-title:  "Pattern Samples"
+"layout": |-
+  article
+"title": |-
+  Pattern Samples
 ---
 
 # Heading Level 1

@@ -1,6 +1,8 @@
 ---
-layout: article
-title: "Parking Tickets"
+"layout": |-
+  article
+"title": |-
+  Parking Tickets
 ---
 
 The Philadelphia Parking Authority employs three levels of enforcement of parking regulations: issuing parking tickets to vehicles that violate regulations; applying the boot to vehicles that accumulate unpaid tickets; and, in certain cases, towing and impounding vehicles until outstanding fines and fees are paid.
