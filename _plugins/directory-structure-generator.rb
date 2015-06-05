@@ -12,17 +12,18 @@ module Structure
                 if is_chime_page(check_page.data['layout'])
                     path_list = make_path_split(check_page.path)
                     cat_path = path_list.join("/")
-
-                    # copy data from the page's front matter and embellish it
+                    # copy data from the page's front matter
                     page_info = check_page.data.clone
+                    # protect against missing values
+                    page_info['order'] = page_info['order'] ? page_info['order'].to_i : 0
+                    page_info['description'] = "" if not page_info['description']
+                    page_info['title'] = "" if not page_info['title']
+                    # add our own values
                     page_info['path_list'] = path_list
                     page_info['depth'] = path_list.length
                     page_info['path'] = cat_path
                     page_info['link_path'] = "/#{cat_path}/"
                     page_info['selected'] = false
-                    # protect against missing values
-                    page_info['order'] = page_info['order'] ? page_info['order'].to_i : 0
-                    page_info['description'] = "" if not page_info['description']
 
                     pages << page_info
                 end
