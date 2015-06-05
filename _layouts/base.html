@@ -14,24 +14,6 @@
       </div>
     </div>
 
-Springfield >>
-{% for crumb in page.breadcrumbs %}
- {% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{{ crumb['title'] }}</a>{% else %}{{ crumb['title'] }}{% endif %} >>
-{% endfor %}
-
-<table>
-  <tr>
-  {% for column in page.columns %}
-    <td>
-      <p><strong>{{ column['title'] }}</strong></p>
-      {% for show_page in column['pages'] %}
-      <p><a href="{{ show_page['link_path'] }}">{% if show_page['selected'] %}<strong>{% endif %}{{ show_page['title'] }}{% if show_page['selected'] %}</strong>{% endif %}</a><br /><em>{{ show_page['description'] }}</em></p>
-      {% endfor %}
-    </td>
-  {% endfor %}
-  </tr>
-</table>
-
     {% include footer.html %}
     <!--[if lt IE 9]>
       <script src="{{ '/js/rem.min.js' | prepend: site.baseurl }}"></script>
