@@ -1,24 +1,17 @@
 ---
 layout: base
 ---
-{% comment %}
-    Retrieve category name and url for breadcrumb
-{% endcomment %}
-
-{% for category in site.data.categories.toplevel %}
-    {% if category.url == page.category %}
-        {% assign currCategory = category %}
-    {% endif %}
-{% endfor %}
-
 <div class="template-subcategory">
+
     <header class="secondary-header">
         <nav class="nav-breadcrumbs">
             <span class="nav-breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
-            <span class="nav-breadcrumbs-item"><a href="{{ currCategory.url | prepend: '/categories/' }}">{{ currCategory.name }}</a></span>
-            <span class="nav-breadcrumbs-item">{{ page.title }}</span>
+            {% for crumb in page.breadcrumbs %}
+             <span class="nav-breadcrumbs-item">{% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{% endif %}{{ crumb['title'] }}{% if forloop.rindex0 > 0 %}</a>{% endif %}</span>
+            {% endfor %}
         </nav>
     </header>
+
     <div class="grid-box">
         <div class="grid-item width-one-sixth">
             {% include nav-categories.html %}

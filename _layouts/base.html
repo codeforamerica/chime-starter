@@ -16,7 +16,7 @@
 
 Springfield >>
 {% for crumb in page.breadcrumbs %}
- <a href="{{ crumb['link_path'] }}">{{ crumb['title'] }}</a> >>
+ {% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{{ crumb['title'] }}</a>{% else %}{{ crumb['title'] }}{% endif %} >>
 {% endfor %}
 
 <table>
