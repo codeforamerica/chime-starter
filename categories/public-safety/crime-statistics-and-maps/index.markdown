@@ -3,7 +3,7 @@
   category
 "title": |-
   Crime Statistics and Maps
-"order": |-
+"order": !!int |-
   0
 "description": |-
   Crime statistics and reports by district and map
