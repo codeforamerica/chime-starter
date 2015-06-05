@@ -1,11 +1,14 @@
 module Structure
     class Generator < Jekyll::Generator
         def generate(site)
+            ''' Build column and breadcrumb data and inject it into site pages.
+            '''
 
             pages = []
 
+            # step through all the pages in the site
             for check_page in site.pages
-                page_info = Hash.new
+                # ignore pages that aren't created by chime
                 if is_chime_page(check_page.data['layout'])
                     path_list = make_path_split(check_page.path)
                     cat_path = path_list.join("/")
@@ -22,7 +25,7 @@ module Structure
                 end
             end
 
-            # sort by depth
+            # sort the pages by depth
             pages = pages.sort_by { |hsh| hsh['depth'] }
             lowest_depth = pages[0]['depth']
 
@@ -34,12 +37,14 @@ module Structure
                 end
                 all_columns[check_page['depth'] - lowest_depth] << check_page
             end
-            # sort the root pages within their column
+            # sort the root pages within their column, so
+            # non-category pages can use them
             all_columns[0] = all_columns[0].sort_by { |hsh| hsh['order'] }
 
+            # step through all the pages
             for target_page in site.pages
                 if !is_chime_page(target_page.data['layout'])
-                    # send non-category pages just the root pages
+                    # send non-category pages just the root pages and no breadcrumbs
                     target_page.data['columns'] = [{"title" => "", "pages" => all_columns[0]}]
                     target_page.data['breadcrumbs'] = []
                     next
@@ -49,15 +54,18 @@ module Structure
                 target_page_cat_path = target_path_list.join("/")
                 target_page_depth = target_path_list.length
 
+                # build the columns and breadcrumbs
                 display_columns = []
                 breadcrumbs = []
+                next_column_title = ""
+                # don't go any deeper in the site structure than the target page
                 end_range = 0
                 end_depth = [target_page_depth - lowest_depth + 1, all_columns.length - 1].min
-                next_column_title = ""
                 for check_depth in (0..end_depth)
                     check_column = all_columns[check_depth]
                     show_pattern = target_path_list[0..end_range].join("/")
                     select_pattern = target_path_list[0..end_range + 1].join("/")
+                    # the column title is the title of the page selected in the last column
                     column_info = {"title" => next_column_title}
                     column_pages = []
                     for check_page in check_column
@@ -68,6 +76,7 @@ module Structure
                             breadcrumbs << clone_page
                         end
 
+                        # only show pages that share the target page's path
                         if /^#{show_pattern}/.match(clone_page['path'])
                             column_pages << clone_page
                         end
@@ -85,10 +94,14 @@ module Structure
         end
 
         def is_chime_page(layout)
-            return (layout == "category" or layout == "subcategory" or layout == "article")
+            ''' Return true if the page has a chime-specific layout
+            '''
+            return (layout == "category" or layout == "article")
         end
 
         def make_path_split(path_string)
+            ''' Split a page path, removing the index file.
+            '''
             path_list = path_string.split("/")
             if path_list.length > 1 and path_list[-1] == "index.markdown"
                 path_list.pop()
