@@ -21,7 +21,7 @@ module Structure
                     page_info['link_path'] = "/#{cat_path}/"
                     page_info['selected'] = false
                     # protect against missing values
-                    page_info['order'] = 0 if not page_info['order']
+                    page_info['order'] = page_info['order'] ? page_info['order'].to_i : 0
                     page_info['description'] = "" if not page_info['description']
 
                     pages << page_info
