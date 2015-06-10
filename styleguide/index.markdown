@@ -36,8 +36,15 @@ The grid layout system is a basic grid system used to build site pages where the
 - `.width-three-fourths`
 - `.width-one-six`
 - `.width-five-sixths`
+- `.width-one-twelfth`
+- `.width-five-twelfths`	
+- `.width-seven-twelfths`
+- `.width-eleven-twelfths`
+		
 
-Generally, fractional widths of all grid items within a grid box should add up to one complete row. If a grid box needs to contain more than one row, the class `.end-row` is required on the last item of each row.
+Generally, fractional widths of all grid items within a grid box should add up to one complete row. If whitespace is needed within a row, `shift` classes are available to add whitespace to the left of a grid item.
+
+If a grid box needs to contain more than one row, the class `.end-row` is required on the last item of each row.
 
 On mobile devices, all grid items default to 100% width.
 
@@ -49,6 +56,15 @@ On mobile devices, all grid items default to 100% width.
 		<div class="grid-item width-two-thirds">Two Thirds</div>
 	</div>
 </div>
+
+### Example Grid Box Using Shift Classes
+
+<div class="preview">
+	<div class="grid-box grid-box-example">
+		<div class="grid-item width-two-thirds shift-one-third">Two Thirds (Shifted One Third)</div>
+	</div>
+</div>
+
 
 ### Example Grid Box with Multiple Rows
 
