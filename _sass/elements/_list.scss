@@ -5,25 +5,44 @@ ul, ol {
 	list-style-type: none;
 }
 
-article {
-	ul, ol {
-		padding-left: 2em;
+@mixin list-bulleted() {
+	list-style-type: disc;
+	padding-left: 2em;
+	margin: {
+		top: 2em;
+		bottom: 2em;
+	}
+	li {
+		line-height: $base-line-height;
 		margin: {
-			top: 2em;
-			bottom: 2em;
-		}
-		li {
-			line-height: $base-line-height;
-			margin: {
-				top: 1em;
-				bottom: 1em;
-			}
+			top: 1em;
+			bottom: 1em;
 		}
 	}
+}
+
+@mixin list-decimal() {
+	list-style-type: decimal;
+	padding-left: 2em;
+	margin: {
+		top: 2em;
+		bottom: 2em;
+	}
+	li {
+		line-height: $base-line-height;
+		margin: {
+			top: 1em;
+			bottom: 1em;
+		}
+	}
+}
+
+
+article {
 	ul {
-		list-style-type: disc;
+		@include list-bulleted();
 	}
 	ol {
-		list-style-type: decimal;
+		@include list-decimal();
 	}
 }
