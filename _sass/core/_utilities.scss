@@ -6,7 +6,7 @@
 }
 
 // Clearfix helper
-@include clearfix {
+@mixin clearfix() {
 	&:after {
 		content: ".";  
 		display: block;

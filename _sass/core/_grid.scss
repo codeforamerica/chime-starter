@@ -35,7 +35,7 @@
 			@include span-columns(5);
 		}
 		.width-seven-twelfths {
-			@include span-column(7)
+			@include span-columns(7);
 		}
 		.width-eleven-twelfths {
 			@include span-columns(11);
@@ -70,7 +70,7 @@
 			@include shift(5);
 		}
 		.shift-seven-twelfths {
-			@include shift7)
+			@include shift(7);
 		}
 		.shift-eleven-twelfths {
 			@include shift(11);
