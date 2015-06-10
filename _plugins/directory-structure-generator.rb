@@ -1,15 +1,17 @@
-module Structure
-    class Generator < Jekyll::Generator
+module Jekyll
+    class DirectoryStructureGenerator < Jekyll::Generator
+        safe true
+        priority :lowest
+
         def generate(site)
             ''' Build column and breadcrumb data and inject it into site pages.
             '''
-
             pages = []
 
             # step through all the pages in the site
             for check_page in site.pages
                 # ignore pages that aren't created by chime
-                if is_chime_page(check_page.data['layout'])
+                if is_chime_page_layout(check_page.data['layout'])
                     path_list = make_path_split(check_page.path)
                     cat_path = path_list.join("/")
                     # copy data from the page's front matter
@@ -47,8 +49,8 @@ module Structure
 
             # step through all the pages
             for target_page in site.pages
-                if !is_chime_page(target_page.data['layout'])
-                    # send non-category pages just the root pages and no breadcrumbs
+                if !is_chime_page_layout(target_page.data['layout'])
+                    # send non-category and -article pages just the root pages and no breadcrumbs
                     target_page.data['columns'] = [{"title" => "", "pages" => all_columns[0]}]
                     target_page.data['breadcrumbs'] = []
                     next
@@ -97,8 +99,8 @@ module Structure
             end
         end
 
-        def is_chime_page(layout)
-            ''' Return true if the page has a chime-specific layout
+        def is_chime_page_layout(layout)
+            ''' Return true if the page layout is chime-specific
             '''
             return (layout == "category" or layout == "article")
         end
@@ -112,6 +114,5 @@ module Structure
             end
             return path_list
         end
-
     end
 end
