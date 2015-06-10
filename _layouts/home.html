@@ -33,31 +33,4 @@
         </div>
     </section>
 
-<!--     <section class="section-slab section-slab-city-departments">
-        <h1>City Departments</h1>
-        <div class="grid-box">
-            {% for department in site.data.departments.toplevel %}
-            <div class="grid-item width-one-third">
-                <p><a href="#">{{ department.name }}</a></p>
-            </div>
-            {% endfor %}
-        </div>
-    </section> -->
-    <section class="section-slab">
-        <div class="grid-box">
-            <div class="grid-item width-one-whole">
-                <ul class="post-list">
-                    {% for post in site.posts %}
-                    <li>
-                        <h3>
-                            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                        </h3>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </section>
-
-
 </div>
