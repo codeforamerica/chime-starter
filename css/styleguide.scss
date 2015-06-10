@@ -34,6 +34,7 @@ $width-nav-sidebar: 250px;
 		@include media($tablet-up + $width-nav-sidebar) {
 			display: block;
 		}
+		
 		h1 {
 			font-weight: bold;
 			font-size: $h3-font-size;
@@ -102,7 +103,7 @@ $width-nav-sidebar: 250px;
 
 	//Pattern Preview Boxes
 	.preview {
-		@extend %clearfix;
+		@include clearfix();
 		background-color: #fff;
 		margin: {
 			top: 2em;
@@ -117,7 +118,7 @@ $width-nav-sidebar: 250px;
 
 	//Code Sample Boxes
 	.code-sample {
-		@extend %clearfix;
+		@include clearfix();
 		border: 1px solid $color-grey-200;
 		background-color: $color-grey-50;
 
