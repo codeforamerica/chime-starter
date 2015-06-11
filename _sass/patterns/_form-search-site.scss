@@ -1,22 +1,31 @@
 .site-search {
+	margin-top: .8em;
 	input[type="search"], input[type="submit"] {
 		margin: 0;
 		float: left;
-		height: 2em;
+		height: 3em;
+		background-color: $color-grey-100;
 	}
 	input[type="search"] {
-		width: calc(100% - 45px);
+		width: calc(100% - 60px);
+		border: 0;
+
 		.lt-ie9 & {
 			width: 85%;
 		}
 	}
 	input[type="submit"] {
-		width: 40px;
+		width: 60px;
 		text-indent: -9999px;
 		background-image: url('ui/icon_search.svg');
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-size: auto 70%;
+		background-size: auto 60%;
+
+		&:hover {
+			background-color: $color-grey-200;
+		}
+		
 		.lt-ie9 & {
 			width: 15%;
 			text-indent: 0;

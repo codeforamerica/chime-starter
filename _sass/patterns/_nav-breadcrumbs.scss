@@ -4,6 +4,10 @@
 
 .nav-breadcrumbs-item {
     margin-right: .5em;
+    color: $color-red;
+    a {
+        color: $color-grey-700;
+    }
     &:not(:last-of-type) {
     	&:after {
         	margin-left: .5em;

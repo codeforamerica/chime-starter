@@ -20,6 +20,10 @@ p {
 
 a {
 	color: $color-base-link;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 	&:hover, &:active, &:visited {
 		color: $color-base-link;
 	}
@@ -34,16 +38,24 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: $heading-line-height;
 }
 
-// Create heading mixins 
+// Create heading mixins
+
+@mixin title() {
+	font-size: title-font-size;
+	font-weight: 800;
+	letter-spacing: -.05em;
+}
 
 @mixin h1 {
 	font-size: $h1-font-size;
 	font-weight: 700;
+	letter-spacing: -.05em;
 }
 
 @mixin h2 {
 	font-size: $h2-font-size;
 	font-weight: 700;
+	letter-spacing: -.05em;
 }
 
 @mixin h3 {
@@ -66,30 +78,28 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
-article {
-	h1 {
-		@include h1();
-	}
+h1 {
+	@include h1();
+}
 
-	h2 {
-		@include h2();
-	}
+h2 {
+	@include h2();
+}
 
-	h3 {
-		@include h3();
-	}
+h3 {
+	@include h3();
+}
 
-	h4 {
-		@include h4();
-	}
+h4 {
+	@include h4();
+}
 
-	h5 {
-		@include h5();
-	}
+h5 {
+	@include h5();
+}
 
-	h6 {
-		@include h6();
-	}
+h6 {
+	@include h6();
 }
 
 

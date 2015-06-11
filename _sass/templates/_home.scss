@@ -2,55 +2,55 @@
 
 	.section-slab-hero {
 		text-align: left;
-		background-color: $color-grey-200;
-		padding: {
-			top: 4em;
-			bottom: 4em;
-		}
-		h1 {
-			font-size: $title-font-size;
-			margin-top: 0;
-			margin-bottom: .25em;
-		}
-		.subtitle {
-			margin-top: 0;
-			font-size: $h3-font-size;
-		}
-		.site-search {
-			@include media($tablet-up) {
-				width: 50%;
-			}
+		background-image: url('../media/images/hero_raleway.jpg');
+		height: 200px;
+		border-bottom: 0;
+
+		@include media($tablet-up) {
+			height: 400px;
 		}
 	}
 
-	.section-slab-city-services, .section-slab-city-departments {
+	.section-slab-city-services, .section-slab-press-releases {
 		.grid-item {
-			padding: 1.5em 0;
+			height: 140px;
+			overflow: hidden;
+			padding: 0 1.5em;
+			margin: {
+				top: 2em;
+				bottom: 2em;
+			}
 			&:nth-child(3n) {
 				@include omega();
 			}
 		}
+		h1 {
+			@include h2();
+			@include media($tablet-up) {
+				@include h1();
+			}
+			margin-bottom: 1em;
+		}
 		h2 {
+			@include h3();
 			margin: 0;
-			font-size: $h3-font-size;
+		}
+		p {
+			margin-bottom: 0;
+			color: $color-grey-700;
 		}
 	}
 
 	.section-slab-city-services {
 		.grid-item {
-			height: rem(150px);
+			border-left: 4px solid $color-blue;
 		}
-
 	}
 
-	.section-slab-city-departments {
-		background-color: $color-grey-200;
+
+	.section-slab-press-releases {
 		.grid-item {
-			height: rem(75px);
+			border-left: 4px solid $color-green;
 		}
-	}
-
-	.section-slab-generic {
-		background-color: $color-grey-400;
 	}
 }

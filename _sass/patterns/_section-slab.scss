@@ -3,6 +3,13 @@
 		left: -$site-margins;
 		right: -$site-margins;
 	}
+	padding: 4em $site-margins;
+	border-bottom: 4px solid $color-grey-200;
+
+	&:last-of-type {
+		border-bottom: 0;
+	}
+
 	h1, h2, h3, h4, h5, h6, .grid-box {
 		max-width: $site-max-width;
 		margin: {
@@ -10,5 +17,7 @@
 			right: auto;
 		}
 	}
-	padding: 2em $site-margins;
+	h1 {
+		margin-top: 0;
+	}
 }

@@ -1,44 +1,24 @@
 .global-header {
-	background-color: $color-grey-800;
-	color: #fff;
-	padding: 1em $site-margins;
+	padding: 2em $site-margins;
+	@include media($tablet-up) {
+		padding: {
+			top: 3em;
+			bottom: 3em;
+		}
+	}
 	h1 {
 		margin: 0;
-		font-size: $h3-font-size;
+		font-size: $h2-font-size;
+		color: $color-red;
+		font-weight: 800;
+
+		@include media($tablet-up) {
+			font-size: $title-font-size;
+		}
 
 		a {
 			color: inherit;
 			text-decoration: none;
-		}
-	}
-
-	.site-search {
-
-		input[type="search"], input[type="submit"] {
-			color: #000;
-			height: 2em;
-			width: calc(100% - 2em);
-			margin: {
-				top: 2em;
-				bottom: .5em;
-			}
-			border: 0;
-			@include media($tablet-up) {
-				font-size: $small-font-size;
-				margin: {
-					top: 0;
-					bottom: 0;
-				}
-			}
-			.lt-ie9 & {
-				width: 85%;
-			}
-		}
-		input[type="submit"] {
-			width: 2em;
-			.lt-ie9 & {
-				width: 15%;
-			}
 		}
 	}
 }
