@@ -10,16 +10,16 @@ This repo contains a starter site for city governments. Its main purpose is for 
 - A Jekyll Plugin that generates the article index pages based off of the folder hierarchy.
 - A living style guide and pattern library
 - Polyfills that help older versions of IE support HTML5 elements, pseudoclasses, media queries, and rem units.
- 
 
-# Prerequisites
+
+## Prerequisites
 
 This starter requires Jekyll to be installed in order to build and preview. To install Jekyll, run:
 
 > `gem install jekyll`
 
 
-# Running Locally
+## Running Locally
 
 To preview the site locally, use the Jekyll command:
 
