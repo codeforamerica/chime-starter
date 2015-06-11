@@ -36,6 +36,11 @@ h1, h2, h3, h4, h5, h6 {
 
 // Create heading mixins 
 
+@mixin title {
+	font-size: $title-font-size;
+	font-weight: 700;
+}
+
 @mixin h1 {
 	font-size: $h1-font-size;
 	font-weight: 700;
@@ -66,30 +71,28 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
-article {
-	h1 {
-		@include h1();
-	}
+h1 {
+	@include h1();
+}
 
-	h2 {
-		@include h2();
-	}
+h2 {
+	@include h2();
+}
 
-	h3 {
-		@include h3();
-	}
+h3 {
+	@include h3();
+}
 
-	h4 {
-		@include h4();
-	}
+h4 {
+	@include h4();
+}
 
-	h5 {
-		@include h5();
-	}
+h5 {
+	@include h5();
+}
 
-	h6 {
-		@include h6();
-	}
+h6 {
+	@include h6();
 }
 
 
