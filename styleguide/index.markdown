@@ -327,7 +327,7 @@ This is the header that appears at the top of every page.
 	<header class="global-header">
 		<div class="grid-box">
 			<div class="grid-item width-one-half">
-				<h1><a href="/">City of Oakland</a></h1>
+				<h1><a href="/">City of {{ site.city }}</a></h1>
 			</div>
 			<div class="grid-item width-one-half">
 				{% unless page.role == 'homepage' %}
@@ -349,7 +349,7 @@ This is the footer that appears at the bottom of every page.
 
 <div class="preview">
 	<footer class="global-footer">
-		&copy; 2015 City of Oakland
+		&copy; 2015 City of {{ site.city }}
 	</footer>
 
 </div>

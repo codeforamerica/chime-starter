@@ -23,7 +23,7 @@
 		}
 	}
 
-	.section-slab-city-services, .section-slab-city-departments {
+	.section-slab-city-services, .section-slab-press-releases {
 		.grid-item {
 			padding: 1.5em 0;
 			&:nth-child(3n) {
@@ -41,16 +41,5 @@
 			height: rem(150px);
 		}
 
-	}
-
-	.section-slab-city-departments {
-		background-color: $color-grey-200;
-		.grid-item {
-			height: rem(75px);
-		}
-	}
-
-	.section-slab-generic {
-		background-color: $color-grey-400;
 	}
 }
