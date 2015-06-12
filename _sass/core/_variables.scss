@@ -6,14 +6,14 @@ $title-font-size:		rem(48px);
 $h1-font-size:			rem(36px);
 $h2-font-size:			rem(28px);
 $h3-font-size:			rem(24px);
-$h4-font-size:			rem(18px);
+$h4-font-size:			rem(16px);
 $h5-font-size:			rem(16px);
 $h6-font-size:			rem(14px);
 $base-line-height:		1.5em;
 $heading-line-height:	1.3em;
 
-$font-sans: 			'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
-$font-serif:			'Georgia', 'Times New Roman', serif;
+$font-sans: 			'Raleway', 'Helvetica', 'Arial', sans-serif;
+$font-serif:			'Lora', 'Georgia', 'Times New Roman', serif;
 $font-mono:				'Source Code Pro', 'Courier New', 'Courier', monospace;
 
 // Color
@@ -28,7 +28,11 @@ $color-grey-700:		#616161;
 $color-grey-800:		#424242;
 $color-grey-900:		#212121;
 
-$color-base-link:		#000000;
+$color-bg-green:		#f2f6ef;
+$color-green:			#366d1f;
+
+
+$color-base-link:		$color-green;
 
 
 // Mobile First Breakpoints

@@ -2,6 +2,10 @@
 	@include outer-container();
 	max-width: $site-max-width;
 
+	.grid-item {
+		@include clearfix();
+	}
+
 	@include media($tablet-up) {
 		// Defines width of element
 		.width-one-whole {

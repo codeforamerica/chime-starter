@@ -3,43 +3,45 @@
 	.section-slab-hero {
 		text-align: left;
 		background-color: $color-grey-200;
-		padding: {
-			top: 4em;
-			bottom: 4em;
-		}
-		h1 {
-			font-size: $title-font-size;
-			margin-top: 0;
-			margin-bottom: .25em;
-		}
-		.subtitle {
-			margin-top: 0;
-			font-size: $h3-font-size;
-		}
-		.site-search {
-			@include media($tablet-up) {
-				width: 50%;
-			}
+		background-image: url('../media/images/hero_lora.jpg');
+		background-position: center center;
+
+		height: 200px;
+		@include media($tablet-up) {
+			height: 400px
 		}
 	}
 
 	.section-slab-city-services, .section-slab-press-releases {
-		.grid-item {
-			padding: 1.5em 0;
-			&:nth-child(3n) {
-				@include omega();
-			}
+		h1 {
+			@include h4;
+			border-bottom: 3px double #000;
+			padding-bottom: 1em;
+			margin-bottom: 2em;
 		}
 		h2 {
+			@include h3;
 			margin: 0;
-			font-size: $h3-font-size;
+		}
+		p {
+			font-style: italic;
 		}
 	}
 
 	.section-slab-city-services {
-		.grid-item {
+		.category {
 			height: rem(150px);
+			padding: 1.5em 0;
+			&:nth-child(2n) {
+				@include omega();
+			}
 		}
 
+	}
+
+	.section-slab-press-releases {
+		.press-release {
+			padding: 1.5em 0;
+		}
 	}
 }

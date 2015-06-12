@@ -8,41 +8,40 @@
 <div class="template-home">
     
     <section class="section-slab section-slab-hero">
-        <div class="grid-box">
-            <div class="grid-item width-one-whole">
-                <h1>Welcome to the City of {{ site.city }}.</h1>
-                <p class="subtitle">How can we help you?</p>
-                <form class="site-search">
-                    <input type="search" placeholder="e.g., pay a parking ticket">
-                    <input type="submit" value="Search">
-                </form>
-                
-            </div>
-        </div>
+
     </section>
 
     <section class="section-slab section-slab-city-services">
-        <h1>Services and Information</h1>
         <div class="grid-box">
-            {% for show_page in page.columns[0]['pages'] %}
-            <div class="grid-item width-one-third">
-                <h2><a href="{{ show_page['link_path'] }}">{{ show_page['title'] }}</a></h2>
-                <p>{{ show_page['description'] }}</p>
+            <div class="grid-item width-three-fourths shift-one-sixth">
+                <h1>Services and Information</h1>
+                <div class="grid-box">
+                    {% for show_page in page.columns[0]['pages'] %}
+                    <div class="grid-item width-one-half category">
+                        <h2><a href="{{ show_page['link_path'] }}">{{ show_page['title'] }}</a></h2>
+                        <p>{{ show_page['description'] }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
-            {% endfor %}
         </div>
+
     </section>
 
     <section class="section-slab section-slab-press-releases">
-        <h1>News and Press Releases</h1>
         <div class="grid-box">
-            <div class="grid-item width-one-half">
-                <h2><a href="#">Apply to the Mayor’s Internship Program</a></h2>
-                <p>Undergraduate and graduate students interested in City government or gaining valuable workplace experience should apply to the MIPs before January 30th, 2015.</p>
-            </div>
-            <div class="grid-item width-one-half end-row">
-                <h2><a href="#">Message to the Police Department</a></h2>
-                <p><a href="#">The mayor's video message will be shown at all Police Department Roll Calls across the city beginning Thursday, December 11th until all members of the Department have seen it.</a></p>
+            <div class="grid-item width-three-fourths shift-one-sixth">
+                <h1>News and Press Releases</h1>
+                <div class="grid-box">
+                    <div class="press-release grid-item end-row">
+                        <h2><a href="#">Apply to the Mayor’s Internship Program</a></h2>
+                        <p>Undergraduate and graduate students interested in City government or gaining valuable workplace experience should apply to the MIPs before January 30th, 2015.</p>
+                    </div>
+                    <div class="press-release grid-item end-row">
+                        <h2><a href="#">Message to the Police Department</a></h2>
+                        <p>The mayor's video message will be shown at all Police Department Roll Calls across the city beginning Thursday, December 11th until all members of the Department have seen it.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

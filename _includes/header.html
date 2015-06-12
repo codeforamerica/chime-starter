@@ -1,15 +1,16 @@
 <header class="global-header">
     <div class="grid-box">
+        <div class="grid-item width-one-sixth">
+            <a href="/" class="logo"></a>
+        </div>
         <div class="grid-item width-one-half">
             <h1><a href="/">City of {{ site.city }}</a></h1>
         </div>
-        <div class="grid-item width-one-half end-row">
-            {% unless page.role == 'homepage' %}
+        <div class="grid-item width-one-third end-row">
             <form class="site-search">
                 <input type="search" placeholder="e.g., pay a parking ticket">
                 <input type="submit" value="Search">
             </form>
-            {% endunless %}
         </div>
     </div>
 </header>

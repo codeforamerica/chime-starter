@@ -1,6 +1,7 @@
 aside {
 	@include allow-layout-classes();
-	background-color: $color-grey-200;
+	background-color: $color-grey-800;
+	color: #fff;
 	padding: 1.5em 2em;
 	margin: {
 		top: 2em;

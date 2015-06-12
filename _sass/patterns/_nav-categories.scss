@@ -1,7 +1,7 @@
 .nav-categories {
 	display: none;
 	padding: 1em 0;
-	border-right: 4px solid $color-grey-200;
+	border-right: 4px solid $color-green;
 	margin-right: 2em;
 	overflow: hidden;
 
@@ -14,7 +14,11 @@
 		min-width: 10em;
 		&.is-selected {
 			font-weight: bold;
-			background-color: $color-grey-200;
+			background-color: $color-green;
+			
+			a {
+				color: #fff;
+			}
 		}
 		a {
 			text-decoration: none;

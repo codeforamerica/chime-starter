@@ -9,7 +9,8 @@
 		margin: 2em 0;
 		li {
 			&.is-selected {
-				background-color: $color-grey-200;
+				background-color: $color-green;
+				color: #fff;
 			}
 			.nav-subcategory-link {
 				font-weight: bold;
