@@ -2,17 +2,18 @@
 	padding: 3em $site-margins;
 	.logo {
 		display: block;
-		height: 80px;
-		margin-top: -10px;
-		background-image: url('../media/images/logo_lora.png');
+		position: absolute;
+		left: -50px;
+		top: -50px;
+		height: 140px;
+		width: 140px;
+		background-image: url('../media/images/logo_inconsolata.png');
 		background-size: auto 100%;
 		background-position: center center;
 		background-repeat: no-repeat;
 	}
 	h1 {
-		@include h2;
-		font-style: italic;
-		font-weight: 400;
+		@include h3;
 		text-align: center;
 		@include media($tablet-up) {
 			@include title;
@@ -28,6 +29,6 @@
 	}
 
 	.site-search {
-		margin-top: .6em;
+		margin-top: .5em;
 	}
 }

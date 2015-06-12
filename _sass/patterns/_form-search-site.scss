@@ -1,12 +1,12 @@
 .site-search {
 	@include clearfix();
-	border: 1px solid #000;
+	border-bottom: 2px solid #000;
 	input[type="search"], input[type="submit"] {
 		margin: 0;
 		float: left;
 		height: 3em;
 		border: 0;
-		background-color: $color-bg-green;
+		background-color: #fff;
 	}
 	input[type="search"] {
 		width: calc(100% - 60px);
@@ -23,7 +23,7 @@
 		background-size: auto 60%;
 
 		&:hover {
-			background-color: shade($color-bg-green, 10%);
+			background-color: $color-grey-100;
 		}
 
 		.lt-ie9 & {
