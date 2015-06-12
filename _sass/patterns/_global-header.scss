@@ -1,26 +1,19 @@
 .global-header {
 	padding: 3em $site-margins;
-	.logo {
-		display: block;
-		position: absolute;
-		left: -50px;
-		top: -50px;
-		height: 140px;
-		width: 140px;
-		background-image: url('../media/images/logo_inconsolata.png');
-		background-size: auto 100%;
-		background-position: center center;
-		background-repeat: no-repeat;
-	}
+
 	h1 {
 		@include h3;
-		text-align: center;
-		@include media($tablet-up) {
-			@include title;
-			text-align: left;
-			margin: 0;
-		}
-		
+        background-image: url('../media/images/logo_inconsolata.png');
+        background-size: 2em auto;
+        background-repeat: no-repeat;
+		margin: .6em 0;
+        background-position: right center;
+        padding: .5em 3em .5em 0;
+
+        @include media($tablet-up) {
+            background-position: left center;
+            padding: .5em 0 .5em 3em;
+        }
 
 		a {
 			color: inherit;
@@ -28,7 +21,8 @@
 		}
 	}
 
-	.site-search {
-		margin-top: .5em;
-	}
+    .site-search {
+        margin-top: .4em;
+    }
+
 }

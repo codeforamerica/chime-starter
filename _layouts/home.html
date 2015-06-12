@@ -12,42 +12,32 @@
     </section>
 
     <section class="section-slab section-slab-city-services">
+        <h1>Services &amp; Information</h1>
         <div class="grid-box">
-            <div class="grid-item width-one-fourth">
-                <h1>Services &amp; Information</h1>
+            {% for show_page in page.columns[0]['pages'] %}
+            <div class="grid-item width-one-third category">
+                <h2><a href="{{ show_page['link_path'] }}">{{ show_page['title'] }}</a></h2>
+                <p>{{ show_page['description'] }}</p>
             </div>
-            <div class="width-three-fourths end-row">
-                <div class="grid-box">
-                    {% for show_page in page.columns[0]['pages'] %}
-                    <div class="grid-item width-one-half category">
-                        <h2><a href="{{ show_page['link_path'] }}">{{ show_page['title'] }}</a></h2>
-                        <p>{{ show_page['description'] }}</p>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
+
+            {% endfor %}
         </div>
 
     </section>
 
     <section class="section-slab section-slab-press-releases">
         <div class="grid-box">
-            <div class="grid-item width-one-fourth">
-                <h1>News &amp; Press Releases</h1>
-            </div>
-            <div class="width-three-fourths end-row">
-                <div class="grid-box">
-                    <div class="press-release grid-item end-row">
-                        <h2><a href="#">Apply to the Mayor’s Internship Program</a></h2>
-                        <p>Undergraduate and graduate students interested in City government or gaining valuable workplace experience should apply to the MIPs before January 30th, 2015.</p>
-                    </div>
-                    <div class="press-release grid-item end-row">
-                        <h2><a href="#">Message to the Police Department</a></h2>
-                        <p>The mayor's video message will be shown at all Police Department Roll Calls across the city beginning Thursday, December 11th until all members of the Department have seen it.</p>
-                    </div>
+            <h1>News &amp; Press Releases</h1>
+            <div class="grid-box">
+                <div class="press-release grid-item width-two-thirds shift-one-sixth end-row">
+                    <h2><a href="#">Apply to the Mayor’s Internship Program</a></h2>
+                    <p>Undergraduate and graduate students interested in City government or gaining valuable workplace experience should apply to the MIPs before January 30th, 2015.</p>
+                </div>
+                <div class="press-release grid-item width-two-thirds shift-one-sixth end-row">
+                    <h2><a href="#">Message to the Police Department</a></h2>
+                    <p>The mayor's video message will be shown at all Police Department Roll Calls across the city beginning Thursday, December 11th until all members of the Department have seen it.</p>
                 </div>
             </div>
         </div>
     </section>
-
 </div>

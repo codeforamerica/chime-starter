@@ -1,5 +1,5 @@
 html {
-	font-family: $font-sans;
+	font-family: $font-serif;
 	font-size: $em-base;
 
 }
@@ -20,10 +20,6 @@ p {
 
 a {
 	color: $color-base-link;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
 	&:hover, &:active, &:visited {
 		color: $color-base-link;
 	}
@@ -41,53 +37,47 @@ h1, h2, h3, h4, h5, h6 {
 // Create heading mixins 
 
 @mixin title {
-	font-family: $font-mono;
+	font-family: $font-serif;
 	font-size: $title-font-size;
 	font-weight: 700;
-	color: $color-orange;
-	text-transform: uppercase;
-	letter-spacing: -.05em;
 }
 
 @mixin h1 {
-	font-family: $font-mono;
+	font-family: $font-serif;
 	font-size: $h1-font-size;
 	font-weight: 700;
-	color: $color-orange;
-	text-transform: uppercase;
-	letter-spacing: -.05em;
 }
 
 @mixin h2 {
-	font-family: $font-mono;
+	font-family: $font-serif;
 	font-size: $h2-font-size;
 	font-weight: 700;
 	color: #000;
-	text-transform: uppercase;
-	letter-spacing: -.05em;
 }
 
 @mixin h3 {
-	font-family: $font-mono;
+	font-family: $font-serif;
 	font-size: $h3-font-size;
-	font-weight: 700;
-	color: $color-orange;
+	font-weight: 400;
+	color: $color-red;
+	text-transform: uppercase;
+	letter-spacing: .1em;	
 }
 
 @mixin h4 {
-	font-family: $font-mono;
+	font-family: $font-serif;
 	font-size: $h4-font-size;
 	font-weight: 700;
 }
 
 @mixin h5 {
-	font-family: $font-mono;
+	font-family: $font-serif;
 	font-size: $h5-font-size;
 	font-weight: 700;
 }
 
 @mixin h6 {
-	font-family: $font-mono;
+	font-family: $font-serif;
 	font-size: $h6-font-size;
 	font-weight: 700;
 	font-family: $font-sans;

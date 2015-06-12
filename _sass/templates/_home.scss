@@ -3,7 +3,7 @@
 	.section-slab-hero {
 		text-align: left;
 		background-color: $color-grey-200;
-		background-image: url('../media/images/hero_inconsolata.jpg');
+		background-image: url('../media/images/hero_merriweather.jpg');
 		background-position: center center;
 
 		height: 200px;
@@ -14,23 +14,32 @@
 
 	.section-slab-city-services, .section-slab-press-releases {
 		h1 {
-			@include h2;
-			margin: 0;
+			@include h3;
+			margin-bottom: 3em;
+			@include media($tablet-up) {
+				text-align: center;
+			}
+			
 		}
 		h2 {
-			@include h3;
+			@include h4;
 			margin: 0;
+		}
+		p {
+			color: $color-grey-800;
+			font-weight: 300;
 		}
 	}
 
 	.section-slab-city-services {
-		margin-top: 3em;
+		@include media($tablet-up) {
+			margin-top: 3em;
+		}
 		.category {
 			height: rem(150px);
 			margin-bottom: 1.5em;
-			&:nth-child(2n) {
-				@include omega();
-			}
+			@include omega(3n);
+			padding-right: 2em;
 		}
 
 	}

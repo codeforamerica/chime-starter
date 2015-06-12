@@ -6,15 +6,15 @@ $title-font-size:		rem(48px);
 $h1-font-size:			rem(36px);
 $h2-font-size:			rem(28px);
 $h3-font-size:			rem(24px);
-$h4-font-size:			rem(16px);
+$h4-font-size:			rem(18px);
 $h5-font-size:			rem(16px);
 $h6-font-size:			rem(14px);
 $base-line-height:		1.5em;
 $heading-line-height:	1.3em;
 
-$font-sans: 			'Raleway', 'Helvetica', 'Arial', sans-serif;
-$font-serif:			'Georgia', 'Times New Roman', serif;
-$font-mono:				'Inconsolata', 'Courier New', 'Courier', monospace;
+$font-sans: 			'Helvetica', 'Arial', sans-serif;
+$font-serif:			'Merriweather', 'Georgia', 'Times New Roman', serif;
+$font-mono:				'Courier New', 'Courier', monospace;
 
 // Color
 $color-grey-50:			#fafafa;
@@ -28,10 +28,11 @@ $color-grey-700:		#616161;
 $color-grey-800:		#424242;
 $color-grey-900:		#212121;
 
-$color-orange:			#cd3f00;
+$color-red:			    #c1272d;
+$color-blue:            #006699;
 
 
-$color-base-link:		$color-orange;
+$color-base-link:		#000;
 
 
 // Mobile First Breakpoints

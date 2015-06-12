@@ -1,6 +1,6 @@
 .site-search {
 	@include clearfix();
-	border-bottom: 2px solid #000;
+	border-bottom: 1px solid #000;
 	input[type="search"], input[type="submit"] {
 		margin: 0;
 		float: left;
@@ -23,7 +23,7 @@
 		background-size: auto 60%;
 
 		&:hover {
-			background-color: $color-grey-100;
+			background-color: $color-red;
 		}
 
 		.lt-ie9 & {
