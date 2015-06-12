@@ -2,27 +2,27 @@
 	padding: 3em $site-margins;
 
 	h1 {
-		@include h3;
-        background-image: url('../media/images/logo_inconsolata.png');
-        background-size: 2em auto;
-        background-repeat: no-repeat;
+		@include h2;
 		margin: .6em 0;
-        background-position: right center;
-        padding: .5em 3em .5em 0;
-
-        @include media($tablet-up) {
-            background-position: left center;
-            padding: .5em 0 .5em 3em;
-        }
 
 		a {
+            background-image: url('../media/images/logo_merriweather.png');
+            background-size: 2em auto;
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding: .5em 3em .5em 0;
 			color: inherit;
+            display: block;
 			text-decoration: none;
+            @include media($tablet-up) {
+                background-position: left center;
+                padding: .5em 0 .5em 3em;
+            }
 		}
 	}
 
     .site-search {
-        margin-top: .4em;
+        margin-top: .6em;
     }
 
 }
