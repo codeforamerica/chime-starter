@@ -1,12 +1,15 @@
 .global-header {
-	padding: 3em $site-margins;
+	padding: 1em $site-margins;
+    background-color: $color-blue;
+    color: #fff;
 
 	h1 {
-		@include h2;
+		@include h3;
+        color: #fff;
 		margin: .6em 0;
 
 		a {
-            background-image: url('../media/images/logo_merriweather.png');
+            background-image: url('../media/images/logo_opensan.png');
             background-size: 2em auto;
             background-repeat: no-repeat;
             background-position: right center;
@@ -22,7 +25,7 @@
 	}
 
     .site-search {
-        margin-top: .6em;
+        margin-top: 1.2em;
     }
 
 }

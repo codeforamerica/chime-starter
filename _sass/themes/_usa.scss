@@ -1,4 +1,4 @@
-$color-red: 		#990000;
+$color-orange: 		#990000;
 $color-beige: 		#BDBBAC;
 $color-egg:			#FFFAEE;
 $color-blue: 		#5B93B4;
@@ -11,13 +11,13 @@ body {
 
 }
 .global-header {
-	background-color: $color-red;
+	background-color: $color-orange;
 	h1 {
 		color: #fff;
 	}
 }
 .global-footer {
-	background-color: $color-red;
+	background-color: $color-orange;
 	color: #fff;
 }
 
@@ -30,7 +30,7 @@ h4, h5, h6 {
 }
 
 h1 {
-	color: $color-red;
+	color: $color-orange;
 }
 
 h3 {
@@ -38,10 +38,10 @@ h3 {
 }
 
 a {
-	color: $color-red;
+	color: $color-orange;
 	text-decoration: none;
 	&:hover, &:visited, &:active {
-		color: $color-red;
+		color: $color-orange;
 	}
 }
 
@@ -62,7 +62,7 @@ button[type="button"],
 button[type="submit"],
 button[type="reset"] {
 	color: #fff;
-	background-color: $color-red;
+	background-color: $color-orange;
 }
 
 table {
@@ -83,7 +83,7 @@ table {
 
 .site-search {
 	input[type="submit"] {
-		background-color: $color-red;
+		background-color: $color-orange;
 	}
 }
 

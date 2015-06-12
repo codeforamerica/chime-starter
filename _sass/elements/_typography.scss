@@ -1,5 +1,5 @@
 html {
-	font-family: $font-serif;
+	font-family: $font-sans;
 	font-size: $em-base;
 
 }
@@ -20,6 +20,10 @@ p {
 
 a {
 	color: $color-base-link;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 	&:hover, &:active, &:visited {
 		color: $color-base-link;
 	}
@@ -52,26 +56,26 @@ h1, h2, h3, h4, h5, h6 {
 @mixin h2 {
 	font-family: $font-serif;
 	font-size: $h2-font-size;
-	font-weight: 400;
+	font-weight: 700;
 	color: #000;
-	color: $color-red;
-	text-transform: uppercase;
-	letter-spacing: .1em;	
+
 }
 
 @mixin h3 {
-	font-family: $font-serif;
+	font-family: $font-sans;
 	font-size: $h3-font-size;
 	font-weight: 400;
-	text-transform: none;
-	letter-spacing: 0;
-
+	color: $color-orange;
+	text-transform: uppercase;
+	letter-spacing: .1em;
 }
 
 @mixin h4 {
 	font-family: $font-serif;
 	font-size: $h4-font-size;
-	font-weight: 700;
+	font-weight: 400;
+	color: $color-orange;
+
 }
 
 @mixin h5 {

@@ -15,11 +15,10 @@
         <h1>Services &amp; Information</h1>
         <div class="grid-box">
             {% for show_page in page.columns[0]['pages'] %}
-            <div class="grid-item width-one-third category">
-                <h2><a href="{{ show_page['link_path'] }}">{{ show_page['title'] }}</a></h2>
+            <a href="{{ show_page['link_path'] }}" class="grid-item width-one-third category">
+                <h2>{{ show_page['title'] }}</h2>
                 <p>{{ show_page['description'] }}</p>
-            </div>
-
+            </a>
             {% endfor %}
         </div>
 
@@ -28,16 +27,16 @@
     <section class="section-slab section-slab-press-releases">
         <div class="grid-box">
             <h1>News &amp; Press Releases</h1>
-            <div class="grid-box">
-                <div class="press-release grid-item width-two-thirds shift-one-sixth end-row">
-                    <h2><a href="#">Apply to the Mayor’s Internship Program</a></h2>
+            <a href="#" class="grid-box">
+                <div class="press-release grid-item width-one-half">
+                    <h2>Apply to the Mayor’s Internship Program</h2>
                     <p>Undergraduate and graduate students interested in City government or gaining valuable workplace experience should apply to the MIPs before January 30th, 2015.</p>
                 </div>
-                <div class="press-release grid-item width-two-thirds shift-one-sixth end-row">
-                    <h2><a href="#">Message to the Police Department</a></h2>
+                <div class="press-release grid-item width-one-half end-row">
+                    <h2>Message to the Police Department</h2>
                     <p>The mayor's video message will be shown at all Police Department Roll Calls across the city beginning Thursday, December 11th until all members of the Department have seen it.</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 </div>
