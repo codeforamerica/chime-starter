@@ -1,21 +1,37 @@
 .template-home {
 
 	.section-slab-hero {
-		text-align: left;
-		background-color: $color-grey-200;
-		background-image: url('../media/images/hero_inconsolata.jpg');
-		background-position: center center;
-
-		height: 200px;
-		@include media($tablet-up) {
-			height: 400px
+		blockquote {
+			border: 0;
+			padding: 0;
+			margin: 0;
+			.quote {
+				@include h3;
+				color: #000;
+				@include media($tablet-up) {
+					@include title;
+					color: #000;
+				}
+				
+			}
+			.author {	
+				@include h4;
+				@include media($tablet-up) {
+					@include h2;
+					color: #000;
+				}
+				text-align: right;
+				color: $color-grey-700;
+			}
 		}
 	}
 
 	.section-slab-city-services, .section-slab-press-releases {
 		h1 {
-			@include h2;
+			@include h3;
+			color: $color-grey-600;
 			margin: 0;
+			margin-bottom: 1em;
 		}
 		h2 {
 			@include h3;
@@ -26,10 +42,12 @@
 	.section-slab-city-services {
 		margin-top: 3em;
 		.category {
-			height: rem(150px);
 			margin-bottom: 1.5em;
-			&:nth-child(2n) {
-				@include omega();
+			padding-right: 2em;
+			@include omega(2n);
+
+			@include media($tablet-up) {
+				height: rem(150px);
 			}
 		}
 
@@ -38,6 +56,7 @@
 	.section-slab-press-releases {
 		.press-release {
 			margin-bottom: 3em;
+			padding-right: 2em;
 		}
 	}
 }

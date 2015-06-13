@@ -1,14 +1,14 @@
 .section-slab {
+	max-width: $site-max-width;
 	margin: {
-		left: -$site-margins;
-		right: -$site-margins;
+		left: auto;
+		right: auto;
 	}
-	h1, h2, h3, h4, h5, h6, > .grid-box {
-		max-width: $site-max-width;
-		margin: {
-			left: auto;
-			right: auto;
-		}
+	padding: 3em 0;
+
+	border-bottom: 3px solid #000;
+
+	&:last-of-type {
+		border-bottom: 0;
 	}
-	padding: 2em $site-margins;
 }

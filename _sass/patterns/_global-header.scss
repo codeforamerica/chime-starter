@@ -1,30 +1,32 @@
 .global-header {
-	padding: 3em $site-margins;
-	.logo {
-		display: block;
-		position: absolute;
-		left: -50px;
-		top: -50px;
-		height: 140px;
-		width: 140px;
-		background-image: url('../media/images/logo_inconsolata.png');
-		background-size: auto 100%;
-		background-position: center center;
-		background-repeat: no-repeat;
+	padding: 1em $site-margins;
+
+	@include media($tablet-up) {
+		padding: 3em $site-margins;
 	}
 	h1 {
-		@include h3;
-		text-align: center;
+		@include h2;
 		@include media($tablet-up) {
-			@include title;
-			text-align: left;
 			margin: 0;
 		}
 		
 
 		a {
+			display: block;
+			background-image: url('../media/images/logo_playfair.png');
+			background-size: auto 2em;
+			background-position: right center;
+			background-repeat: no-repeat;
 			color: inherit;
 			text-decoration: none;
+			padding: .5em;
+			padding-right: 3em;
+
+			@include media($tablet-up) {
+				padding-right: 0;
+				padding-left: 3em;
+				background-position: left center;
+			}
 		}
 	}
 
