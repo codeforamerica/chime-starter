@@ -7,13 +7,19 @@
 		top: -50px;
 		height: 140px;
 		width: 140px;
+		z-index: -1;
 		background-image: url('../media/images/logo_inconsolata.png');
 		background-size: auto 100%;
 		background-position: center center;
 		background-repeat: no-repeat;
+
+		.lt-ie9 & {
+			background-image: url('../media/images/logo_inconsolata_ie.png');
+		}
 	}
 	h1 {
-		@include h3;
+		@include h1;
+		background-color: #fff;
 		text-align: center;
 		@include media($tablet-up) {
 			@include title;
@@ -21,6 +27,10 @@
 			margin: 0;
 		}
 		
+		.lt-ie9 & {
+			@include title;
+		}
+
 
 		a {
 			color: inherit;
