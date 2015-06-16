@@ -1,28 +1,11 @@
 .global-header {
 	padding: 3em $site-margins;
-	.logo {
-		display: block;
-		height: 80px;
-		margin-top: -10px;
-		background-image: url('../media/images/logo_lora.png');
-		background-size: auto 100%;
-		background-position: center center;
-		background-repeat: no-repeat;
-
-		.lt-ie9 & {
-			background-image: url('../media/images/logo_lora_ie.png');
-		}
-	}
+	background-color: $color-yellow;
+	border-bottom: 3px solid #000;
 	h1 {
-		@include h2;
-		font-style: italic;
-		font-weight: 400;
-		text-align: center;
-		@include media($tablet-up) {
-			@include title;
-			text-align: left;
-			margin: 0;
-		}
+		@include h1;
+		text-align: left;
+		margin: 0;
 		
 
 		a {
@@ -30,12 +13,6 @@
 			text-decoration: none;
 		}
 
-		.lt-ie9 & {
-			@include title;
-		}
 	}
 
-	.site-search {
-		margin-top: .6em;
-	}
 }

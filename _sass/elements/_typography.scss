@@ -42,27 +42,30 @@ h1, h2, h3, h4, h5, h6 {
 
 @mixin title {
 	font-size: $title-font-size;
-	font-style: italic;
 	font-weight: 400;
 	color: $color-green;
+	font-family: $font-sans;
 }
 
 @mixin h1 {
 	font-size: $h1-font-size;
 	font-weight: 700;
 	color: $color-green;
+	font-family: $font-sans;
 }
 
 @mixin h2 {
 	font-size: $h2-font-size;
 	font-weight: 700;
 	color: #000;
+	font-family: $font-sans;
 }
 
 @mixin h3 {
 	font-size: $h3-font-size;
 	font-weight: 700;
-	color: $color-green;
+	color: $color-blue;
+	font-family: $font-sans;
 }
 
 @mixin h4 {
@@ -78,6 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: $h5-font-size;
 	font-weight: 700;
 	color: $color-green;
+	font-family: $font-sans;
 }
 
 @mixin h6 {

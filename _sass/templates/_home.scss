@@ -3,9 +3,9 @@
 	.section-slab-hero {
 		text-align: left;
 		background-color: $color-grey-200;
-		background-image: url('../media/images/hero_lora.jpg');
+		background-image: url('../media/images/hero_springfield.png');
 		background-position: center center;
-
+		border-bottom: 3px solid #000;
 		height: 200px;
 		@include media($tablet-up) {
 			height: 400px
@@ -14,10 +14,8 @@
 
 	.section-slab-city-services, .section-slab-press-releases {
 		h1 {
-			@include h4;
-			border-bottom: 3px double #000;
+			@include h1;
 			padding-bottom: 1em;
-			margin-bottom: 2em;
 		}
 		h2 {
 			@include h3;
