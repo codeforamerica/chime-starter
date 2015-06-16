@@ -12,11 +12,21 @@
 					@include title;
 					color: #000;
 				}
+
+				.lt-ie9 & {
+					@include title;
+					color: #000;
+				}
 				
 			}
 			.author {	
 				@include h4;
 				@include media($tablet-up) {
+					@include h2;
+					color: #000;
+				}
+
+				.lt-ie9 & {
 					@include h2;
 					color: #000;
 				}
