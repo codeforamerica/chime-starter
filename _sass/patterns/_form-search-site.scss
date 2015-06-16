@@ -1,20 +1,20 @@
 .site-search {
 	@include clearfix();
 	background-color: $color-grey-200;
-	input[type="search"], input[type="submit"] {
+	.site-search-input, .site-search-button {
 		margin: 0;
 		float: left;
 		height: 3em;
 		border: 0;
 		background-color: transparent;
 	}
-	input[type="search"] {
+	.site-search-input {
 		width: calc(100% - 60px);
 		.lt-ie9 & {
 			width: 85%;
 		}
 	}
-	input[type="submit"] {
+	.site-search-button {
 		width: 60px;
 		text-indent: -9999px;
 		background-image: url('ui/icon_search.svg');
