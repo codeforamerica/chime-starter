@@ -14,6 +14,10 @@
 			color: inherit;
             display: block;
 			text-decoration: none;
+
+			.lt-ie9 & {
+				background-image: url('../media/images/logo_merriweather_ie.png');
+			}
             @include media($tablet-up) {
                 background-position: left center;
                 padding: .5em 0 .5em 3em;
