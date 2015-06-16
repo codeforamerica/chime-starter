@@ -4,10 +4,18 @@ table {
 	thead {
 		th {
 			text-align: left;
+			background-color: $color-grey-300;
 		}
 	}
 	th, td {
-		border: 1px solid $color-grey-900;
-		padding: .5em;
+		padding: .5em 1em;
+	}
+	tbody {
+		tr {
+			border-bottom: 1px solid $color-grey-300;
+			&:last-of-type {
+				border-bottom: 0;
+			}
+		}
 	}
 }

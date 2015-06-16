@@ -22,6 +22,10 @@
 			padding: .5em;
 			padding-right: 3em;
 
+			.lt-ie9 & {
+				background-image: url('../media/images/logo_playfair_ie.png');
+			}
+
 			@include media($tablet-up) {
 				padding-right: 0;
 				padding-left: 3em;
