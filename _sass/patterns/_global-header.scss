@@ -8,6 +8,10 @@
 		background-size: auto 100%;
 		background-position: center center;
 		background-repeat: no-repeat;
+
+		.lt-ie9 & {
+			background-image: url('../media/images/logo_lora_ie.png');
+		}
 	}
 	h1 {
 		@include h2;
@@ -24,6 +28,10 @@
 		a {
 			color: inherit;
 			text-decoration: none;
+		}
+
+		.lt-ie9 & {
+			@include title;
 		}
 	}
 
