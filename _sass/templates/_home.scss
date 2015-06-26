@@ -3,7 +3,7 @@
 	.section-slab-hero {
 		text-align: left;
 		background-color: $color-grey-200;
-		background-image: url('../media/images/hero_boston_1.jpg');
+		background-image: url('../media/images/hero_nola.jpg');
 		background-position: center center;
 
 		height: 200px;
@@ -15,6 +15,7 @@
 	.section-slab-city-services, .section-slab-press-releases {
 		h1 {
 			@include h2;
+			color: #000;
 			margin-bottom: 2em;
 		}
 		h2 {
