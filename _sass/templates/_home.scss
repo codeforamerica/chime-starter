@@ -15,6 +15,7 @@
 	.section-slab-city-services, .section-slab-press-releases {
 		h1 {
 			@include h2;
+			color: #000;
 			margin-bottom: 2em;
 		}
 		h2 {
