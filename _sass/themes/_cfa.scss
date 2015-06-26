@@ -1,5 +1,5 @@
 // Colors
-$color-orange:			#cf1b41;
+$color-green:			#cf1b41;
 $color-blue:		#399fd3;
 $color-gray:		#6D6E71;
 $color-light-blue:	#7ab5d6;
@@ -9,7 +9,7 @@ $color-light-gray:	#e5e5e5;
 $color-medium-gray:	#999595;
 $color-dark-gray:	#444444;
 $color-medium-red:	#aa1c3a;
-$color-orange:		#e87d2b;
+$color-green:		#e87d2b;
 $color-purple:		#69579C;
 $color-teal:		#00a175;
 $color-yellow:		#fedd44;
@@ -30,10 +30,10 @@ h2, h3, h4 {
 }
 
 a {
-	color: $color-orange;
+	color: $color-green;
 	text-decoration: none;
 	&:hover, &:visited, &:active {
-		color: $color-orange;
+		color: $color-green;
 	}
 }
 
@@ -68,7 +68,7 @@ textarea {
 
 aside {
 	color: #fff;
-	background-color: $color-orange;
+	background-color: $color-green;
 }
 
 // Site Patterns
@@ -88,7 +88,7 @@ aside {
 	background-color: #fff;
 	border-bottom: 1px solid $color-grey-300;
 	h1 {
-		color: $color-orange;
+		color: $color-green;
 	}
 	.site-search {
 		input[type="search"] {
