@@ -7,7 +7,7 @@
 
 # About this Guide
 
-This is a living style guide based on the live CSS of this site. By building the style guide as a part of the site itself, we'll never need to worry that the style guide falls out of date with the existing site design as documentation tends to do. This style guide is meant for as reference for designers, developers, as well as anyone else interested in the design and front-end concepts we use to build the backbone of government websites.
+This is a living style guide based on the live CSS of this site. This style guide is meant for as reference for designers, developers, as well as anyone else interested in the design and front-end concepts we use to build the backbone of government websites.
 
 # CSS Architecture
 
@@ -17,7 +17,16 @@ This is a living style guide based on the live CSS of this site. By building the
 1. Media queries are built **mobile first**.
 1. Hard coded magic numbers are avoided and, if necessary, defined in the `_variables.scss` file.
 1. Spacing units are as much as possible defined as `rem` or `em` units so they scale appropriately with text size.
-1. Browser compatility is defined by...
+
+# Browser Support
+
+Browser compatility is tested against IE8 and up, and latest versions of Chrome, Firefox, and Safari. Partial support for HTML5 and CSS3 in IE8 and IE9 are supplied by polyfills:
+
+1. **html5shiv:** adds support for HTML5 elements.
+1. **respond.js:** addds support for media query.
+1. **selectivr.js:** adds support for CSS3 psuedo and attribute selectors.
+1. **rem.js:** adds support for rem units.
+
 
 # Colors
 
@@ -41,12 +50,15 @@ The grid layout system is a basic grid system used to build site pages where the
 - `.width-seven-twelfths`
 - `.width-eleven-twelfths`
 		
+### Notes
 
-Generally, fractional widths of all grid items within a grid box should add up to one complete row. If whitespace is needed within a row, `shift` classes are available to add whitespace to the left of a grid item.
+1. Generally, fractional widths of all grid items within a grid box should add up to one complete row. If whitespace is needed within a row, `shift` classes are available to add whitespace to the left of a grid item.
 
-If a grid box needs to contain more than one row, the class `.end-row` is required on the last item of each row.
+1. If a grid box needs to contain more than one row, the class `.end-row` is required on the last item of each row.
 
-On mobile devices, all grid items default to 100% width.
+1. On mobile devices, all grid items default to 100% width.
+
+.1 For more complicated grid use cases (such as nested grids or different behavior on mobile devices), use the built in Bourbon and Neat Sass mixins.
 
 ### Example Grid Box
 
@@ -141,6 +153,11 @@ This section pertains to the styling of basic HTML elements.
 </div>
 
 ## Lists
+
+Outside of `<article>` elements, lists are unstyled by default. To use styled lists outside of `<article>` elements, use the following classes:
+
+- `.list-decimal`
+- `.list-bulleted`
 
 <div class="preview">
 	<ol>
@@ -369,7 +386,7 @@ Breadcrumbs offer a contextual cue to where the user is in the site hierarchy. T
 
 ## Slab Section
 
-Slab are used to separate logical chunks of content within a page. They are a foundational building block of content meant to be customized for specific usages. Each instance of a slab section should have a second class of `site-section-instance` where custom styles can be applied. 
+Slab are used to separate logical chunks of content within a page. They are a foundational building block of content meant to be customized for specific usages. Each instance of a slab section should have a second class of `section-slab-[instance]` where custom styles can be applied. 
 
 Common uses of slab sections would to be include a header and custom layout of elements using the grid box layout. Custom background colors or images can also be applied to slab sections as they are full-bleed by default.
 
