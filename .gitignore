@@ -1,3 +1,4 @@
 _site
+_plugins
 .sass-cache
 .DS_Store
