@@ -63,6 +63,9 @@ button[type="reset"] {
 	&:hover {
 		background-color: $color-grey-400;
 	}
+	&:active {
+		background-color: $color-grey-500;
+	}
 }
 
 input[type="submit"]:disabled {
