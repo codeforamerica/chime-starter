@@ -8,6 +8,14 @@ aside {
 		bottom: 2em;
 	}
 
+	a {
+		color: #fff;
+		text-decoration: underline;
+		&:hover, &:visited, &:active {
+			color: #fff;
+		}
+	}
+
 	& *:first-child {
 		margin-top: 0;
 	}
