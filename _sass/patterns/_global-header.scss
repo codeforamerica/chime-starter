@@ -21,6 +21,10 @@
                 background-position: left center;
                 padding: .5em 0 .5em 3em;
             }
+
+            .lt-ie9 & {
+            	background-image: url('../media/images/logo_orlando_ie.png');
+            }
 		}
 	}
 
