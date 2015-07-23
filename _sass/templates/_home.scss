@@ -2,9 +2,9 @@
 
 	.section-slab-hero {
 		text-align: left;
-		background-color: $color-grey-200;
-		background-image: url('../media/images/hero_opensan.jpg');
-		background-position: center center;
+		background: $color-grey-200 url('../media/images/hero_opensan.jpg') no-repeat top center;
+		background-size: cover; //IE9+ only
+
 
 		height: 200px;
 		@include media($tablet-up) {
@@ -16,6 +16,9 @@
 		h1 {
 			@include h2;
 			margin-bottom: 2em;
+		}
+		a {
+			text-decoration: none;
 		}
 		h2 {
 			@include h4;
