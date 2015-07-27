@@ -63,7 +63,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dignissimos mo
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor saepe quidem inventore voluptatem labore, natus delectus? Quaerat ex similique illum aspernatur sint, et necessitatibus quisquam, esse, illo delectus consequatur eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor saepe quidem inventore voluptatem labore, natus delectus? Quaerat ex similique illum aspernatur sint, et necessitatibus quisquam, esse, illo delectus consequatur eum!
 
 <aside class="width-one-half align-right">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, consectetur ratione quam, ut quasi neque ad atque hic. Earum assumenda, maxime mollitia illo quos quisquam provident! Consequatur minima labore alias!</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, consectetur ratione quam, ut quasi neque ad atque hic. Earum assumenda, maxime mollitia illo quos quisquam provident! Consequatur minima labore alias! <a href="#">Here's a link</a></p>
 </aside>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor saepe quidem inventore voluptatem labore, natus delectus? Quaerat ex similique illum aspernatur sint, et necessitatibus quisquam, esse, illo delectus consequatur eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor saepe quidem inventore voluptatem labore, natus delectus? Quaerat ex similique illum aspernatur sint, et necessitatibus quisquam, esse, illo delectus consequatur eum!
