@@ -25,10 +25,6 @@ textarea  {
 	padding: 0 .7em;
 	margin: .5em 0 1.5em 0;
 	height: 2em;
-	&:focus {
-		border: 1px solid $color-base-link;
-		box-shadow: 0 0 0 1px $color-base-link;
-	}
 }
 
 // Inline form elements
@@ -40,10 +36,21 @@ input[type="checkbox"] {
 		bottom: .5em;
 		right: .5em;
 	}
-	&:focus {
-		border: 1px solid $color-base-link;
-		box-shadow: 0 0 0 1px $color-base-link;
-	}
+}
+
+input:focus {
+	border: 1px solid $color-base-link;
+	box-shadow: 0 0 0 1px $color-base-link;
+}
+
+input.input-success, input.input-success:focus {
+	border: 1px solid $color-green;
+	box-shadow: 0 0 0 1px $color-green;	
+}
+
+input.input-error, input.input-error:focus {
+	border: 1px solid $color-red;
+	box-shadow: 0 0 0 1px $color-red;	
 }
 
 label {

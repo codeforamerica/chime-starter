@@ -117,21 +117,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor rem voluptatibus
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem aut dolore delectus beatae ipsam, accusamus deleniti totam aliquam a nisi excepturi corporis cupiditate sunt ullam, natus sint illo commodi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime obcaecati alias, minus molestias tempore voluptas? Ab nostrum cupiditate ipsum maxime hic, ratione blanditiis, recusandae vel eligendi aperiam tempore alias architecto.
 
-# Grid Box
-
-Would something like this be useful?
-
-<div class="grid-box">
-	<div class="grid-item width-one-whole">
-		One Whole
-	</div>
-	<div class="grid-item width-one-half">One Half</div>
-	<div class="grid-item width-one-half end-row">One Half</div>
-	<div class="grid-item width-one-third">One Third</div>
-	<div class="grid-item width-two-thirds end-row">Two Thirds</div>
-	<div class="grid-item width-one-fourth">One Fourth</div>
-	<div class="grid-item width-three-fourths">Three Fourths</div>
-</div>
 
 # Forms
 

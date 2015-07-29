@@ -249,6 +249,14 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 
 ## Inputs
 
+### Input Validation
+<div class="preview">
+	<label for="">Input Success</label>
+	<input type="text" name="input-validation-success" class="input-success">
+	<label for="">Input Error</label>
+	<input type="text" name="input-validation-error" class="input-error">
+</div>
+
 ### Text Input Fields
 <div class="preview">
 	<label for="">Input Type Text</label>
@@ -271,7 +279,6 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 
 	<label for="">Input Type Search</label>
 	<input type="search" name="input-type-search">
-
 </div>
 
 ### Checkboxes and Radio Buttons
