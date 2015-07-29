@@ -223,6 +223,8 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 
 <div class="preview">
 	<aside class="width-one-half align-right">
+		<h3>Aside Header</h3>
+		<p><a href="#">Example of a link within an aside</a></p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero perferendis placeat error nemo, atque accusantium?</p>
 	</aside>
 	<p class="is-peripheral">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ipsa voluptatem consequuntur, mollitia soluta, quasi ducimus voluptate vitae eum nulla ad aliquid, saepe reprehenderit. Dolorem, voluptates, corrupti? Labore, rem, incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores quas, adipisci cum voluptate vero necessitatibus animi iure similique? Illo, impedit reiciendis cumque saepe ut quaerat odio dolorum sapiente. Delectus.</p>
@@ -245,7 +247,7 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 	<p class="is-peripheral">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ipsa voluptatem consequuntur, mollitia soluta, quasi ducimus voluptate vitae eum nulla ad aliquid, saepe reprehenderit. Dolorem, voluptates, corrupti? Labore, rem, incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores quas, adipisci cum voluptate vero necessitatibus animi iure similique? Illo, impedit reiciendis cumque saepe ut quaerat odio dolorum sapiente. Delectus.</p>
 </div>
 
-## Forms
+## Inputs
 
 ### Text Input Fields
 <div class="preview">
@@ -317,7 +319,14 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 	<input type="week" name="input-type-week">
 </div>
 
-### Buttons
+## Buttons
+
+Colored buttons should be used to hint at the purpose button. 
+
+- The primary button should only be used once per form and denotes the next logical step in the process (e.g., Continue, Submit)
+- The danger button should be used to denote an important or potentially dangerous action. (e.g., Delete)
+- The outline button should be used to deemphasize less important actions.
+
 <div class="preview">
 	<label for="button-type-button">Buttons</label>
 	<button type="button">Button</button>
@@ -329,6 +338,17 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 	<input type="reset" name="input-type-reset">
 	<input type="submit" name="input-type-submit">
 	<input type="submit" name="input-type-submit" disabled="">
+
+	<label for="button-type-color">Colored Buttons</label>
+	<button class="button button-primary">Primary Button</button>
+	<button class="button button-danger">Danger Button</button>
+	<button class="button button-outline">Outline Button</button>
+
+	<label for="button-type-color">Button Sizes</label>
+	<button class="button">Regular Button</button>
+	<button class="button button-large">Large Button</button>
+	
+	
 </div>
 
 
@@ -350,7 +370,7 @@ This is the header that appears at the top of every page.
 				{% unless page.role == 'homepage' %}
 				<form class="site-search">
 				    <input type="search" placeholder="e.g., pay a parking ticket">
-				    <input type="submit" value="Search">
+				    <input type="submit" value="&#xf002">
 				</form>
 				{% endunless %}
 			</div>
@@ -414,19 +434,10 @@ A default combinaton of a seach type input and a custom submit button used to gl
 <div class="preview">
 	<form class="site-search">
 	    <input type="search" placeholder="e.g., pay a parking ticket">
-	    <input type="submit" value="Search">
+	    <input type="submit" value="&#xf002">
 	</form>
 </div>
 
-# Templates
-
-## Home
-
-## Category
-
-## Subcategory
-
-## Article
 
 # Contributing
 
