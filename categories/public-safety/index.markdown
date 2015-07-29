@@ -6,5 +6,5 @@
 "order": !!int |-
   2
 "description": |-
-  Includes emergency prepardness and safety advice and crime
+  Includes emergency preparedness and safety advice and crime
 ---

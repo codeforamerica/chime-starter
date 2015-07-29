@@ -17,7 +17,7 @@
 		input[type="search"], input[type="submit"] {
 			color: #000;
 			height: 2em;
-			width: calc(100% - 2em);
+			width: calc(100% - 2.5em);
 			margin: {
 				top: 2em;
 				bottom: .5em;
@@ -35,7 +35,7 @@
 			}
 		}
 		input[type="submit"] {
-			width: 2em;
+			width: 2.5em;
 			.lt-ie9 & {
 				width: 15%;
 			}

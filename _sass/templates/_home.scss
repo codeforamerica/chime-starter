@@ -2,7 +2,8 @@
 
 	.section-slab-hero {
 		text-align: left;
-		background-color: $color-grey-200;
+		background-color: $color-grey-100;
+		border-bottom: 1px solid $color-grey-300;
 		padding: {
 			top: 4em;
 			bottom: 4em;
@@ -28,6 +29,10 @@
 			padding: 1.5em 0;
 			&:nth-child(3n) {
 				@include omega();
+			}
+
+			@include media($tablet-up) {
+				margin-bottom: 1em;
 			}
 		}
 		h2 {

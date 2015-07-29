@@ -7,16 +7,16 @@ ul, ol {
 
 @mixin list-bulleted() {
 	list-style-type: disc;
-	padding-left: 2em;
+	padding-left: 4em;
 	margin: {
-		top: 2em;
-		bottom: 2em;
+		top: 1em;
+		bottom: 1em;
 	}
 	li {
 		line-height: $base-line-height;
 		margin: {
-			top: 1em;
-			bottom: 1em;
+			top: .5em;
+			bottom: .5em;
 		}
 	}
 }
@@ -27,16 +27,16 @@ ul, ol {
 
 @mixin list-decimal() {
 	list-style-type: decimal;
-	padding-left: 2em;
+	padding-left: 4em;
 	margin: {
-		top: 2em;
-		bottom: 2em;
+		top: 1em;
+		bottom: 1em;
 	}
 	li {
 		line-height: $base-line-height;
 		margin: {
-			top: 1em;
-			bottom: 1em;
+			top: .5em;
+			bottom: .5em;
 		}
 	}
 }
