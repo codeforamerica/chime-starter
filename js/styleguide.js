@@ -71,7 +71,7 @@ Styleguide.prototype.generateTOC = function() {
 			window.location.hash = hashLocation;
 		})
 
-		$('.button--toggle-sidebar').click(function(e) {
+		$('.button-toggle-sidebar').click(function(e) {
 			e.preventDefault();
 			$('body').toggleClass('sidebar-open');
 		})

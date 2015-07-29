@@ -28,7 +28,9 @@ $width-nav-sidebar: 250px;
 		}
 	}
 
-	.button--toggle-sidebar {
+	.button-toggle-sidebar {
+		background-color: transparent;
+		border: 0;
 		color: #fff;
 		width: 1.5em;
 		margin-right: 1em;
