@@ -79,6 +79,11 @@ Styleguide.prototype.generateTOC = function() {
 
 	var toc = this.buildTOC();
 	this.render();
+
+	//Initial scroll to hash location
+	if(window.location.hash) {
+		$('.main-content').scrollTop($(window.location.hash).position().top);
+	}
 }
 
 Styleguide.prototype.generateCodeSnippets = function() {
