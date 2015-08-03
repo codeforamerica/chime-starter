@@ -1,0 +1,11 @@
+.beta-banner {
+	color: #fff;
+	background-color: $color-red;
+	font-size: rem(8px);
+	font-weight: 600;
+	text-align: center;
+	padding: .5em $site-margins;
+	a {
+		color: inherit;
+	}	
+}

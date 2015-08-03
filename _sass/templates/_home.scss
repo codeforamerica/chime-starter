@@ -2,12 +2,12 @@
 
 	.section-slab-hero {
 		text-align: left;
-		background: $color-grey-200 url('../media/images/hero_inconsolata.jpg') no-repeat center center;
+		background: $color-grey-200 url('../media/images/hero_oakland_5.jpg') no-repeat center center;
 		background-size: cover;
 
 		height: 200px;
 		@include media($tablet-up) {
-			height: 400px
+			height: 350px
 		}
 	}
 
@@ -15,6 +15,7 @@
 		h1 {
 			@include h2;
 			margin: 0;
+			margin-bottom: 2em;
 		}
 		h2 {
 			@include h3;
@@ -25,7 +26,7 @@
 	.section-slab-city-services {
 		margin-top: 3em;
 		.category {
-			height: rem(150px);
+			height: rem(125px);
 			margin-bottom: 1.5em;
 			&:nth-child(2n) {
 				@include omega();

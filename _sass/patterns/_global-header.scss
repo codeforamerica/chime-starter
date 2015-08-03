@@ -16,8 +16,8 @@
 		a {
 			display: block;
 			padding: .5em 0;
-			background-image: url('../media/images/logo_inconsolata.png');
-			background-size: auto 1.5em;
+			background-image: url('../media/images/logo_oakland.png');
+			background-size: auto 1em;
 			background-position: right center;
 			background-repeat: no-repeat;
 			color: inherit;
@@ -31,7 +31,7 @@
 			}
 
 			.lt-ie9 & {
-				background-image: url('../media/images/logo_inconsolata_ie.png');
+				background-image: url('../media/images/logo_oakland_ie.png');
 			}
 		}
 	}
