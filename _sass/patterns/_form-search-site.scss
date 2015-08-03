@@ -7,20 +7,27 @@
 		height: 3em;
 		border: 0;
 		background-color: #fff;
+		outline: none;
+		&:focus {
+			outline: 0;
+			box-shadow: none;
+		}
 	}
 	input[type="search"] {
 		width: calc(100% - 60px);
+
 		.lt-ie9 & {
 			width: 85%;
 		}
 	}
 	input[type="submit"] {
 		width: 60px;
-		text-indent: -9999px;
-		background-image: url('ui/icon_search.svg');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: auto 60%;
+		font-family: "FontAwesome";
+		font-weight: 400;
+		border: 0;
 
 		&:hover {
 			background-color: $color-grey-100;
@@ -28,7 +35,6 @@
 
 		.lt-ie9 & {
 			width: 15%;
-			background-image: url('ui/icon_search_ie.png');
 		}
 	}
 }

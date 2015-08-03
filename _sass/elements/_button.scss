@@ -1,0 +1,80 @@
+// Buttons
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"],
+button[type="button"],
+button[type="submit"],
+button[type="reset"] {
+	-webkit-appearance: none;
+	font-weight: bold;
+	background-color: $color-grey-300;
+	border: 1px solid $color-grey-300;
+	border-radius: $border-radius;
+	font-size: $base-font-size;
+	text-align: center;
+	margin: {
+		top: .5em;
+		bottom: .5em;
+		right: .5em;
+	}
+	outline: none;
+	padding: .5em .7em;
+	&:hover {
+		background-color: $color-grey-500;
+		border: 1px solid $color-grey-500;
+	}
+	&:active {
+		background-color: $color-grey-600;
+		border: 1px solid $color-grey-600;
+	}
+	&:focus {
+		border: 1px solid $color-base-link;
+		box-shadow: 0 0 0 1px $color-base-link;
+	}
+}
+
+input[type="submit"]:disabled, button[type="submit"]:disabled {
+	background-color: $color-grey-300;
+	color: $color-grey-500;
+	cursor: not-allowed;
+	&:hover {
+		background-color: $color-grey-300;
+		border: 1px solid $color-grey-300;
+	}
+}
+
+button.button-primary, .button.button-primary {
+	color: #fff;
+	background-color: $color-green;
+	border-color: $color-green;
+	&:hover {
+		background-color: shade($color-green, 20%);
+		border-color: shade($color-green, 20%);
+	}
+}
+
+button.button-danger, .button.button-danger {
+	color: $color-red;
+	background-color: transparent;
+	border-color: $color-grey-400;
+	&:hover {
+		background-color: transparent;
+		border-color: $color-grey-600;
+	}
+}
+
+button.button-outline, .button.button-outline {
+	color: $color-grey-700;
+	background-color: transparent;
+	border-color: $color-grey-400;
+	&:hover {
+		background-color: transparent;
+		border-color: $color-grey-600;
+	}
+}
+
+button.button-large, .button.button-large {
+	font-size: 1.5em;
+}

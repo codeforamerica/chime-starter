@@ -70,10 +70,20 @@ Styleguide.prototype.generateTOC = function() {
 			}, 200);
 			window.location.hash = hashLocation;
 		})
+
+		$('.button-toggle-sidebar').click(function(e) {
+			e.preventDefault();
+			$('body').toggleClass('sidebar-open');
+		})
 	}	
 
 	var toc = this.buildTOC();
 	this.render();
+
+	//Initial scroll to hash location
+	if(window.location.hash) {
+		$('.main-content').scrollTop($(window.location.hash).position().top);
+	}
 }
 
 Styleguide.prototype.generateCodeSnippets = function() {

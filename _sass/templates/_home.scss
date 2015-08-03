@@ -2,9 +2,8 @@
 
 	.section-slab-hero {
 		text-align: left;
-		background-color: $color-grey-200;
-		background-image: url('../media/images/hero_inconsolata.jpg');
-		background-position: center center;
+		background: $color-grey-200 url('../media/images/hero_inconsolata.jpg') no-repeat center center;
+		background-size: cover;
 
 		height: 200px;
 		@include media($tablet-up) {

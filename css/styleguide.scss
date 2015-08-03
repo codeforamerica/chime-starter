@@ -1,6 +1,7 @@
 ---
 ---
 
+@import 'bourbon/bourbon';
 @import 'core/defaults';
 @import 'core/utilities';
 
@@ -13,7 +14,46 @@ $width-nav-sidebar: 250px;
 	right: 0;
 	bottom: 0;
 
+	> .global-header {
+		@include clearfix();
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		right: 0;
+
+		h1 {
+			font-size: $h4-font-size;
+			display: inline-block;
+		}
+	}
+
+	.button-toggle-sidebar {
+		background-color: transparent;
+		border: 0;
+		color: #fff;
+		width: 1.5em;
+		margin-right: 1em;
+		display: inline-block;
+		font-family: 'FontAwesome';
+		text-decoration: none;
+
+		&:before {
+			content: '\f0c9';
+		}
+		.sidebar-open & {
+			&:before {
+				content: '\f00d';
+			}
+		}
+
+		@include media($tablet-up + $width-nav-sidebar) {
+			display: none;
+		}
+	}
+
 	.nav-sidebar {
+		@include transition(margin-left .2s ease-out);
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -22,14 +62,22 @@ $width-nav-sidebar: 250px;
 		background-color: $color-grey-50;
 		border-right: 1px solid $color-grey-200;
 		padding: 1em 2em;
+		padding-top: 6em;
 		overflow: auto;
-		display: none;
+		margin-left: -$width-nav-sidebar;
+		z-index: 1;
+
+		.sidebar-open & {
+			margin-left: 0;
+		}
+
 		.lt-ie9 & {
 			width: 25%;
 		}
 
 		@include media($tablet-up + $width-nav-sidebar) {
 			display: block;
+			margin-left: 0;
 		}
 		
 		h1 {
@@ -90,7 +138,7 @@ $width-nav-sidebar: 250px;
 			border-bottom: 1px solid #000;
 			padding-bottom: .5em;
 			&:not(:first-child) {
-				margin-top: 2em;
+				margin-top: 4em;
 			}
 		}
 		> h2, > h3 {

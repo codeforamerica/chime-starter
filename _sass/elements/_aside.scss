@@ -15,4 +15,11 @@ aside {
 	& *:last-child {
 		margin-bottom: 0;
 	}
+
+	a {
+		color: inherit;
+		&:hover, &:active, &:visited {
+			color: inherit;
+		}
+	}
 }
