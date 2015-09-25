@@ -2,7 +2,7 @@
 "layout": |-
   article
 "title": |-
-  Pattern Samples
+  Example Article
 ---
 
 # Heading Level 1
