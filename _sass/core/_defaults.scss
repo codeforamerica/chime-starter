@@ -4,8 +4,8 @@
 
 // Typography
 $em-base:				10px; // default is already defined in bourbon
-$base-font-size:		rem(16px) !default;
-$small-font-size:		rem(14px) !default;
+$base-font-size:		rem(19px) !default;
+$small-font-size:		rem(16px) !default;
 $title-font-size:		rem(48px) !default;
 $h1-font-size:			rem(36px) !default;
 $h2-font-size:			rem(28px) !default;
@@ -17,9 +17,8 @@ $base-line-height:		1.5em !default;
 $heading-line-height:	1.3em !default;
 
 $font-sans: 			'Source Sans Pro', 'Helvetica', 'Arial', sans-serif !default;
-$font-serif:			'Merriweather', 'Georgia', 'Times New Roman', serif;
-$font-mono:				'Source Code Pro', 'Courier New', 'Courier', monospace !default;
-
+$font-serif:			'Source Serif Pro', 'Georgia', 'Times New Roman', serif;
+$font-icon:				'FontAwesome';
 
 // Color
 $color-grey-50:			#fafafa !default;

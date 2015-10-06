@@ -1,3 +1,14 @@
+.row {
+	@include clearfix();
+}
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right;
+}
+
 .grid-box {
 	@include outer-container();
 	max-width: $site-max-width;

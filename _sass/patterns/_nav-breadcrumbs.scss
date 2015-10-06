@@ -1,24 +1,25 @@
 .nav-breadcrumbs {
     margin: 1em 0;
+    font-size: $small-font-size;
 }
 
 .nav-breadcrumbs-item {
     margin-right: .5em;
-    &:not(:last-of-type) {
-    	&:after {
-        	margin-left: .5em;
-        	content: '→';
+    a {
+        text-decoration: none;
+        color: $color-grey-700;
+        &:hover {
+            text-decoration: underline;
+            color: #000;
         }
     }
-
-    .lt-ie9 & {
-    	a {
-    		text-decoration: none;
-    		&:after {
-    			margin-left: .5em;
-    			content: '→';
-    		}
-    	}
+    &:not(:last-of-type) {
+    	&:after {
+            @include icon();
+        	margin-left: .5em;
+        	content: '\f178';
+            color: $color-grey-300;
+        }
     }
     
 }

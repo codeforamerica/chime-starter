@@ -2,19 +2,20 @@
 $em-base:				10px;
 $base-font-size:		rem(18px);
 $small-font-size:		rem(16px);
-$title-font-size:		rem(48px);
-$h1-font-size:			rem(36px);
-$h2-font-size:			rem(28px);
-$h3-font-size:			rem(24px);
-$h4-font-size:			rem(18px);
-$h5-font-size:			rem(16px);
+$title-font-size:		rem(36px);
+$h1-font-size:			rem(28px);
+$h2-font-size:			rem(24px);
+$h3-font-size:			rem(19px);
+$h4-font-size:			rem(16px);
+$h5-font-size:			rem(14px);
 $h6-font-size:			rem(14px);
 $base-line-height:		1.5em;
 $heading-line-height:	1.3em;
 
 $font-sans: 			'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
-$font-serif:			'Georgia', 'Times New Roman', serif;
-$font-mono:				'Source Code Pro', 'Courier New', 'Courier', monospace;
+$font-serif:			'Source Serif Pro', 'Georgia', 'Times New Roman', serif;
+$font-icon:				'FontAwesome';
+$font-mono:				'Courier New';
 
 // Color
 $color-grey-50:			#fafafa;
@@ -45,5 +46,5 @@ $widescreen-up:			1201px;
 $site-max-width:		960px;
 $site-margins:			40px;
 $article-max-width:		600px;
-$border-radius:			3px;
+$border-radius:			0px;
 $box-shadow:			0 0 2px rgba(#000, .3);

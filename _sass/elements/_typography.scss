@@ -7,15 +7,22 @@ html {
 body {
 	font-size: $base-font-size;
 	-webkit-font-smoothing: antialiased;
+	font-weight: 300;
 }
 
 p {
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	margin: {
-		top: 1em;
 		bottom: 1em;
 	}
+}
+
+.lead-in {
+	font-size: $h2-font-size;
+	font-family: $font-serif;
+	color: $color-grey-800;
+	line-height: $heading-line-height;
 }
 
 a {
@@ -32,66 +39,76 @@ h1, h2, h3, h4, h5, h6 {
 		bottom: .5em;
 	}
 	line-height: $heading-line-height;
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
 // Create heading mixins 
 
 @mixin title {
+	font-family: $font-serif;
 	font-size: $title-font-size;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 @mixin h1 {
+	font-family: $font-serif;
 	font-size: $h1-font-size;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 @mixin h2 {
+	font-family: $font-serif;
 	font-size: $h2-font-size;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 @mixin h3 {
+	font-family: $font-serif;
 	font-size: $h3-font-size;
-	font-weight: 400;
+	font-weight: 600;
 }
 
 @mixin h4 {
+	font-family: $font-serif;
 	font-size: $h4-font-size;
-	font-weight: 400;
+	font-weight: 600;
 }
 
 @mixin h5 {
+	font-family: $font-serif;
 	font-size: $h5-font-size;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 @mixin h6 {
+	font-family: $font-serif;
 	font-size: $h6-font-size;
-	font-weight: 700;
+	font-weight: 600;
 }
 
-h1 {
+h1, .h1 {
 	@include h1();
 }
 
-h2 {
+h2, .h2 {
 	@include h2();
 }
 
-h3 {
+h3, .h3 {
 	@include h3();
 }
 
-h4 {
+h4, .h4 {
 	@include h4();
 }
 
-h5 {
+h5, .h5 {
 	@include h5();
 }
 
-h6 {
+h6, .h6 {
 	@include h6();
 }
 

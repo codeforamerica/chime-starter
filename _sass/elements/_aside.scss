@@ -1,11 +1,9 @@
 aside {
-	@include allow-layout-classes();
-	background-color: $color-grey-900;
-	color: #fff;
-	padding: 1.5em 2em;
+	background-color: $color-grey-200;
+	border: 1px solid $color-grey-300;
+	padding: 1em 1.5em;
 	margin: {
-		top: 2em;
-		bottom: 2em;
+		bottom: 1em;
 	}
 
 	& *:first-child {
