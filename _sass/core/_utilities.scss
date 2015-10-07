@@ -23,7 +23,8 @@
 }
 
 @mixin icon() {
+	display: inline-block;
 	font-family: $font-icon;
 	font-size: 14px;
+	font-weight: 400;
 }
-

@@ -4,47 +4,41 @@
 		text-align: left;
 		background-color: $color-grey-100;
 		border-bottom: 1px solid $color-grey-300;
-		padding: {
-			top: 4em;
-			bottom: 4em;
-		}
-		h1 {
-			font-size: $title-font-size;
-			margin-top: 0;
-			margin-bottom: .25em;
-		}
-		.subtitle {
-			margin-top: 0;
-			font-size: $h3-font-size;
-		}
-		.site-search {
-			@include media($tablet-up) {
-				width: 50%;
-			}
-		}
+		background: url('../media/images/hero_image.png');
+		background-position: center center;
+		background-size: cover;
+		height: 400px;
+		margin-bottom: -350px;
 	}
 
-	.section-slab-city-services, .section-slab-press-releases {
-		.grid-item {
-			padding: 1.5em 0;
-			&:nth-child(3n) {
+	.city-services {
+		@include outer-container();
+		background-color: #fff;
+		border: 1px solid $color-grey-300;
+		padding: 1.5em;
+		.site-search {
+			margin-bottom: 2em;
+		}
+		.service-item {
+			@include span-columns(3 of 6);
+			height: 6.5em;
+
+			&:nth-of-type(2n) {
 				@include omega();
 			}
 
-			@include media($tablet-up) {
-				margin-bottom: 1em;
+			h2 {
+				font-size: $h3-font-size;
+				margin-bottom: .5em;
+				a {
+					color: inherit;
+				}
+			}
+			p {
+				font-size: $small-font-size;
+				line-height: $heading-line-height;
+				margin-top: 0;
 			}
 		}
-		h2 {
-			margin: 0;
-			font-size: $h3-font-size;
-		}
-	}
-
-	.section-slab-city-services {
-		.grid-item {
-			height: rem(150px);
-		}
-
 	}
 }

@@ -8,30 +8,22 @@
 <div class="template-home">
     
     <section class="section-slab section-slab-hero">
-        <div class="grid-box">
-            <div class="grid-item width-one-whole">
-                <h1>Welcome to the City of {{ site.city }}.</h1>
-                <p class="subtitle">How can we help you?</p>
-                <form class="site-search">
-                    <input type="search" placeholder="e.g., pay a parking ticket">
-                    <input type="submit" value="&#xf002">
-                </form>
-                
-            </div>
-        </div>
     </section>
 
-    <section class="section-slab section-slab-city-services">
-        <h1>Services and Information</h1>
-        <div class="grid-box">
+    <div class="grid-box">
+        <section class="width-one-half city-services">
+            <form class="site-search">
+                    <input type="search" placeholder="How can we help you?">
+                    <input type="submit" value="&#xf002">
+            </form>
             {% for show_page in page.columns[0]['pages'] %}
-            <div class="grid-item width-one-third">
+            <div class="service-item">
                 <h2><a href="{{ show_page['link_path'] }}">{{ show_page['title'] }}</a></h2>
                 <p>{{ show_page['description'] }}</p>
             </div>
             {% endfor %}
-        </div>
-    </section>
+        </section>
+    </div>
 
 
 </div>

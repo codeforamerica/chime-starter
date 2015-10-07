@@ -1,4 +1,6 @@
 .site-search {
+	@include clearfix();
+	border: 1px solid $color-grey-500;
 
 	input[type="search"], input[type="submit"] {
 		margin: 0;
@@ -7,9 +9,7 @@
 	}
 	input[type="search"] {
 		width: calc(100% - 45px);
-		border-top-right-radius: 0px;
-		border-bottom-right-radius: 0px;
-		border-color: $color-grey-300;
+		border: 0;
 		.lt-ie9 & {
 			width: 85%;
 		}
@@ -18,11 +18,10 @@
 		position: relative;
 		width: 40px;
 		background-size: auto 70%;
-		border-top-left-radius: 0px;
-		border-bottom-left-radius: 0px;
 		font-family: "FontAwesome";
 		font-weight: 400;
 		border: 0;
+		background-color: transparent;
 
 		&:before {
 			content: "\f002";

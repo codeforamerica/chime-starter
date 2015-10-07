@@ -20,18 +20,22 @@ button[type="reset"] {
 		right: .5em;
 	}
 	outline: none;
-	padding: .5em .7em;
+	padding: .3em .5em;
+	text-decoration: none;
 	&:hover {
 		background-color: $color-grey-500;
 		border: 1px solid $color-grey-500;
+		text-decoration: none;
 	}
 	&:active {
 		background-color: $color-grey-600;
 		border: 1px solid $color-grey-600;
+		text-decoration: none;
 	}
 	&:focus {
 		border: 1px solid $color-base-link;
 		box-shadow: 0 0 0 1px $color-base-link;
+		text-decoration: none;
 	}
 }
 
@@ -47,11 +51,11 @@ input[type="submit"]:disabled, button[type="submit"]:disabled {
 
 button.button-primary, .button.button-primary {
 	color: #fff;
-	background-color: $color-green;
-	border-color: $color-green;
+	background-color: $color-base-link;
+	border-color: $color-base-link;
 	&:hover {
-		background-color: shade($color-green, 20%);
-		border-color: shade($color-green, 20%);
+		background-color: shade($color-base-link, 20%);
+		border-color: shade($color-base-link, 20%);
 	}
 }
 
@@ -76,5 +80,21 @@ button.button-outline, .button.button-outline {
 }
 
 button.button-large, .button.button-large {
-	font-size: 1.5em;
+	padding: .5em .7em;
+}
+
+button.button-linkout, .button.button-linkout {
+	&:after {
+		@include icon();
+		margin-left: 1em;
+		content: '\f054';
+	}
+}
+
+button.button-download, .button.button-download {
+	&:after {
+		@include icon();
+		margin-left: 1em;
+		content: '\f019';
+	}
 }

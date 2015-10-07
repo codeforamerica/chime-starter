@@ -1,20 +1,17 @@
 .template-article {
 	margin: 0 auto 6em auto;
 	max-width: $site-max-width;
-	.secondary-header {
-		border-bottom: 1px solid $color-grey-200;
-		margin-bottom: 2em;
-		h1 {
-			font-size: $title-font-size;
-		}
+}
+
+.article-header {
+	border-bottom: 1px solid $color-grey-200;
+	margin-bottom: 2em;
+	h1 {
+		font-size: $title-font-size;
 	}
 }
 
 .article-content {
-	max-width: $article-max-width;
-}
-
-article {
 	aside[class^="width"], figure[class^="width"] {
 		& + p {
 			@include media($tablet-up) {

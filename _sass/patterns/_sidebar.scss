@@ -1,0 +1,22 @@
+.sidebar {
+	h2 {
+		font-size: $small-font-size;
+		color: $color-grey-800;
+		font-family: $font-sans;
+		font-weight: 300;
+	}
+}
+
+.side-nav {
+	margin-bottom: 4em;
+	li {
+		font-family: $font-serif;
+		font-size: $small-font-size;
+		color: $color-grey-700;
+		margin-bottom: .5em;
+		padding-bottom: .5em;
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-grey-200;
+		}
+	}
+}

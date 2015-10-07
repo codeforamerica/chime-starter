@@ -9,6 +9,8 @@
 This is a lead in paragraph. It provides an brief description of the content that will follow.
 </p>
 
+<a href="#" class="button button-large button-primary button-linkout">Primary call to action</a>
+
 # Heading Level 1
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi rerum, consequuntur natus error eligendi, mollitia reprehenderit nemo. Unde praesentium quibusdam, fugiat impedit ullam voluptas eaque reprehenderit numquam, omnis corrupti in.

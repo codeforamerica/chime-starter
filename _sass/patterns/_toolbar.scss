@@ -1,0 +1,11 @@
+.toolbar {
+	@include clearfix();
+	.toolbar-item {
+		display: block;
+		float: left;
+		margin-right: 1em;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

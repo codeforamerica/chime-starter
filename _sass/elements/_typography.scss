@@ -23,6 +23,15 @@ p {
 	font-family: $font-serif;
 	color: $color-grey-800;
 	line-height: $heading-line-height;
+	margin-bottom: 2em;
+}
+
+.address {
+	margin-bottom: 1em;
+	p {
+		margin: 0;
+		line-height: $heading-line-height;
+	}
 }
 
 a {
@@ -36,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	margin: {
 		top: 2em;
-		bottom: .5em;
+		bottom: 1em;
 	}
 	line-height: $heading-line-height;
 	&:first-child {
