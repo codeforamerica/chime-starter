@@ -51,8 +51,8 @@
             <div class="menu-large">
                 {% for page in current_column['pages'] %}
                 <a class="menu-item" href="{{ page.link_path }}" >
-                    <h3>{{ page.title }}</h3>
-                    <p>{{ page.description }}</p>
+                    <p class="large-text">{{ page.title }}</p>
+                    <p class="detail-text">{{ page.description }}</p>
                 </a>
                 {% endfor %}
             </div>

@@ -7,7 +7,8 @@ html {
 body {
 	font-size: $base-font-size;
 	-webkit-font-smoothing: antialiased;
-	font-weight: 300;
+	font-weight: 400;
+	color: $color-grey-800;
 }
 
 p {
@@ -20,9 +21,9 @@ p {
 
 
 a {
-	color: $color-base-link;
+	color: inherit;
 	&:hover, &:active, &:visited {
-		color: $color-base-link;
+		color: inherit;
 	}
 }
 
@@ -36,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 	&:first-child {
 		margin-top: 0;
 	}
+	color: #000;
 }
 
 // Create heading mixins 
@@ -82,6 +84,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 }
 
+@mixin large-text {
+	font-family: $font-sans;
+	font-size: $h3-font-size;
+	line-height: $heading-line-height;
+}
+
+@mixin detail-text {
+	font-family: $font-sans;
+	font-size: $small-font-size;
+	line-height: $heading-line-height;
+}
+
 h1, .h1 {
 	@include h1();
 }
@@ -104,6 +118,14 @@ h5, .h5 {
 
 h6, .h6 {
 	@include h6();
+}
+
+.detail-text {
+	@include detail-text();
+}
+
+.large-text {
+	@include large-text();
 }
 
 .header-icon {

@@ -7,21 +7,17 @@
 	display: block;
 	font-size: $small-font-size;
 	padding: .3em .8em;
-	color: #000;
 	text-decoration: none;
 	margin-left: -.8em;
 	background-color: rgba(#000, .0);
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: $font-sans;
-		font-weight: 400;
 		margin: 0;
 		text-decoration: underline;
 		margin-bottom: .3em;
 	}
 	p {
 		margin: 0;
-		font-size: $small-font-size;
 		line-height: $heading-line-height;
 	}
 

@@ -32,22 +32,37 @@
 		text-decoration: none;
 		color: inherit;
 		background-color: #fff;
+		height: 16em;
 		&:hover {
 			text-decoration: none;
 			color: inherit;
 			background-color: $color-grey-50;
 		}
 
+		header {
+			@include clearfix();
+			img {
+				float: right;
+				max-width: 30%;
+				max-height: 100%;
+				margin-left: 1em;
+			}
+		}
+
 		h3 {
 			text-decoration: underline;
+			margin: 0;
+			clear: none;
 		}
 
 		p {
-			font-size: $small-font-size;
-			line-height: $heading-line-height;
+			max-height: 6*$heading-line-height;
+			overflow: hidden;
 		}
 
 		.date {
+			@include detail-text();
+			margin: 0;
 			color: $color-grey-600;
 		}
 	}

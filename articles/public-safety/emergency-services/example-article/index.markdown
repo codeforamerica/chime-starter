@@ -13,7 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi rerum, consequunt
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi rerum, consequuntur natus error eligendi, mollitia reprehenderit nemo. Unde praesentium quibusdam, fugiat impedit ullam voluptas eaque reprehenderit numquam, omnis corrupti in.
 
-### Headling Level 3
+### Heading Level 3
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi rerum, consequuntur natus error eligendi, mollitia reprehenderit nemo. Unde praesentium quibusdam, fugiat impedit ullam voluptas eaque reprehenderit numquam, omnis corrupti in.
 

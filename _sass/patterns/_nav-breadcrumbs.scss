@@ -6,11 +6,10 @@
 .nav-breadcrumbs-item {
     margin-right: .5em;
     font-weight: 400;
-    color: $color-grey-800;
+    color: #000;
     a {
-        font-weight: 300;
         text-decoration: none;
-        color: inherit;
+        color: $color-grey-600;
         &:hover {
             text-decoration: underline;
             color: #000;
