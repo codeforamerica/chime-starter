@@ -7,38 +7,52 @@
 		background: url('../media/images/hero_image.png');
 		background-position: center center;
 		background-size: cover;
-		height: 400px;
-		margin-bottom: -350px;
+		height: 250px;
+		margin-bottom: -6em;
+
+		@include media($tablet-up) {
+			height: 350px;
+		}
 	}
 
 	.city-services {
-		@include outer-container();
-		background-color: #fff;
-		border: 1px solid $color-grey-300;
-		padding: 1.5em;
 		.site-search {
 			margin-bottom: 2em;
 		}
-		.service-item {
-			@include span-columns(3 of 6);
-			height: 6.5em;
+		.hero-credits {
+			font-size: $small-font-size;
+			color: $color-grey-600;
+			margin-bottom: 2em;
 
-			&:nth-of-type(2n) {
-				@include omega();
-			}
-
-			h2 {
-				font-size: $h3-font-size;
-				margin-bottom: .5em;
-				a {
-					color: inherit;
-				}
-			}
-			p {
-				font-size: $small-font-size;
-				line-height: $heading-line-height;
-				margin-top: 0;
-			}
 		}
 	}
+
+	.announcement {
+		@include panel();
+		text-decoration: none;
+		color: inherit;
+		background-color: #fff;
+		&:hover {
+			text-decoration: none;
+			color: inherit;
+			background-color: $color-grey-50;
+		}
+
+		h3 {
+			text-decoration: underline;
+		}
+
+		p {
+			font-size: $small-font-size;
+			line-height: $heading-line-height;
+		}
+
+		.date {
+			color: $color-grey-600;
+		}
+	}
+}
+
+.homepage {
+	background-color: $color-grey-100;
 }

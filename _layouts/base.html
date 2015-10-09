@@ -4,8 +4,7 @@
 
   {% include head.html %}
 
-  <body>
-
+  <body {% if page.role == "homepage" %}class="homepage"{% endif %}>
     {% include header.html %}
 
     <div class="page-content">

@@ -16,6 +16,14 @@
     }
 }
 
+.align-left {
+	float: left;
+}
+
+.align-right {
+	float: right;
+}
+
 // Type Helpers
 @mixin allcaps() {
 	text-transform: uppercase;

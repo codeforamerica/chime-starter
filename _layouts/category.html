@@ -26,23 +26,36 @@
             {% endfor %}
         </nav>
     </header>
-
     <div class="grid-box">
-    {% for column in page.columns %}
-        {% assign column_idx = forloop.index0 %}
-        <div class="{{ column_classes[column_idx] }}">
-            <nav class="{{ nav_classes[column_idx] }}">
-                {% if column_idx > 0 %}<h1>{{ column['title'] }}</h1>{% endif %}
-                <ul>
-                    {% for show_page in column['pages'] %}
-                    <li {% if show_page['selected'] %}class="is-selected"{% endif %}>
-                        <a href="{{ show_page['link_path'] }}" class="{{ link_classes[column_idx] }}">{{ show_page['title'] }}</a>
-                        {% if column_idx == 1 %}<p>{{ show_page['description'] }}</p>{% endif %}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </nav>
+        <div class="sidebar grid-item width-one-fourth">
+            <ul class="sidebar-menu">
+                {% for topic in page.columns[0]['pages'] %}
+                <li class="{% if topic.selected %}is-selected{% endif %}">
+                    <a href="{{ topic.link_path }}">{{ topic.title }}</a>
+                    {% if topic.selected %}
+                    <ul class="sidebar-menu-sublist">
+                        {% for subtopic in page.columns[1]['pages'] %}
+                        <li class="{% if subtopic.selected %}is-selected{% endif %}"><a href="{{ subtopic.link_path }}">{{ subtopic.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
         </div>
-    {% endfor %}
+        <div class="grid-item width-seven-twelfths shift-one-twelfth">
+            <header class="content-header">
+                {% assign current_column = page.columns|last %}
+                <h1>{{ current_column.title }}</h1>
+            </header>
+            <div class="menu-large">
+                {% for page in current_column['pages'] %}
+                <a class="menu-item" href="{{ page.link_path }}" >
+                    <h3>{{ page.title }}</h3>
+                    <p>{{ page.description }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>

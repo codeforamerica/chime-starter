@@ -6,24 +6,126 @@
 ---
 
 <div class="template-home">
-    
+<!--     <div class="danger-alert">
+      <p class="alert-content"><span class="alert-title">City Alert</span><span class="alert-message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
+    </div> -->
     <section class="section-slab section-slab-hero">
     </section>
-
-    <div class="grid-box">
-        <section class="width-one-half city-services">
-            <form class="site-search">
-                    <input type="search" placeholder="How can we help you?">
-                    <input type="submit" value="&#xf002">
-            </form>
-            {% for show_page in page.columns[0]['pages'] %}
-            <div class="service-item">
-                <h2><a href="{{ show_page['link_path'] }}">{{ show_page['title'] }}</a></h2>
-                <p>{{ show_page['description'] }}</p>
+    <section class="section-slab city-services">
+      <div class="grid-box">
+          <div class="width-one-whole panel">
+            <div class="grid-box">
+              <form class="site-search width-two-thirds">
+                      <input type="search" placeholder="How can we help you?">
+                      <input type="submit" value="&#xf002">
+              </form>
+              <div class="hero-credits width-one-third">illustration by J.B. Ingwersen, 1960-1965</div>
             </div>
-            {% endfor %}
-        </section>
-    </div>
 
-
+            <div class="grid-box">
+                <ul class="menu-medium grid-item width-one-third">
+                    {% for show_page in page.columns[0]['pages'] %}
+                    {% assign modulo = forloop.index0|modulo:3 %}
+                    {% if modulo == 0 %} 
+                      <a href="{{ show_page['link_path'] }}" class="menu-item">
+                          <h3>{{ show_page['title'] }}</h3>
+                          <p>{{ show_page['description'] }}</p>
+                      </a>  
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                <ul class="menu-medium grid-item width-one-third">
+                    {% for show_page in page.columns[0]['pages'] %}
+                    {% assign modulo = forloop.index0|modulo:3 %}
+                    {% if modulo == 1 %} 
+                      <a href="{{ show_page['link_path'] }}" class="menu-item">
+                          <h3>{{ show_page['title'] }}</h3>
+                          <p>{{ show_page['description'] }}</p>
+                      </a>  
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                <ul class="menu-medium grid-item width-one-third">
+                    {% for show_page in page.columns[0]['pages'] %}
+                    {% assign modulo = forloop.index0|modulo:3 %}
+                    {% if modulo == 2 %} 
+                      <a href="{{ show_page['link_path'] }}" class="menu-item">
+                          <h3>{{ show_page['title'] }}</h3>
+                          <p>{{ show_page['description'] }}</p>
+                      </a>  
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section class="section-slab announcements">
+        <h2>Announcements</h2>
+        <div class="grid-box">
+          <a href="#" class="announcement grid-item width-one-third">
+            <header>
+              <h3>New Zero Waste Services Started July 1</h3>
+              <p class="date">June 25th, 2015</p>
+            </header>
+            <p>Oakland’s new trash, compost and recycling services started July 1. We’re excited the day is finally here! All apartment and condo residents now have green compost carts.</p>
+          </a>
+          <a href="#" class="announcement grid-item width-one-third">
+            <header>
+              <h3>New Zero Waste Services Started July 1</h3>
+              <p class="date">June 25th, 2015</p>
+            </header>
+            <p>Oakland’s new trash, compost and recycling services started July 1. We’re excited the day is finally here! All apartment and condo residents now have green compost carts.</p>
+          </a>
+          <a href="#" class="announcement grid-item width-one-third">
+            <header>
+              <h3>New Zero Waste Services Started July 1</h3>
+              <p class="date">June 25th, 2015</p>
+            </header>
+            <p>Oakland’s new trash, compost and recycling services started July 1. We’re excited the day is finally here! All apartment and condo residents now have green compost carts.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section-slab">
+      <h2>City Departments</h2>
+      <div class="grid-box">
+        <div class="menu-medium grid-item width-one-third">
+          <a href="#" class="menu-item">
+            <h3>Police Department</h3>
+          </a>
+          <a href="#" class="menu-item">
+            <h3>Fire Department</h3>
+          </a>
+          <a href="#" class="menu-item">
+            <h3>Parks &amp; Recreation</h3>
+          </a>
+          <a href="#" class="menu-item">
+            <h3>Public Works</h3>
+          </a>
+        </div>
+        <div class="menu-medium grid-item width-one-third">
+          <a href="#" class="menu-item">
+            <h3>Public Library</h3>
+          </a>
+          <a href="#" class="menu-item">
+            <h3>Community &amp; Economic Development</h3>
+          </a>
+          <a href="#" class="menu-item">
+            <h3>Animal Services</h3>
+          </a>
+        </div>
+        <div class="menu-medium grid-item width-one-third">
+          <a href="#" class="menu-item">
+            <h3>Housing &amp; Community Development</h3>
+          </a>
+          <a href="#" class="menu-item">
+            <h3>Planning &amp; Building</h3>
+          </a>
+          <a href="#" class="menu-item">
+            <h3>Office of the Mayor</h3>
+          </a>
+        </div>
+      </div>
+    </section>
 </div>

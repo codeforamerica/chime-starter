@@ -1,0 +1,14 @@
+.disclaimer {
+	background-color: $color-grey-100;
+	margin: {
+		left: -$site-margins;
+		right: -$site-margins;
+	}
+	padding: .5em $site-margins;
+	border-bottom: 1px solid $color-grey-300;
+	p {
+		margin: 0 auto;
+		max-width: $site-max-width;
+		font-size: $small-font-size;
+	}
+}

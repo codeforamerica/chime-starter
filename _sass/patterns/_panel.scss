@@ -1,0 +1,11 @@
+@mixin panel() {
+	display: block;
+	background-color: #fff;
+	border: 1px solid $color-grey-300;
+	padding: 1.5em;
+	margin-bottom: 2em;
+}
+
+.panel {
+	@include panel();
+}

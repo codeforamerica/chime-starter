@@ -1,0 +1,61 @@
+.menu {
+	@include clearfix();
+}
+
+.menu-item, a.menu-item {
+	@include transition(background-color .2s ease-out);
+	display: block;
+	font-size: $small-font-size;
+	padding: .3em .8em;
+	color: #000;
+	text-decoration: none;
+	margin-left: -.8em;
+	background-color: rgba(#000, .0);
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-sans;
+		font-weight: 400;
+		margin: 0;
+		text-decoration: underline;
+		margin-bottom: .3em;
+	}
+	p {
+		margin: 0;
+		font-size: $small-font-size;
+		line-height: $heading-line-height;
+	}
+
+	&:hover {
+		background-color: rgba(#000, .05);
+	}
+}
+
+.menu-bar {
+	@extend .menu;
+	.menu-item {
+		float: left;
+		margin-right: 1em;
+		display: inline-block;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.menu-medium {
+	@extend .menu;
+	.menu-item {
+		padding: .5em 1em;
+		margin-left: -1em;
+		margin-bottom: .5em;
+	}
+}
+
+.menu-large {
+	@extend .menu;
+	.menu-item {
+		padding: 1em;
+		margin-left: -1em;
+		margin-bottom: 1em;
+	}
+}

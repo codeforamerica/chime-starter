@@ -1,22 +1,123 @@
 .sidebar {
 	h2 {
 		font-size: $small-font-size;
-		color: $color-grey-800;
 		font-family: $font-sans;
-		font-weight: 300;
+		font-weight: 400;
 	}
 }
 
-.side-nav {
+.sidebar-menu {
 	margin-bottom: 4em;
-	li {
-		font-family: $font-serif;
-		font-size: $small-font-size;
-		color: $color-grey-700;
-		margin-bottom: .5em;
-		padding-bottom: .5em;
+	margin-left: -.5em;
+
+	> li {
 		&:not(:last-child) {
 			border-bottom: 1px solid $color-grey-200;
 		}
+		> a {
+			color: inherit;
+			text-decoration: none;
+			display: block;
+			font-family: $font-serif;
+			font-size: $small-font-size;
+			color: $color-grey-700;
+			padding: .5em .5em;
+			&:hover {
+				background-color: $color-grey-100;
+				border-left: 3px solid $color-base-link;
+				margin-left: -3px;
+				color: #000;
+			}
+		}
+		&.is-selected {
+			> a {
+				background-color: $color-grey-100;
+				border-left: 3px solid $color-base-link;
+				margin-left: -3px;
+				color: #000;
+			}
+		}
+	}
+}
+
+.sidebar-menu-sublist {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+	> li {
+		font-family: $font-sans;
+		font-size: $small-font-size;
+		font-weight: 400;
+		margin-bottom: 1em;
+		color: $color-grey-800;
+		> a {
+			display: block;
+			position: relative;
+			color: inherit;
+			text-decoration: none;
+			line-height: $heading-line-height;
+			padding: 0 1.5em;
+			&:hover {
+				color: $color-base-link;
+			}
+		}
+		&.is-selected {
+			> a {
+				color: $color-base-link;
+				&:after {
+					@include icon();
+					position: absolute;
+					top: 50%;
+					margin-top: -$heading-line-height/2;
+					right: .5em;
+					content: "\f054";
+				}
+			}
+		}
+	}
+}
+
+.link-block {
+	@include transition(background-color .2s ease-out);
+	background-color: rgba(#000, 0);
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: .5em;
+	margin-bottom: .5em;
+	margin: {
+		left: -.5em;
+		right: -.5em;
+	}
+	.link-block-title {
+		font-weight: 300;
+		font-size: $h3-font-size;
+		line-height: $heading-line-height;
+		text-decoration: underline;
+		font-weight: 400;
+		margin: 0;
+	}
+	.link-block-detail {
+		line-height: $heading-line-height;
+		font-size: $small-font-size;
+		margin: 0;
+	}
+	&:hover {
+		background-color: #000;
+		background-color: rgba(#000, .05);
+	}
+	&:active, &:hover, &:visited {
+		color: #000;
+	}
+}
+
+.link-block-small {
+	@extend .link-block;
+	padding: .5em;
+	.link-block-title {
+		font-size: $h4-font-size;
+		font-weight: 400;
+	}
+	.link-block-detail {
+		font-size: $small-font-size;
 	}
 }

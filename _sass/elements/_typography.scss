@@ -18,21 +18,6 @@ p {
 	}
 }
 
-.lead-in {
-	font-size: $h2-font-size;
-	font-family: $font-serif;
-	color: $color-grey-800;
-	line-height: $heading-line-height;
-	margin-bottom: 2em;
-}
-
-.address {
-	margin-bottom: 1em;
-	p {
-		margin: 0;
-		line-height: $heading-line-height;
-	}
-}
 
 a {
 	color: $color-base-link;
@@ -121,4 +106,33 @@ h6, .h6 {
 	@include h6();
 }
 
+.header-icon {
+	display: inline-block;
+	margin-right: .5em;
+	height: 1.2em;
+	width: auto;
+	position: relative;
+	top: .2em;
+}
 
+.header-icon-large {
+	@extend .header-icon;
+	height: 1.4em;
+	top: .3em;
+}
+
+.lead-in {
+	font-size: $h2-font-size;
+	font-family: $font-serif;
+	color: $color-grey-800;
+	line-height: $heading-line-height;
+	margin-bottom: 2em;
+}
+
+.address {
+	margin-bottom: 1em;
+	p {
+		margin: 0;
+		line-height: $heading-line-height;
+	}
+}
