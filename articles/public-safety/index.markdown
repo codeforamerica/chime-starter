@@ -1,10 +1,10 @@
 ---
+"description": |-
+  including corrections, crime, fire, emergencies, and community safety
 "layout": |-
   category
-"title": |-
-  Public Safety
 "order": !!int |-
   2
-"description": |-
-  Includes emergency preparedness and safety advice and crime
+"title": |-
+  Public Safety
 ---

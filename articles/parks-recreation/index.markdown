@@ -1,10 +1,10 @@
 ---
+"description": |-
+  including parks, playgrounds, theatres, libraries, and community centers
 "layout": |-
   category
-"title": |-
-  Parks & Recreation
 "order": !!int |-
   6
-"description": |-
-  Includes city provided outdoor activities, attractions and entertainment
+"title": |-
+  Parks & Recreation
 ---

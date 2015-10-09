@@ -1,10 +1,10 @@
 ---
+"description": |-
+  including garbage, recycling, sewage and drains, water treatment, and animal control
 "layout": |-
   category
-"title": |-
-  Utilities & Streets
 "order": !!int |-
   4
-"description": |-
-  Including bill payments, reporting issues and disputes
+"title": |-
+  Utilities & Environment
 ---

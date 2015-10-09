@@ -1,10 +1,10 @@
 ---
+"description": |-
+  including building, land use, commercial and residential zones, and life events.
 "layout": |-
   category
-"title": |-
-  Licensing & Permits
 "order": !!int |-
   3
-"description": |-
-  Includes applications for building permits and zoning code
+"title": |-
+  Licensing & Permits
 ---
