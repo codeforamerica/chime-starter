@@ -42,8 +42,6 @@
 @import 'patterns/panel';
 @import 'patterns/secondary-header';
 @import 'patterns/nav-breadcrumbs';
-@import 'patterns/nav-categories';
-@import 'patterns/nav-subcategories';
 @import 'patterns/section-slab';
 @import 'patterns/form-search-site';
 
@@ -53,8 +51,8 @@
 
 @import 'templates/home';
 @import 'templates/category';
-@import 'templates/subcategory';
 @import 'templates/article';
+@import 'templates/announcement';
 // @import 'templates/event';
 // @import 'templates/job';
 

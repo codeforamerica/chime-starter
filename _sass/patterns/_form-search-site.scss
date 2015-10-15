@@ -2,19 +2,22 @@
 	@include clearfix();
 	border: 1px solid $color-grey-500;
 
-	input[type="search"], input[type="submit"] {
+	.site-search-input, .site-search-button {
 		margin: 0;
 		float: left;
 		height: 2em;
 	}
-	input[type="search"] {
-		width: calc(100% - 45px);
+	.site-search-input {
+		width: calc(100% - 40px);
 		border: 0;
 		.lt-ie9 & {
 			width: 85%;
 		}
+		&:focus {
+			box-shadow: none;
+		}
 	}
-	input[type="submit"] {
+	.site-search-button {
 		position: relative;
 		width: 40px;
 		background-size: auto 70%;

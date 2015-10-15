@@ -7,6 +7,9 @@
 		left: -$site-margins;
 		right: -$site-margins;
 	}
+	a {
+		color: $color-base-link;
+	}
 }
 
 .alert-content {
@@ -30,5 +33,21 @@
 	border-color: $color-red;
 	.alert-title {
 		color: $color-red;
+	}
+}
+
+.caution-alert {
+	@extend .alert;
+	border-color: $color-orange;
+	.alert-title {
+		color: $color-orange;
+	}
+}
+
+.info-alert {
+	@extend .alert;
+	border-color: $color-base-link;
+	.alert-title {
+		color: $color-base-link;
 	}
 }

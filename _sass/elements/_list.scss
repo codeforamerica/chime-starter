@@ -7,7 +7,7 @@ ul, ol {
 
 @mixin list-bulleted() {
 	list-style-type: disc;
-	padding-left: 4em;
+	padding-left: 2em;
 	margin: {
 		top: 1em;
 		bottom: 1em;
@@ -27,7 +27,7 @@ ul, ol {
 
 @mixin list-decimal() {
 	list-style-type: decimal;
-	padding-left: 4em;
+	padding-left: 2em;
 	margin: {
 		top: 1em;
 		bottom: 1em;

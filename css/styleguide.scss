@@ -25,13 +25,25 @@ $width-nav-sidebar: 250px;
 		h1 {
 			font-size: $h4-font-size;
 			display: inline-block;
+			font-family: $font-sans;
+			.subtitle {
+				font-weight: 400;
+				border-left: 1px solid $color-grey-800;
+				margin-left: .5em;
+				padding-left: .5em;
+			}
 		}
+	}
+
+	code {
+		font-family: "Source Code Pro", "Courier New", mono;
+		font-weight: 400;
 	}
 
 	.button-toggle-sidebar {
 		background-color: transparent;
 		border: 0;
-		color: #fff;
+		color: #000;
 		width: 1.5em;
 		margin-right: 1em;
 		display: inline-block;
@@ -52,23 +64,23 @@ $width-nav-sidebar: 250px;
 		}
 	}
 
-	.nav-sidebar {
+	> .sidebar {
 		@include transition(margin-left .2s ease-out);
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		width: $width-nav-sidebar;
-		background-color: $color-grey-50;
-		border-right: 1px solid $color-grey-200;
 		padding: 1em 2em;
 		padding-top: 6em;
 		overflow: auto;
 		margin-left: -$width-nav-sidebar;
 		z-index: 1;
+		background-color: #fff;
 
 		.sidebar-open & {
 			margin-left: 0;
+			border-right: 1px solid $color-grey-300;
 		}
 
 		.lt-ie9 & {
@@ -79,33 +91,6 @@ $width-nav-sidebar: 250px;
 			display: block;
 			margin-left: 0;
 		}
-		
-		h1 {
-			font-weight: bold;
-			font-size: $h3-font-size;
-			padding-bottom: 1.1em;
-			border-bottom: 1px solid #000;
-		}
-		.link-h1 {
-			font-size: $h5-font-size;
-			font-weight: bold;
-		}
-		ul {
-			li {
-				padding: .25em 0;
-			}
-		}
-
-		ul ul {
-			padding-left: 1em;
-		}
-
-		a {
-			text-decoration: none;
-			&:hover {
-				text-decoration: underline;
-			}
-		}
 	}
 
 	.main-content {
@@ -115,6 +100,7 @@ $width-nav-sidebar: 250px;
 		right: 0;
 		overflow: auto;
 		width: 100%;
+		padding-top: 6em;
 
 		.lt-ie9 & {
 			width: 75%;
@@ -131,18 +117,13 @@ $width-nav-sidebar: 250px;
 	.style-guide-content {
 		position: relative;
 		padding: 1em 2em;
-		> h2, > h3, > p, > ul, > ol {
-			max-width: 500px;
-		}
+		
 		> h1 {
-			border-bottom: 1px solid #000;
+			border-bottom: 1px solid $color-grey-300;
 			padding-bottom: .5em;
-			&:not(:first-child) {
-				margin-top: 4em;
-			}
 		}
-		> h2, > h3 {
-			margin-top: 2em;
+		>h1, >h2, >h3, >h4, >h5, >h6, >p, >ul, >ol {
+			max-width: 600px;
 		}
 	}
 
@@ -150,14 +131,14 @@ $width-nav-sidebar: 250px;
 	.preview {
 		@include clearfix();
 		background-color: #fff;
-		margin: {
-			top: 2em;
-			bottom: 2em;
-		}
+		margin: 2em 0;
 		padding: 1em $site-margins;
 		border: 1px solid $color-grey-200;
 		.is-peripheral {
 			opacity: .2;
+		}
+		ul {
+			list-style-type: none;
 		}
 	}
 
@@ -166,13 +147,17 @@ $width-nav-sidebar: 250px;
 		@include clearfix();
 		border: 1px solid $color-grey-200;
 		background-color: $color-grey-50;
+		margin: 2em 0;
 
 		&.is-open {
 			.button-toggle:before {
 				content: 'Hide code';
 			}
 			pre {
+				padding-top: 0;
 				display: block;
+				line-height: 1em;
+				font-size: $small-font-size;
 			}
 		}
 		.button-toggle {

@@ -43,13 +43,13 @@ Styleguide.prototype.generateTOC = function() {
 
 	// Render the TOC
 	this.render = function() {
-		var tocView = $('<ul>');
+		var tocView = $('<ul class="sidebar-menu">');
 		$(toc).each(function(index, h1) {
-			var currH1El = $('<li>');
+			var currH1El = $('<li class="is-selected">');
 			currH1El.append('<a class="link-h1" href="#' + h1.hash + '">' + h1.title + '</a>');
 			
 			if(h1.contents) {
-				var h1Contents = $("<ul>");
+				var h1Contents = $('<ul class="sidebar-menu-sublist">');
 				$(h1.contents).each(function(index, h2) {
 					var currH2El = $('<li>');
 					$(currH2El).append('<a class="link-h2" href="#' + h2.hash + '">' + h2.title + '</a>');
@@ -60,9 +60,9 @@ Styleguide.prototype.generateTOC = function() {
 			$(tocView).append(currH1El);
 		})
 
-		$('.nav-sidebar').append(tocView);
+		$('#styleguide-nav').append(tocView);
 
-		$('.nav-sidebar a').click(function(e) {
+		$('#styleguide-nav a').click(function(e) {
 			e.preventDefault();
 			var hashLocation = $(this).attr('href');
 			$('.main-content').animate({

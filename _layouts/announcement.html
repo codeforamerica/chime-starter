@@ -1,0 +1,40 @@
+---
+"layout": |-
+  base
+"title": |-
+  New Zero Waste Services Started July 1
+"date": |-
+  June 25th, 2015
+---
+
+<div class="template-announcement">
+    <header class="secondary-header">
+        <nav class="nav-breadcrumbs">
+            <span class="nav-breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
+            {% for crumb in page.breadcrumbs %}
+             <span class="nav-breadcrumbs-item">{% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{% endif %}{{ crumb['title'] }}{% if forloop.rindex0 > 0 %}</a>{% endif %}</span>
+            {% endfor %}
+        </nav>
+    </header>
+
+    <div class="grid-box">
+        <div class="width-one-fourth sidebar">
+            <h2>Media Contacts</h2>
+            <div class="address">
+                <p><b>Sean Maher</b></p>
+                <p>Oakland Recycles</p>
+                <p>(510) 238-7968</p>
+                <p>smaher@oaklandnet.com</p>
+            </div>
+        </div>
+        <article class="article-content width-two-thirds shift-one-twelfth">
+            <header class="content-header">
+                <h1>{{ page.title }}</h1>
+            </header>
+            {{ content }}
+        </article>
+
+    </div>
+
+
+</div>

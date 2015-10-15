@@ -17,4 +17,29 @@
 		position: relative;
 		top: .3em;
 	}
+	.menu-item:not(.js-search-button) {
+		display: none;
+		@include media($tablet-up) {
+			display: block;
+		}
+	}
+}
+
+.header-search {
+	padding: 1em $site-margins;
+	background-color: $color-grey-50;
+	border-bottom: 1px solid $color-grey-300;
+	display: none;
+
+	.site-search {
+		border: 0;
+		max-width: $site-max-width;
+		margin: 0 auto;
+	}
+	.site-search-input, .site-search-button {
+		font-size: $h2-font-size;
+		background-color: transparent;
+		padding: 0;
+	}
+
 }

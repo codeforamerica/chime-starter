@@ -2,39 +2,16 @@
 "layout": |-
   styleguide
 "title": |-
-  Chime Starter Style Guide
+  Component Library
 ---
 
-# About this Guide
+# Introduction
 
 This is a living style guide based on the live CSS of this site. This style guide is meant for as reference for designers, developers, as well as anyone else interested in the design and front-end concepts we use to build the backbone of government websites.
 
-# CSS Architecture
+# Components
 
-1. The CSS foundation of this site is built with the **Sass** preprocessor langauge.
-1. The **Bourbon** library is used for auto browser prefixing and the **Neat** library is used for the grid framework. Bourbon and Neat are open-source products from **Thoughtbot**.
-1. The CSS organization and naming conventions are based loosely on **SMACSS** guidelines.
-1. Media queries are built **mobile first**.
-1. Hard coded magic numbers are avoided and, if necessary, defined in the `_variables.scss` file.
-1. Spacing units are as much as possible defined as `rem` or `em` units so they scale appropriately with text size.
-
-# Browser Support
-
-Browser compatility is tested against IE8 and up, and latest versions of Chrome, Firefox, and Safari. Partial support for HTML5 and CSS3 in IE8 and IE9 are supplied by polyfills:
-
-1. **html5shiv:** adds support for HTML5 elements.
-1. **respond.js:** addds support for media query.
-1. **selectivr.js:** adds support for CSS3 psuedo and attribute selectors.
-1. **rem.js:** adds support for rem units.
-
-
-# Colors
-
-This style guide automatically pulls colors from the `_variables.scss` file as long as the color variable is prefixed with `$color-`.
-
-# Layout Systems
-
-## Grid Layout
+## Grid System
 
 The grid layout system is a basic grid system used to build site pages where they layout is largely rectangular blocks of content (e.g., homepages and navigation pages). Content in the grid layout is placed with modular **grid items** which live inside **grid boxes**. Grid items require width classes to define what percentage of the screen they should take up. Width classes include:
 
@@ -58,7 +35,7 @@ The grid layout system is a basic grid system used to build site pages where the
 
 1. On mobile devices, all grid items default to 100% width.
 
-.1 For more complicated grid use cases (such as nested grids or different behavior on mobile devices), use the built in Bourbon and Neat Sass mixins.
+1. For more complicated grid use cases (such as nested grids or different behavior on mobile devices), use the built in Bourbon and Neat Sass mixins.
 
 ### Example Grid Box
 
@@ -92,57 +69,11 @@ The grid layout system is a basic grid system used to build site pages where the
 	</div>
 </div>
 
-
-## Float Layout
-
-The float layout system is used in articles where most of the content consists of text. It utilizes width and alignment classes that can be applied to block elements such as `<aside>` and `<figure>` within `<article>` elements. 
-
-1. **Width classes** are based on a fraction of the page and include denominators of half, third, fourth, and sixth. Block elements default to 100% of the article width. Width classes include:
-	- `.width-one-half`
-	- `.width-one-third`
-	- `.width-two-thirds`
-	- `.width-one-fourth`
-	- `.width-three-fourths`
-	- `.width-one-six`
-	- `.width-five-sixths`
-1. **Alignment classes** allow you to float elements to the right or left. If an element is not floated, it defaults to center alignment. Alignment classes include:
-	- `.align-left`
-	- `.align-right`
-
-### Examples
-<div class="preview">
-	<aside class="width-one-half align-right">
-		<p>This aside takes up one-half of the page width and is right aligned.</p>
-	</aside>
-	<p class="is-peripheral">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ipsa voluptatem consequuntur, mollitia soluta, quasi ducimus voluptate vitae eum nulla ad aliquid, saepe reprehenderit. Dolorem, voluptates, corrupti? Labore, rem, incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores quas, adipisci cum voluptate vero necessitatibus animi iure similique? Illo, impedit reiciendis cumque saepe ut quaerat odio dolorum sapiente. Delectus.</p>
-</div>
-<div class="preview">
-	<aside class="width-one-third align-left">
-		<p>This aside takes up one-third of the page width and is left aligned.</p>
-	</aside>
-	<p class="is-peripheral">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ipsa voluptatem consequuntur, mollitia soluta, quasi ducimus voluptate vitae eum nulla ad aliquid, saepe reprehenderit. Dolorem, voluptates, corrupti? Labore, rem, incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores quas, adipisci cum voluptate vero necessitatibus animi iure similique? Illo, impedit reiciendis cumque saepe ut quaerat odio dolorum sapiente. Delectus.</p>
-</div>
-
-
-# Elements
-
 This section pertains to the styling of basic HTML elements.
 
-## Inline
+## Typography
 
-<div class="preview">
-	<p>This is <i>italicized text</i></p>
-	<p>This is <em>emphasized text</em></p>
-	<p>This is <b>bold text</b></p>
-	<p>This is <strong>strong text</strong></p>
-	<p>This is <a href="#">linked text</a></p>
-	<p>This is <code>preformatted code</code></p>
-	<p>This is <mark>highlighted text</mark></p>
-
-</div>
-
-## Headings
-
+### Headings
 <div class="preview">
 	<h1>Heading Level 1</h1>
 	<h2>Heading Level 2</h2>
@@ -152,7 +83,27 @@ This section pertains to the styling of basic HTML elements.
 	<h6>Heading Level 6</h6>
 </div>
 
-## Lists
+### Inline Styles
+<div class="preview">
+	<p>This is <i>italicized text</i></p>
+	<p>This is <em>emphasized text</em></p>
+	<p>This is <b>bold text</b></p>
+	<p>This is <strong>strong text</strong></p>
+	<p>This is <a href="#">linked text</a></p>
+	<p>This is <code>preformatted code</code></p>
+	<p>This is <mark>highlighted text</mark></p>
+</div>
+
+### Blockquotes
+
+<div class="preview">
+	<blockquote>The blockquote element represents a section that is quoted from another source. Blockquotes are also sometimes referred to in publishing as 'pullquotes'.</blockquote>	
+</div>
+
+
+
+
+### Lists
 
 Outside of `<article>` elements, lists are unstyled by default. To use styled lists outside of `<article>` elements, use the following classes:
 
@@ -175,62 +126,9 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 	</ul>
 </div>
 
-## Tables
+## Media
 
-<div class="preview">
-	<table>
-	  <thead>
-	    <tr>
-	      <th>Row 1</th>
-	      <th>Row 2</th>
-	      <th>Row 3</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td>item 1</td>
-	      <td>item 2</td>
-	      <td>item 3</td>
-	    </tr>
-	    <tr>
-	      <td>item 1</td>
-	      <td>item 2</td>
-	      <td>item 3</td>
-	    </tr>
-	    <tr>
-	      <td>item 1</td>
-	      <td>item 2</td>
-	      <td>item 3</td>
-	    </tr>
-	  </tbody>
-	</table>
-</div>
-
-
-## Blockquotes
-
-<div class="preview">
-	<blockquote>The blockquote element represents a section that is quoted from another source. Blockquotes are also sometimes referred to in publishing as 'pullquotes'.</blockquote>	
-</div>
-
-## Asides
-
-<div class="preview">
-	<aside>
-		<p>Asides, or callouts, are used to block off a specific portion of text that is periperal to the main body text. They can contain headings as well.</p>
-	</aside>
-</div>
-
-<div class="preview">
-	<aside class="width-one-half align-right">
-		<h3>Aside Header</h3>
-		<p><a href="#">Example of a link within an aside</a></p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero perferendis placeat error nemo, atque accusantium?</p>
-	</aside>
-	<p class="is-peripheral">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ipsa voluptatem consequuntur, mollitia soluta, quasi ducimus voluptate vitae eum nulla ad aliquid, saepe reprehenderit. Dolorem, voluptates, corrupti? Labore, rem, incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores quas, adipisci cum voluptate vero necessitatibus animi iure similique? Illo, impedit reiciendis cumque saepe ut quaerat odio dolorum sapiente. Delectus.</p>
-</div>
-
-## Figures
+### Figures
 
 <div class="preview">
 	<figure>
@@ -239,15 +137,38 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 	</figure>
 </div>
 
+## Buttons and Forms
+
+### Buttons
+
+Colored buttons should be used to hint at the purpose button. 
+
+- The primary button should only be used once per form and denotes the next logical step in the process (e.g., Continue, Submit)
+- The danger button should be used to denote an important or potentially dangerous action. (e.g., Delete)
+- The outline button should be used to deemphasize less important actions.
+
 <div class="preview">
-	<figure class="width-one-half align-right">
-		<img src="http://placehold.it/800x600/eeeeee/333333" alt="Placeholder Image">
-		<figcaption>This is an image figure with a caption</figcaption>
-	</figure>
-	<p class="is-peripheral">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ipsa voluptatem consequuntur, mollitia soluta, quasi ducimus voluptate vitae eum nulla ad aliquid, saepe reprehenderit. Dolorem, voluptates, corrupti? Labore, rem, incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores quas, adipisci cum voluptate vero necessitatibus animi iure similique? Illo, impedit reiciendis cumque saepe ut quaerat odio dolorum sapiente. Delectus.</p>
+	<label for="button-type-button">Buttons</label>
+	<button type="button">Button</button>
+	<button type="reset">Reset</button>
+	<button type="submit">Submit</button>
+
+	<label for="button-type-submit">Input Buttons</label>
+	<input type="button" name="input-type-button" value="Button">
+	<input type="reset" name="input-type-reset">
+	<input type="submit" name="input-type-submit">
+	<input type="submit" name="input-type-submit" disabled="">
+
+	<label for="button-type-color">Colored Buttons</label>
+	<button class="button button-primary">Primary Button</button>
+	<button class="button button-danger">Danger Button</button>
+	<button class="button button-outline">Outline Button</button>
+
+	<label for="button-type-color">Button Sizes</label>
+	<button class="button">Regular Button</button>
+	<button class="button button-large">Large Button</button>
 </div>
 
-## Inputs
 
 ### Input Validation
 <div class="preview">
@@ -333,44 +254,13 @@ Outside of `<article>` elements, lists are unstyled by default. To use styled li
 	<input type="week" name="input-type-week">
 </div>
 
-## Buttons
-
-Colored buttons should be used to hint at the purpose button. 
-
-- The primary button should only be used once per form and denotes the next logical step in the process (e.g., Continue, Submit)
-- The danger button should be used to denote an important or potentially dangerous action. (e.g., Delete)
-- The outline button should be used to deemphasize less important actions.
-
-<div class="preview">
-	<label for="button-type-button">Buttons</label>
-	<button type="button">Button</button>
-	<button type="reset">Reset</button>
-	<button type="submit">Submit</button>
-
-	<label for="button-type-submit">Input Buttons</label>
-	<input type="button" name="input-type-button" value="Button">
-	<input type="reset" name="input-type-reset">
-	<input type="submit" name="input-type-submit">
-	<input type="submit" name="input-type-submit" disabled="">
-
-	<label for="button-type-color">Colored Buttons</label>
-	<button class="button button-primary">Primary Button</button>
-	<button class="button button-danger">Danger Button</button>
-	<button class="button button-outline">Outline Button</button>
-
-	<label for="button-type-color">Button Sizes</label>
-	<button class="button">Regular Button</button>
-	<button class="button button-large">Large Button</button>
-	
-	
-</div>
 
 
-# Site Patterns
+## Site Navigation
 
 These patterns are reusable blocks of code meant for developers and designers to build site templates.
 
-## Global Header
+### Global Header
 
 This is the header that appears at the top of every page.
 
@@ -394,7 +284,7 @@ This is the header that appears at the top of every page.
 
 
 
-## Global Footer
+### Global Footer
 
 This is the footer that appears at the bottom of every page.
 
@@ -405,7 +295,7 @@ This is the footer that appears at the bottom of every page.
 
 </div>
 
-## Breadcrumbs
+### Breadcrumbs
 
 Breadcrumbs offer a contextual cue to where the user is in the site hierarchy. They are especially useful when users arrive at a page from a different website (e.g, Google) and provide a sense of context to where they are and allows them to quickly navigate to a different context if necessary.
 
@@ -418,7 +308,119 @@ Breadcrumbs offer a contextual cue to where the user is in the site hierarchy. T
 	 </nav>
 </div>
 
-## Slab Section
+### Sidebar
+
+<div class="preview">
+	<div class="sidebar">
+		<h2>Sidebar Title</h2>
+	    <ul class="sidebar-menu">
+	    	<li class="is-selected">
+	    		<a href="#">Sidebar Menu Item</a>
+	    		<ul class="sidebar-menu-sublist">
+	    			<li><a href="#">Submenu Item</a></li>
+	    			<li><a href="#">Submenu Item</a></li>
+	    			<li><a href="#">Submenu Item</a></li>
+	    		</ul>
+	    	</li>
+	    	<li><a href="#">Sidebar Menu Item</a></li>
+	    	<li><a href="#">Sidebar Menu Item</a></li>
+	    </ul>
+	 </div>
+</div>
+
+### Search Site Form
+
+A default combinaton of a seach type input and a custom submit button used to globally search the site.
+
+<div class="preview">
+	<form class="site-search">
+	    <input type="search" placeholder="e.g., pay a parking ticket">
+	    <input type="submit" value="&#xf002">
+	</form>
+</div>
+
+## Menus
+
+Menus and menu bars provide a way to display a list of block level links. Technically, anything can go inside `.menu-item' divs including headings, text, and images. They can also be combined with the grid layout to provide multiple column menus.
+
+<div class="preview">
+	<div class="grid-box">
+		<div class="menu grid-item width-one-third">
+		    <a href="" class="menu-item">Menu Item 1</a>
+		    <a href="" class="menu-item">Menu Item 2</a>
+		    <a href="" class="menu-item">Menu Item 3</a>
+		    <a href="" class="menu-item">Menu Item 4</a>
+		 </div>
+		 <div class="menu grid-item width-one-third">
+		     <a href="" class="menu-item">Menu Item 1</a>
+		     <a href="" class="menu-item">Menu Item 2</a>
+		     <a href="" class="menu-item">Menu Item 3</a>
+		     <a href="" class="menu-item">Menu Item 4</a>
+		  </div>
+		  <div class="menu grid-item width-one-third">
+		      <a href="" class="menu-item">Menu Item 1</a>
+		      <a href="" class="menu-item">Menu Item 2</a>
+		      <a href="" class="menu-item">Menu Item 3</a>
+		      <a href="" class="menu-item">Menu Item 4</a>
+		   </div>
+	</div>
+</div>
+
+<div class="preview">
+	<div class="menu-medium">
+	    <a href="" class="menu-item">
+	    	<h3>Menu Item</h3>
+	    	<p class="detail-text">Menu item desciption</p>
+	    </a>
+	    <a href="" class="menu-item">
+	    	<h3>Menu Item</h3>
+	    	<p class="detail-text">Menu item desciption</p>
+	    </a>
+	    <a href="" class="menu-item">
+	    	<h3>Menu Item</h3>
+	    	<p class="detail-text">Menu item desciption</p>
+	    </a>
+	    <a href="" class="menu-item">
+	    	<h3>Menu Item</h3>
+	    	<p class="detail-text">Menu item desciption</p>
+	    </a>
+	 </div>
+</div>
+
+<div class="preview">
+	<div class="menu-bar">
+	    <a href="" class="menu-item">Menu Item 1</a>
+	    <a href="" class="menu-item">Menu Item 2</a>
+	    <a href="" class="menu-item">Menu Item 3</a>
+	    <a href="" class="menu-item">Menu Item 4</a>
+	 </div>
+</div>
+
+## City Alerts
+
+City alerts can be used to provide sitewide notifications.
+
+<div class="preview">
+	<div class="danger-alert">
+		<p class="alert-content"><span class="alert-title">City Alert</span><span class="alert-message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
+	</div>
+</div> 
+
+<div class="preview">
+	<div class="caution-alert">
+		<p class="alert-content"><span class="alert-title">City Caution</span><span class="alert-message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
+	</div>
+</div> 
+
+<div class="preview">
+	<div class="info-alert">
+		<p class="alert-content"><span class="alert-title">City Notice</span><span class="alert-message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
+	</div>
+</div> 
+
+## Structural Elements
+
+### Slab Section
 
 Slab are used to separate logical chunks of content within a page. They are a foundational building block of content meant to be customized for specific usages. Each instance of a slab section should have a second class of `section-slab-[instance]` where custom styles can be applied. 
 
@@ -441,19 +443,89 @@ Common uses of slab sections would to be include a header and custom layout of e
 	</section>
 </div>
 
-## Search Site Form
 
-A default combinaton of a seach type input and a custom submit button used to globally search the site.
+### Asides
 
 <div class="preview">
-	<form class="site-search">
-	    <input type="search" placeholder="e.g., pay a parking ticket">
-	    <input type="submit" value="&#xf002">
-	</form>
+	<aside>
+		<p>Asides, or callouts, are used to block off a specific portion of text that is periperal to the main body text. They can contain headings as well.</p>
+	</aside>
+</div>
+
+<div class="preview">
+	<aside class="width-one-half align-right">
+		<h3>Aside Header</h3>
+		<p><a href="#">Example of a link within an aside</a></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero perferendis placeat error nemo, atque accusantium?</p>
+	</aside>
+	<p class="is-peripheral">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ipsa voluptatem consequuntur, mollitia soluta, quasi ducimus voluptate vitae eum nulla ad aliquid, saepe reprehenderit. Dolorem, voluptates, corrupti? Labore, rem, incidunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque maiores quas, adipisci cum voluptate vero necessitatibus animi iure similique? Illo, impedit reiciendis cumque saepe ut quaerat odio dolorum sapiente. Delectus.</p>
 </div>
 
 
-# Contributing
+### Tables
+
+<div class="preview">
+	<table>
+	  <thead>
+	    <tr>
+	      <th>Row 1</th>
+	      <th>Row 2</th>
+	      <th>Row 3</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>item 1</td>
+	      <td>item 2</td>
+	      <td>item 3</td>
+	    </tr>
+	    <tr>
+	      <td>item 1</td>
+	      <td>item 2</td>
+	      <td>item 3</td>
+	    </tr>
+	    <tr>
+	      <td>item 1</td>
+	      <td>item 2</td>
+	      <td>item 3</td>
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+
+# Page Templates
+
+## Home Page
+
+## Topic Page
+ 
+## Article
+
+## Announcement
+
+## Department
+
+# Developers
+
+## CSS Architecture
+
+1. The CSS foundation of this site is built with the **Sass** preprocessor langauge.
+1. The **Bourbon** library is used for auto browser prefixing and the **Neat** library is used for the grid framework. Bourbon and Neat are open-source products from **Thoughtbot**.
+1. The CSS organization and naming conventions are based loosely on **SMACSS** guidelines.
+1. Media queries are built **mobile first**.
+1. Hard coded magic numbers are avoided and, if necessary, defined in the `_variables.scss` file.
+1. Spacing units are as much as possible defined as `rem` or `em` units so they scale appropriately with text size.
+
+## Browser Support
+
+Browser compatility is tested against IE8 and up, and latest versions of Chrome, Firefox, and Safari. Partial support for HTML5 and CSS3 in IE8 and IE9 are supplied by polyfills:
+
+1. **html5shiv:** adds support for HTML5 elements.
+1. **respond.js:** addds support for media query.
+1. **selectivr.js:** adds support for CSS3 psuedo and attribute selectors.
+1. **rem.js:** adds support for rem units.
+
+## Contributing
 
 This styleguide is written as a markdown file in the Jekyll site. Any changes to the styles or patterns should be documented here.
 
