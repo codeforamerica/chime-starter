@@ -272,7 +272,7 @@ This is the header that appears at the top of every page.
 			</div>
 			<div class="grid-item width-one-half">
 				{% unless page.role == 'homepage' %}
-				<form class="site-search">
+				<form class="searchbar">
 				    <input type="search" placeholder="e.g., pay a parking ticket">
 				    <input type="submit" value="&#xf002">
 				</form>
@@ -300,11 +300,11 @@ This is the footer that appears at the bottom of every page.
 Breadcrumbs offer a contextual cue to where the user is in the site hierarchy. They are especially useful when users arrive at a page from a different website (e.g, Google) and provide a sense of context to where they are and allows them to quickly navigate to a different context if necessary.
 
 <div class="preview">
-	<nav class="nav-breadcrumbs">
-	    <span class="nav-breadcrumbs-item"><a href="#">City</a></span>
-	    <span class="nav-breadcrumbs-item"><a href="#">Service</a></span>
-	    <span class="nav-breadcrumbs-item"><a href="#">Subservice</a></span>
-	    <span class="nav-breadcrumbs-item">Article Name</span>
+	<nav class="breadcrumbs">
+	    <span class="breadcrumbs-item"><a href="#">City</a></span>
+	    <span class="breadcrumbs-item"><a href="#">Service</a></span>
+	    <span class="breadcrumbs-item"><a href="#">Subservice</a></span>
+	    <span class="breadcrumbs-item">Article Name</span>
 	 </nav>
 </div>
 
@@ -333,7 +333,7 @@ Breadcrumbs offer a contextual cue to where the user is in the site hierarchy. T
 A default combinaton of a seach type input and a custom submit button used to globally search the site.
 
 <div class="preview">
-	<form class="site-search">
+	<form class="searchbar">
 	    <input type="search" placeholder="e.g., pay a parking ticket">
 	    <input type="submit" value="&#xf002">
 	</form>
@@ -388,7 +388,7 @@ Menus and menu bars provide a way to display a list of block level links. Techni
 </div>
 
 <div class="preview">
-	<div class="menu-bar">
+	<div class="bar-menu">
 	    <a href="" class="menu-item">Menu Item 1</a>
 	    <a href="" class="menu-item">Menu Item 2</a>
 	    <a href="" class="menu-item">Menu Item 3</a>
@@ -401,20 +401,20 @@ Menus and menu bars provide a way to display a list of block level links. Techni
 City alerts can be used to provide sitewide notifications.
 
 <div class="preview">
-	<div class="danger-alert">
-		<p class="alert-content"><span class="alert-title">City Alert</span><span class="alert-message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
+	<div class="alert--danger">
+		<p class="alert__content"><span class="alert__title">City Alert</span><span class="alert__message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
 	</div>
 </div> 
 
 <div class="preview">
 	<div class="caution-alert">
-		<p class="alert-content"><span class="alert-title">City Caution</span><span class="alert-message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
+		<p class="alert__content"><span class="alert__title">City Caution</span><span class="alert__message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
 	</div>
 </div> 
 
 <div class="preview">
 	<div class="info-alert">
-		<p class="alert-content"><span class="alert-title">City Notice</span><span class="alert-message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
+		<p class="alert__content"><span class="alert__title">City Notice</span><span class="alert__message">7.0 magnitude earthquake reported in the vicinity. </span><a href="#" class="alert-action">Learn about what you need to know</a></p>
 	</div>
 </div> 
 
@@ -422,12 +422,12 @@ City alerts can be used to provide sitewide notifications.
 
 ### Slab Section
 
-Slab are used to separate logical chunks of content within a page. They are a foundational building block of content meant to be customized for specific usages. Each instance of a slab section should have a second class of `section-slab-[instance]` where custom styles can be applied. 
+Slab are used to separate logical chunks of content within a page. They are a foundational building block of content meant to be customized for specific usages. Each instance of a slab section should have a second class of `slab-[instance]` where custom styles can be applied. 
 
 Common uses of slab sections would to be include a header and custom layout of elements using the grid box layout. Custom background colors or images can also be applied to slab sections as they are full-bleed by default.
 
 <div class="preview">
-	<section class="section-slab section-slab-example">
+	<section class="slab slab-example">
 		<h2>Slab Section Title</h2>
 		<div class="grid-box">
 			<div class="grid-item width-one-third">

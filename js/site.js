@@ -1,10 +1,9 @@
 $(document).ready(function() {
 	// Header Search Button
 	$('.js-search-button').click(function(e) {
-		$(this).find('.fa').toggleClass('fa-search').toggleClass('fa-close');
-		$('.header-search').toggle();
-		if($('.header-search').is(':visible')) {
-			$('.header-search .site-search-input').focus();
+		$('.global-header-search').toggle();
+		if($('.global-header-search').is(':visible')) {
+			$('.global-header-search .searchbar-input').focus();
 		}
 	})
 })

@@ -28,7 +28,7 @@
 			padding: .5em .5em;
 			&:hover {
 				background-color: $color-grey-100;
-				border-left: 3px solid $color-base-link;
+				border-left: 3px solid $color-primary;
 				margin-left: -3px;
 				color: #000;
 			}
@@ -36,7 +36,7 @@
 		&.is-selected {
 			> a {
 				background-color: $color-grey-100;
-				border-left: 3px solid $color-base-link;
+				border-left: 3px solid $color-primary;
 				margin-left: -3px;
 				color: #000;
 			}
@@ -62,20 +62,20 @@
 			position: relative;
 			color: inherit;
 			text-decoration: none;
-			line-height: $heading-line-height;
+			line-height: $tight-line-height;
 			padding: 0 1.5em;
 			&:hover {
-				color: $color-base-link;
+				color: $color-primary;
 			}
 		}
 		&.is-selected {
 			> a {
-				color: $color-base-link;
+				color: $color-primary;
 				&:after {
 					@include icon();
 					position: absolute;
 					top: 50%;
-					margin-top: -$heading-line-height/2;
+					margin-top: -$tight-line-height/2;
 					right: .5em;
 					content: "\f054";
 				}

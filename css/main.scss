@@ -1,64 +1,46 @@
 ---
 ---
 
-// Vendor -------------- //
+// Vendor
+@import 'vendor/bourbon/bourbon';
+@import 'vendor/neat/grid-settings';
+@import 'vendor/neat/neat';
 
-@import 'bourbon/bourbon';
-@import 'core/grid-settings';
-@import 'neat/neat';
 
-
-// Core -------------- //
-
+// Core
 @import 'core/variables';
 @import 'core/utilities';
 @import 'core/normalize';
 @import 'core/base';
 @import 'core/grid';
 
-// Elements ---------- //
-// Styles basic html elements.
 
-@import 'elements/inline';
-@import 'elements/typography';
-@import 'elements/list';
-@import 'elements/table';
-@import 'elements/aside';
-@import 'elements/blockquote';
-@import 'elements/figure';
-@import 'elements/input';
-@import 'elements/button';
+// Simple Components
+@import 'components/typography';
+@import 'components/list';
+@import 'components/table';
+@import 'components/aside';
+@import 'components/blockquote';
+@import 'components/figure';
+@import 'components/input';
+@import 'components/button';
 
 
-
-// Site Patterns //
-
-@import 'patterns/global-header';
-@import 'patterns/global-footer';
-@import 'patterns/sidebar';
-@import 'patterns/disclaimer';
-@import 'patterns/alert';
-@import 'patterns/menu';
-@import 'patterns/panel';
-@import 'patterns/secondary-header';
-@import 'patterns/nav-breadcrumbs';
-@import 'patterns/section-slab';
-@import 'patterns/form-search-site';
+// Complex Components
+@import 'components/sidebar';
+@import 'components/disclaimer';
+@import 'components/alert';
+@import 'components/menu';
+@import 'components/panel';
+@import 'components/breadcrumbs';
+@import 'components/slab';
+@import 'components/searchbar';
+@import 'components/global-header';
+@import 'components/global-footer';
 
 
-// Templates --------- //
-// Styles specific page templates
-
+// Page Templates
 @import 'templates/home';
 @import 'templates/category';
 @import 'templates/article';
 @import 'templates/announcement';
-// @import 'templates/event';
-// @import 'templates/job';
-
-
-// Hacks --------- //
-// Temporary solutions until a better permanant solution is found
-
-@import 'shame';
-

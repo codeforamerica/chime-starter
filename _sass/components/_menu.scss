@@ -18,7 +18,7 @@
 	}
 	p {
 		margin: 0;
-		line-height: $heading-line-height;
+		line-height: $tight-line-height;
 	}
 
 	&:hover {
@@ -26,7 +26,7 @@
 	}
 }
 
-.menu-bar {
+.bar-menu	 {
 	@extend .menu;
 	.menu-item {
 		float: left;

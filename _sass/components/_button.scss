@@ -11,7 +11,6 @@ button[type="reset"] {
 	font-weight: bold;
 	background-color: $color-grey-300;
 	border: 1px solid $color-grey-300;
-	border-radius: $border-radius;
 	font-size: $base-font-size;
 	text-align: center;
 	margin: {
@@ -33,8 +32,8 @@ button[type="reset"] {
 		text-decoration: none;
 	}
 	&:focus {
-		border: 1px solid $color-base-link;
-		box-shadow: 0 0 0 1px $color-base-link;
+		border: 1px solid $color-primary;
+		box-shadow: 0 0 0 1px $color-primary;
 		text-decoration: none;
 	}
 }
@@ -51,16 +50,16 @@ input[type="submit"]:disabled, button[type="submit"]:disabled {
 
 button.button-primary, .button.button-primary {
 	color: #fff;
-	background-color: $color-base-link;
-	border-color: $color-base-link;
+	background-color: $color-primary;
+	border-color: $color-primary;
 	&:hover {
-		background-color: shade($color-base-link, 20%);
-		border-color: shade($color-base-link, 20%);
+		background-color: shade($color-primary, 20%);
+		border-color: shade($color-primary, 20%);
 	}
 }
 
 button.button-danger, .button.button-danger {
-	color: $color-red;
+	color: $color-danger;
 	background-color: transparent;
 	border-color: $color-grey-400;
 	&:hover {

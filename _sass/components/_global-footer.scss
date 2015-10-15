@@ -6,7 +6,7 @@
 	font-size: $small-font-size;
 	color: $color-grey-600;
 
-	h1 {
+	.global-footer-title {
 		margin-bottom: 2em;
 	}
 
@@ -14,7 +14,7 @@
 		font-size: $small-font-size;
 	}
 
-	.social-bar {
+	.global-footer-social {
 		margin-bottom: .5em;
 		a {
 			font-size: $h2-font-size;
@@ -24,11 +24,11 @@
 		}
 	}
 
-	.footer-menu {
+	.global-footer-nav {
 		margin-bottom: 1em;
 	}
 	
-	.footer-mayor-image {
+	.global-footer-mayor-image {
 		width: 6em;
 		margin-bottom: 1.5em;
 	}

@@ -1,10 +1,10 @@
-.nav-breadcrumbs {
-    margin: 1em auto;
+.breadcrumbs {
+    margin: 1em auto 4em auto;
     font-size: $small-font-size;
     max-width: $site-max-width;
 }
 
-.nav-breadcrumbs-item {
+.breadcrumbs-item {
     display: inline-block;
     margin-right: .5em;
     margin-bottom: .5em;

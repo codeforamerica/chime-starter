@@ -8,7 +8,7 @@
 		right: -$site-margins;
 	}
 	a {
-		color: $color-base-link;
+		color: $color-primary;
 	}
 }
 
@@ -28,26 +28,27 @@
 	font-weight: 400;
 }
 
+
 .danger-alert {
 	@extend .alert;
-	border-color: $color-red;
+	border-color: $color-danger;
 	.alert-title {
-		color: $color-red;
+		color: $color-danger;
 	}
 }
 
 .caution-alert {
 	@extend .alert;
-	border-color: $color-orange;
+	border-color: $color-caution;
 	.alert-title {
-		color: $color-orange;
+		color: $color-caution;
 	}
 }
 
 .info-alert {
 	@extend .alert;
-	border-color: $color-base-link;
+	border-color: $color-primary;
 	.alert-title {
-		color: $color-base-link;
+		color: $color-primary;
 	}
 }

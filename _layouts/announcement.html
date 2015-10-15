@@ -9,10 +9,10 @@
 
 <div class="template-announcement">
     <header class="secondary-header">
-        <nav class="nav-breadcrumbs">
-            <span class="nav-breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
+        <nav class="breadcrumbs">
+            <span class="breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
             {% for crumb in page.breadcrumbs %}
-             <span class="nav-breadcrumbs-item">{% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{% endif %}{{ crumb['title'] }}{% if forloop.rindex0 > 0 %}</a>{% endif %}</span>
+             <span class="breadcrumbs-item">{% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{% endif %}{{ crumb['title'] }}{% if forloop.rindex0 > 0 %}</a>{% endif %}</span>
             {% endfor %}
         </nav>
     </header>

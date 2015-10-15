@@ -1,6 +1,6 @@
 .template-home {
 
-	.section-slab-hero {
+	.slab-hero {
 		text-align: left;
 		background-color: $color-grey-100;
 		border-bottom: 1px solid $color-grey-300;
@@ -16,7 +16,7 @@
 	}
 
 	.city-services {
-		.site-search {
+		.searchbar {
 			margin-bottom: 2em;
 		}
 		.hero-credits {
@@ -56,7 +56,7 @@
 		}
 
 		p {
-			max-height: 6*$heading-line-height;
+			max-height: 6*$tight-line-height;
 			overflow: hidden;
 		}
 

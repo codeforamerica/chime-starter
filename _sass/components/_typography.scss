@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 		top: 2em;
 		bottom: 1em;
 	}
-	line-height: $heading-line-height;
+	line-height: $tight-line-height;
 	&:first-child {
 		margin-top: 0;
 	}
@@ -87,13 +87,13 @@ h1, h2, h3, h4, h5, h6 {
 @mixin large-text {
 	font-family: $font-sans;
 	font-size: $h3-font-size;
-	line-height: $heading-line-height;
+	line-height: $tight-line-height;
 }
 
 @mixin detail-text {
 	font-family: $font-sans;
 	font-size: $small-font-size;
-	line-height: $heading-line-height;
+	line-height: $tight-line-height;
 }
 
 h1, .h1 {
@@ -147,7 +147,6 @@ h6, .h6 {
 	font-size: $h2-font-size;
 	font-family: $font-serif;
 	color: $color-grey-800;
-	line-height: $heading-line-height;
 	margin-bottom: 2em;
 }
 
@@ -155,6 +154,6 @@ h6, .h6 {
 	margin-bottom: 1em;
 	p {
 		margin: 0;
-		line-height: $heading-line-height;
+		line-height: $tight-line-height;
 	}
 }
