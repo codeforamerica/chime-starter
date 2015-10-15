@@ -1,23 +1,23 @@
 <div class="disclaimer">
 	<p><b>This site is a working beta</b>. Information found here may be incomplete and inaccurate. <a href="">Learn more</a></p>
 </div>
-<header class="global-header">
+<header class="global-header" role="banner">
 	<div class="grid-box">
 		<div class="align-left">
-		    <h1 class="global-header-title"><img class="header-icon" src="/media/images/springfield_logo.png"/><a href="/">City of {{ site.city }}</a></h1>
+		    <h1 class="global-header-title"><img class="header-icon" src="/media/images/springfield_logo.png" alt="City Logo"/><a href="/">City of {{ site.city }}</a></h1>
 		</div>
-		<div class="bar-menu global-header-menu align-right">
+		<div class="bar-menu global-header-menu align-right" role="navigation">
 			<a href="#" class="menu-item">Services</a>
 			<a href="#" class="menu-item">Announcements</a>
 			<a href="#" class="menu-item">Events</a>
 			<a href="#" class="menu-item">More</a>
-			<a href="#" class="menu-item js-search-button"><span class="fa fa-search"></span></a>
+			<a href="#" class="menu-item js-search-button" title="Open search"><span class="fa fa-search"></span></a>
 		</div>
 	</div>
 </header>
 <div class="global-header-search">
-	<form action="" class="searchbar">
+	<form action="" class="searchbar" role="search">
 		<input class="searchbar-input" type="search" placeholder="How can we help you?">
-		<input class="searchbar-button" type="submit" value="&#xf002">
+		<button class="searchbar-button" type="submit"></button>
 	</form>
 </div>

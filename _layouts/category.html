@@ -16,10 +16,10 @@
 {% assign nav_classes = "nav-categories,nav-subcategories,nav-article-list" | split: "," %}
 {% assign link_classes = ",nav-subcategory-link,article-link" | split: "," %}
 
-<div class="template-category">
+<div class="template-category" role="main">
 
     <header class="secondary-header">
-        <nav class="breadcrumbs">
+        <nav class="breadcrumbs" role="navigation">
             <span class="breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
             {% for crumb in page.breadcrumbs %}
              <span class="breadcrumbs-item">{% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{% endif %}{{ crumb['title'] }}{% if forloop.rindex0 > 0 %}</a>{% endif %}</span>

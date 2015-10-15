@@ -3,9 +3,9 @@
   base
 ---
 
-<div class="template-article">
+<div class="template-article" role="main">
 
-    <nav class="breadcrumbs">
+    <nav class="breadcrumbs" role="navigation">
         <span class="breadcrumbs-item"><a href="{{ site.url }}">{{ site.city }}</a></span>
         {% for crumb in page.breadcrumbs %}
          <span class="breadcrumbs-item">{% if forloop.rindex0 > 0 %}<a href="{{ crumb['link_path'] }}">{% endif %}{{ crumb['title'] }}{% if forloop.rindex0 > 0 %}</a>{% endif %}</span>

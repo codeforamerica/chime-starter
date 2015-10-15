@@ -38,7 +38,7 @@
 	}
 }
 
-.menu-medium {
+.medium-menu {
 	@extend .menu;
 	.menu-item {
 		padding: .5em 1em;
@@ -47,7 +47,7 @@
 	}
 }
 
-.menu-large {
+.large-menu {
 	@extend .menu;
 	.menu-item {
 		padding: 1em;

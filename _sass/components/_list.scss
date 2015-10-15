@@ -1,11 +1,11 @@
 // Make lists unstyled by default
-ul, ol {
+ul, ol, .unstyled-list {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 
-@mixin list-bulleted() {
+@mixin bulleted-list() {
 	list-style-type: disc;
 	padding-left: 2em;
 	margin: {
@@ -21,11 +21,11 @@ ul, ol {
 	}
 }
 
-.list-bulleted {
-	@include list-bulleted();
+.bulleted-list {
+	@include bulleted-list();
 }
 
-@mixin list-decimal() {
+@mixin decimal-list() {
 	list-style-type: decimal;
 	padding-left: 2em;
 	margin: {
@@ -41,16 +41,16 @@ ul, ol {
 	}
 }
 
-.list-decimal {
-	@include list-decimal();
+.decimal-list {
+	@include decimal-list();
 }
 
 
 article {
 	ul {
-		@include list-bulleted();
+		@include bulleted-list();
 	}
 	ol {
-		@include list-decimal();
+		@include decimal-list();
 	}
 }
