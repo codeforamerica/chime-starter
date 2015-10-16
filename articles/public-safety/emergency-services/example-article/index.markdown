@@ -7,7 +7,7 @@
 
 <p class="lead-in">A Certificate of Occupancy is a legal document that indicates that you can use your building or space legally. It makes sure that your space meets safety and other requirements. You will need a Certificate of Occupancy before registering for a business license with the City.</p>
 
-<a href="#" class="button button-primary button-large">Start the certificate of occupancy form</a>
+<a href="#" class="button button-primary button-large button-linkout">Apply for the certificate</a>
 
 # Heading Level 1
 

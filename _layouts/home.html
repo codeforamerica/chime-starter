@@ -23,7 +23,7 @@
             </div>
 
             <div class="grid-box">
-                <ul class="menu-medium grid-item width-one-third">
+                <ul class="medium-menu grid-item width-one-third">
                     {% for show_page in page.columns[0]['pages'] %}
                     {% assign modulo = forloop.index0|modulo:3 %}
                     {% if modulo == 0 %} 
@@ -34,7 +34,7 @@
                     {% endif %}
                     {% endfor %}
                 </ul>
-                <ul class="menu-medium grid-item width-one-third">
+                <ul class="medium-menu grid-item width-one-third">
                     {% for show_page in page.columns[0]['pages'] %}
                     {% assign modulo = forloop.index0|modulo:3 %}
                     {% if modulo == 1 %} 
@@ -45,7 +45,7 @@
                     {% endif %}
                     {% endfor %}
                 </ul>
-                <ul class="menu-medium grid-item width-one-third">
+                <ul class="medium-menu grid-item width-one-third">
                     {% for show_page in page.columns[0]['pages'] %}
                     {% assign modulo = forloop.index0|modulo:3 %}
                     {% if modulo == 2 %} 

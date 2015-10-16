@@ -3,19 +3,6 @@
   base
 ---
 
-{% comment %} columns classes, assigned depending on which and how many columns {% endcomment %}
-{% if page.columns.size > 2 %}
-    {% assign column_count = 3 %}
-    {% assign column_classes = "grid-item width-one-sixth,grid-item width-one-third,grid-item width-one-half end-row" | split: "," %}
-{% else %}
-    {% assign column_count = 2 %}
-    {% assign column_classes = "grid-item width-one-third,grid-item width-two-thirds end-row" | split: "," %}
-{% endif %}
-
-{% comment %} nav and link classes, assigned depending on which column {% endcomment %}
-{% assign nav_classes = "nav-categories,nav-subcategories,nav-article-list" | split: "," %}
-{% assign link_classes = ",nav-subcategory-link,article-link" | split: "," %}
-
 <div class="template-category" role="main">
 
     <header class="secondary-header">
@@ -48,7 +35,7 @@
                 {% assign current_column = page.columns|last %}
                 <h1>{{ current_column.title }}</h1>
             </header>
-            <div class="menu-large">
+            <div class="large-menu">
                 {% for page in current_column['pages'] %}
                 <a class="menu-item" href="{{ page.link_path }}" >
                     <p class="large-text">{{ page.title }}</p>
